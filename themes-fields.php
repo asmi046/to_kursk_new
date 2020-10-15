@@ -14,5 +14,13 @@ use Carbon_Fields\Field;
 Container::make( 'theme_options', __( 'Настройки темы', 'crb' ) )
 		->add_fields( array(
 			Field::make( 'text', 'crb_text', 'Text Field' ),
-        ) );
+		) );
+		
+Container::make('post_meta', 'to_param', 'Преимущества тура')
+		->where( 'post_template', '=', 'single-osago.php' )
+		->or_where( 'post_template', '=', 'single-to.php' )
+		->add_fields(array(
+			Field::make('text', 'city_name', 'Город')->set_width(50),
+			Field::make('text', 'city_padeg', 'Город склонение (Воронеж -> Воронеже)')->set_width(50)
+		));
 ?>

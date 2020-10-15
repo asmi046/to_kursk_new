@@ -16,7 +16,7 @@
     "send_func": "scp -C functions.php tehosmyu_all@tehosmyu.beget.tech:tehosago24.ru/public_html/wp-content/themes/to_new/",
     "mk_part_carbon": "ssh tehosmyu_all@tehosmyu.beget.tech \"mkdir -p tehosago24.ru/public_html/wp-content/themes/to_new/inc\"",
     "send_carbon": "scp -C -r inc tehosmyu_all@tehosmyu.beget.tech:tehosago24.ru/public_html/wp-content/themes/to_new/",
-    "send_carbon_fild": "scp -C -r inc/custom-fields-options tehosmyu_all@tehosmyu.beget.tech:tehosago24.ru/public_html/wp-content/themes/to_new/inc/",
+    "send_carbon_fild": "scp -C themes-fields.php tehosmyu_all@tehosmyu.beget.tech:tehosago24.ru/public_html/wp-content/themes/to_new/",
     "mk_part_dir": "ssh tehosmyu_all@tehosmyu.beget.tech \"mkdir -p tehosago24.ru/public_html/wp-content/themes/to_new/template-parts\"",
     "send_part": "scp -C -r template-parts tehosmyu_all@tehosmyu.beget.tech:tehosago24.ru/public_html/wp-content/themes/to_new/",
     "mk_part_img": "ssh tehosmyu_all@tehosmyu.beget.tech \"mkdir -p tehosago24.ru/public_html/wp-content/themes/to_new/img\"",
