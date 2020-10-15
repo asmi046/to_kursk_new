@@ -26,8 +26,8 @@
 <body>
 
     <? include "modal-win.php";?>
-
     <div class="great-shadow"></div>
+
     <div id="wrapper">
         <header id="header">
             <div class="header__top">
@@ -619,21 +619,11 @@
             </a>
             <nav class="footer-menu footer__item">
                 <ul>
-                    <li>
-                        <a href="#">Техосмотр</a>
-                    </li>
-                    <li>
-                        <a href="#">Проверка карты</a>
-                    </li>
-                    <li>
-                        <a href="#">ОСАГО</a>
-                    </li>
-                    <li>
-                        <a href="#">Сотрудничество</a>
-                    </li>
-                    <li>
-                        <a href="#">Отзывы</a>
-                    </li>
+                    <li><a href="#">Техосмотр</a></li>
+                    <li><a href="#">Проверка карты</a></li>
+                    <li><a href="#">ОСАГО</a></li>
+                    <li><a href="#">Сотрудничество</a></li>
+                    <li><a href="#">Отзывы</a></li>
                 </ul>
             </nav>
             <div class="footer__item work-time">
