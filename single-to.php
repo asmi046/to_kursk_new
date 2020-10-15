@@ -1,4 +1,10 @@
-<?php get_header(); ?>
+<?php 
+
+/**
+ * Template Name: Шаблон страницы ТО
+ */
+
+get_header(); ?>
 
 	<?php get_template_part('template-parts/header-section');?>
 
