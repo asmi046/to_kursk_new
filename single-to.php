@@ -1,8 +1,9 @@
 <?php 
 
-/**
- * Template Name: Шаблон страницы ТО
- */
+/*
+Template Name: Шаблон страницы ТО
+Template Post Type: post, page
+*/
 
 get_header(); ?>
 

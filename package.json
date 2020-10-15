@@ -9,7 +9,7 @@
     "send_r": "scp -C *.php *.png *.css tehosmyu_all@tehosmyu.beget.tech:tehosago24.ru/public_html/wp-content/themes/to_new/",
     "send_ms": "scp -C *.css tehosmyu_all@tehosmyu.beget.tech:tehosago24.ru/public_html/wp-content/themes/to_new/",
     "send_head": "scp -C header.php tehosmyu_all@tehosmyu.beget.tech:tehosago24.ru/public_html/wp-content/themes/to_new/",
-    "send_one": "scp -C page-checaut-bascet.php tehosmyu_all@tehosmyu.beget.tech:tehosago24.ru/public_html/wp-content/themes/to_new/",
+    "send_one": "scp -C single-to.php tehosmyu_all@tehosmyu.beget.tech:tehosago24.ru/public_html/wp-content/themes/to_new/",
     "send_cat": "scp -C category.php tehosmyu_all@tehosmyu.beget.tech:tehosago24.ru/public_html/wp-content/themes/to_new/",
     "send_singl": "scp -C single.php tehosmyu_all@tehosmyu.beget.tech:tehosago24.ru/public_html/wp-content/themes/to_new/",
     "send_index": "scp -C index.php tehosmyu_all@tehosmyu.beget.tech:tehosago24.ru/public_html/wp-content/themes/to_new/",
