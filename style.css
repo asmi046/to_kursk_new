@@ -1260,7 +1260,7 @@ Tags: TO,OSAGO
 .popup__body-2 {
   min-height: 100%;
   max-width: 1600px;
-  width: 100%;
+  /*width: 100%;*/
   margin: 0px auto;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1271,7 +1271,8 @@ Tags: TO,OSAGO
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
-  padding: 30px 10px; }
+  padding: 30px 10px;
+   }
 
 .popup__content-2 {
   background: #fff;
@@ -1371,9 +1372,11 @@ Tags: TO,OSAGO
 	.input-panel .input-panel__step .free-row .input-panel__field-box {
 	  margin-right: 20px; } }
   @media screen and (max-width: 1240px) {
+  	.popup__menu{
+		flex-wrap: wrap;
+   }
 	.inform-section .decore-elem {
 	  right: -20%; }
-  
 	#header .header__bottom .main-menu ul li a {
 	  font-size: 0.8em;
 	  padding: 0 15px;
