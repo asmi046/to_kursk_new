@@ -12,6 +12,13 @@ jQuery(document).ready(function() {
 
 	// Типовой скрипт для отправки сообщений на почту
 
+
+	jQuery(".location").click(function(e){ 
+		e.preventDefault();
+		console.log(111);
+		jQuery("#popupTO").arcticmodal();
+	});
+
 	jQuery("#clsubmit").click(function(){ 
 
 		e.preventDefault();

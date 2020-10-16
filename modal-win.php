@@ -15,4 +15,11 @@
     </div>
 </div>
 
+<div style="display: none;">
+    <div class="box-modal" id="popupTO">
+        <div class="box-modal_close arcticmodal-close"><?_e("закрыть","rubex");?></div>
+    
+    </div>
+</div>
+
 
