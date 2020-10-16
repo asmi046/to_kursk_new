@@ -24,14 +24,13 @@
                 <div class="inner">
                     <nav class="main-menu">
                         <ul>
-                            <li><a href="#">Техосмотр</a></li>
+                            <li><a href="#popup-2">Техосмотр</a></li>
                             <li><a href="#">Проверка карты</a></li>
-                            <li><a href="#">ОСАГО</a></li>
+                            <li><a href="#popup-1">ОСАГО</a></li>
                             <li><a href="#">Сотрудничество</a></li>
                             <li><a href="#">Отзывы</a></li>
                         </ul>
                     </nav>
                 </div>
             </div>
-
         </header>
