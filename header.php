@@ -24,11 +24,11 @@
 </head>
    
 <body>
-
+    
     <? include "modal-win.php";?>
     <div class="great-shadow"></div>
 
-    <div id="wrapper">
+    <div id="wrapper" class="wrapper">
         
         
         

@@ -1,10 +1,10 @@
 
 <div id="popup-2" class="popup-2">
-	<a href="#" class="popup__area-2"></a>
+	<!-- <a href="#" class="popup__area-2"></a> -->
 	<div class="popup__body-2">
 		<div class="popup__content-2">
 
-			<a href="#" class="popup__close-2">Close</a>
+			<a href="#header" class="popup__close-2 close-popup">Close</a>
 			<div class="popup__title">Выберите свой город ТО</div>
 				<div class="popup__menu">
 
@@ -62,7 +62,7 @@
 						<ul class="popup__column-list">
 							<li class="popup__letter">К</li>
 							<li><a href="<?php echo get_permalink(216);?>">Кабардино-Балкария</a></li>
-							<li><li><a href="<?php echo get_permalink();?>">Калининградская область</a></li></li>
+							<li><li><a href="<?php echo get_permalink(338);?>">Калининградская область</a></li></li>
 							<li><li><a href="<?php echo get_permalink(218);?>">Калмыкия</a></li></li>
 							<li><li><a href="<?php echo get_permalink(220);?>">Калужская область</a></li></li>
 							<li><li><a href="<?php echo get_permalink(222);?>">Камчатский край</a></li></li>
@@ -183,7 +183,7 @@
 	</div>
 </div>
 
-<div id="popup-1" class="popup-1">
+<!-- <div id="popup-1" class="popup-1">
 	<a href="#" class="popup__area-2"></a>
 	<div class="popup__body-2">
 		<div class="popup__content-2">
@@ -365,4 +365,6 @@
 				</div>
 		</div>
 	</div>
-</div>
+</div> -->
+
+

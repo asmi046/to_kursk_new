@@ -1,4 +1,4 @@
-<header id="header">
+<header id="header" class="header lock-padding">
             <div class="header__top">
                 <div class="inner">
                     <a href="#" class="main-logo header__top__item">
@@ -20,13 +20,14 @@
                     </div>
                 </div>
             </div>
+            <?php get_template_part('template-parts/popups');?>
             <div class="header__bottom">
                 <div class="inner">
                     <nav class="main-menu">
                         <ul>
-                            <li><a href="#popup-2">Техосмотр</a></li>
+                            <li><a href="#popup-2" class="popup-link">Техосмотр</a></li>
                             <li><a href="#">Проверка карты</a></li>
-                            <li><a href="#popup-1">ОСАГО</a></li>
+                            <li><a href="#" class="popup-modal">ОСАГО</a></li>
                             <li><a href="#">Сотрудничество</a></li>
                             <li><a href="#">Отзывы</a></li>
                         </ul>
