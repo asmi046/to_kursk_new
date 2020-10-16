@@ -1,6 +1,7 @@
 <?php get_header(); ?>
 
 	<?php get_template_part('template-parts/header-section');?>
+	
 
 	<main class="main">
 
@@ -20,3 +21,5 @@
     
 	</main>
 <?php get_footer(); ?>
+
+

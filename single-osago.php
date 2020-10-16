@@ -1,6 +1,14 @@
-<?php get_header(); ?>
+<?php 
+
+/*
+Template Name: Шаблон страницы ОСАГО
+Template Post Type: post, page
+*/
+
+get_header(); ?>
 
 	<?php get_template_part('template-parts/header-section');?>
+
 
 	<main class="main">
 
