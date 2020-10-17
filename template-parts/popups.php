@@ -1,6 +1,5 @@
 
-<div id="popup-2" class="popup-2">
-	<!-- <a href="#" class="popup__area-2"></a> -->
+<!-- <div id="popup-2" class="popup-2">
 	<div class="popup__body-2">
 		<div class="popup__content-2">
 
@@ -181,7 +180,7 @@
 				</div>
 		</div>
 	</div>
-</div>
+</div> -->
 
 <!-- <div id="popup-1" class="popup-1">
 	<a href="#" class="popup__area-2"></a>

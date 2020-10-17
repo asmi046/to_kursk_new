@@ -25,9 +25,9 @@
                 <div class="inner">
                     <nav class="main-menu">
                         <ul>
-                            <li><a href="#popup-2" class="popup-link">Техосмотр</a></li>
+                            <li><a href="#" class="location">Техосмотр</a></li>
                             <li><a href="#">Проверка карты</a></li>
-                            <li><a href="#" class="popup-modal">ОСАГО</a></li>
+                            <li><a href="#" class="location-2">ОСАГО</a></li>
                             <li><a href="#">Сотрудничество</a></li>
                             <li><a href="#">Отзывы</a></li>
                         </ul>
