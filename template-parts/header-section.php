@@ -14,9 +14,9 @@
                         <span class="marker"></span>Курск
                     </a>
                     <div class="header__top__item contact-box">
-                        <span class="db desktop phone">8 (800)-000-00-00</span>
-                        <a href="tel:88000000000" class="db mobil phone">8 (800)-000-00-00</a>
-                        <a href="mailto:mail@mail.ru" class="email">mail@mail.ru</a>
+                        <span class="db desktop phone"><? echo $tel = carbon_get_theme_option("to_phone"); ?></span>
+                        <a href="tel:<? echo preg_replace('/[^0-9]/', '', $tel); ?>" class="db mobil phone"><? echo $tel; ?></a>
+                        <a href="<? echo $mail = carbon_get_theme_option("to_mail"); ?>" class="email"><? echo $mail; ?></a>
                     </div>
                 </div>
             </div>

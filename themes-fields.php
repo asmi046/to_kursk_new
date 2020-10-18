@@ -13,7 +13,9 @@ use Carbon_Fields\Field;
 
 Container::make( 'theme_options', __( 'Настройки темы', 'crb' ) )
 		->add_fields( array(
-			Field::make( 'text', 'crb_text', 'Text Field' ),
+			Field::make( 'text', 'to_phone', 'Телефон' ),
+			Field::make( 'text', 'to_mail', 'e-mail' ),
+			Field::make( 'text', 'to_price', 'Цена техосмотра' ),
 		) );
 		
 Container::make('post_meta', 'to_param', 'Преимущества тура')

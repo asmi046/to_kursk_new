@@ -5,7 +5,7 @@
        Помощь в оформлении <br>ТЕХОСМОТРА
       </h1>
       <ul>
-        <li><span class="list-marker"></span>400 рублей</li>
+        <li><span class="list-marker"></span><? echo carbon_get_theme_option("to_price"); ?> рублей</li>
         <li><span class="list-marker"></span>10 минут</li>
       </ul>
       <a href="#" class="btn">Начать оформление</a>
