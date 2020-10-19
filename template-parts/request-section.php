@@ -96,11 +96,11 @@
                         <div class="input-panel__field-box">
                             <span class="caption db">Тип ТС</span>
                             <select class="selectBox" name="type_ts">
-                                <option value="" selected>Обычный автомобиль</option>
-                                <option value="">Используеутся в такси</option>
-                                <option value="">Для обучения</option>
-                                <option value="">Для перевозки опасных грузов Для перевозки опасных грузов</option>
-                                <option value="">Мотоцикл</option>
+                                <option value="Обычный автомобиль" selected>Обычный автомобиль</option>
+                                <option value="Используеутся в такси">Используеутся в такси</option>
+                                <option value="Для обучения">Для обучения</option>
+                                <option value="Для перевозки опасных грузов Для перевозки опасных грузов">Для перевозки опасных грузов Для перевозки опасных грузов</option>
+                                <option value="Мотоцикл">Мотоцикл</option>
                             </select>
                         </div>
                         <div class="input-panel__field-box">

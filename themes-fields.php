@@ -16,6 +16,8 @@ Container::make( 'theme_options', __( 'Настройки темы', 'crb' ) )
 			Field::make( 'text', 'to_phone', 'Телефон' ),
 			Field::make( 'text', 'to_mail', 'e-mail' ),
 			Field::make( 'text', 'to_price', 'Цена техосмотра' ),
+			Field::make( 'text', 'to_main_sendmail', 'е-mail для рассылки' )->set_width(100),
+			Field::make( 'text', 'to_telegramm_id', 'Telegram ID для рассылки' )->set_width(100),
 		) );
 		
 Container::make('post_meta', 'to_param', 'Преимущества тура')

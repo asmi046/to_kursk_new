@@ -20,7 +20,11 @@
     
     
     <?php wp_head();?> 
-
+    <script>
+        let toThencsPageUrl = "<?echo get_the_permalink(341); ?>";
+        let osagoThencsPageUrl = "<?echo get_the_permalink(343); ?>";
+        let agentThencsPageUrl = "<?echo get_the_permalink(345); ?>";
+    </script>
 </head>
    
 <body>
@@ -29,15 +33,3 @@
     <div class="great-shadow"></div>
 
     <div id="wrapper" class="wrapper">
-        
-        
-        
-            
-            
-            
-            
-            
-            
-            
-      
-   

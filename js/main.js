@@ -40,7 +40,7 @@ jQuery(document).ready(function() {
 	}
 
 	//----------------------Верификация ТО
-	
+
 	jQuery("#toStep2").click(function(e){ 
 		e.preventDefault();
 		
@@ -282,6 +282,27 @@ jQuery(document).ready(function() {
 
 		if (flag) {
 			console.log("COOL");
+
+			var  jqXHR = jQuery.post(
+				allAjax.ajaxurl,
+				{
+					action: 'sendTO',		
+					nonce: allAjax.nonce,
+					alldata: jQuery(".request-form-to").serialize(),
+				}
+				
+			);
+			
+			
+			jqXHR.done(function (responce) {  
+				console.log(responce);
+				document.location.href = toThencsPageUrl;	
+			});
+					
+			jqXHR.fail(function (responce) {
+				alert("Произошла ошибка попробуйте позднее");
+			});
+
 		}
 	});
 
@@ -289,6 +310,9 @@ jQuery(document).ready(function() {
 		e.preventDefault();
 		toStapIndex(3);
 	});
+
+//-----------------------------
+
 
 	jQuery("#clsubmit").click(function(){ 
 
