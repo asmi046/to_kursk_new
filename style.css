@@ -1124,6 +1124,11 @@ Tags: TO,OSAGO
 		font-size: 14px;
 		line-height: 24px;
 		color: red; }
+		
+		.consent-mess.error {
+			color: red;
+		}
+
 	  .input-panel .input-panel__step .error .inputbox {
 		border: 1px solid red; }
 	  .input-panel .input-panel__step .error .err-message {

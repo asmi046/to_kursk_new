@@ -86,8 +86,8 @@
                         </div>
                         <div class="input-panel__field-box">
                             <label>
-                                <span class="caption db">*Пробег ТС в км</span>
-                                <input type="text" name="probeg" class="inputbox probeg" placeholder="Пробег" autocomplete="off">
+                                <span class="caption db mandatory">Пробег ТС в км</span>
+                                <input type="number" name="probeg" class="inputbox probeg" placeholder="Пробег" autocomplete="off">
                                 <span class="err-message">
                                     Пожалуйста, заполните это поле.
                                 </span>
@@ -131,22 +131,16 @@
                     <div class="free-row">
                         <div class="input-panel__field-box input-panel__field-box__doc">
                             <span class="caption db mandatory">Документ</span>
-                            <select class="selectBox" name="type_ts">
-                                <option value="СТС" selected>
-                                    СТС
-                                </option>
-                                <option value="ПТС">
-                                    ПТС
-                                </option>
-                                <option value="ЭПТС">
-                                    ЭПТС
-                                </option>
+                            <select class="selectBox" class = "type_doc" name="type_doc">
+                                <option value="СТС" selected>СТС</option>
+                                <option value="ПТС">ПТС</option>
+                                <option value="ЭПТС">ЭПТС</option>
                             </select>
                         </div>
                         <div class="input-panel__field-box input-panel__field-box-series">
                             <label>
                                 <span class="caption db mandatory">Серия</span>
-                                <input type="text" name="lastname" class="inputbox " placeholder="0000" autocomplete="off">
+                                <input type="text" name="doc_seria" class="inputbox doc_seria" placeholder="0000" autocomplete="off">
                                 <span class="err-message">
                                     Пожалуйста, заполните это поле.
                                 </span>
@@ -155,7 +149,7 @@
                         <div class="input-panel__field-box">
                             <label>
                                 <span class="caption db mandatory">Номер</span>
-                                <input type="text" name="lastname" class="inputbox " placeholder="123456" autocomplete="off">
+                                <input type="text" name="doc_number" class="inputbox doc_number" placeholder="123456" autocomplete="off">
                                 <span class="err-message">
                                     Пожалуйста, заполните это поле.
                                 </span>
@@ -166,7 +160,7 @@
                         <div class="input-panel__field-box">
                             <label>
                                 <span class="caption db mandatory">Выдано</span>
-                                <input type="text" name="lastname" class="inputbox " placeholder="Выдано" autocomplete="off">
+                                <input type="text" name="doc_org" class="inputbox doc_org" placeholder="Выдано" autocomplete="off">
                                 <span class="err-message">
                                     Пожалуйста, заполните это поле.
                                 </span>
@@ -175,7 +169,7 @@
                         <div class="input-panel__field-box input-panel__field-box-date">
                             <label>
                                 <span class="caption db mandatory">Дата выдачи</span>
-                                <input type="text" id="field-date" name="lastname" class="inputbox " placeholder="дд.мм.гггг" autocomplete="off">
+                                <input type="text" id="field-date" name="doc_data_v" class="inputbox doc_data_v" placeholder="дд.мм.гггг" autocomplete="off">
                                 <span class="err-message">
                                     Пожалуйста, заполните это поле.
                                 </span>
@@ -186,7 +180,7 @@
                         <div class="input-panel__field-box">
                             <label>
                                 <span class="caption db mandatory">Марка</span>
-                                <input type="text" name="lastname" class="inputbox " placeholder="Марка" autocomplete="off">
+                                <input type="text" name="doc_marka" class="inputbox doc_marka" placeholder="Марка" autocomplete="off">
                                 <span class="err-message">
                                     Пожалуйста, заполните это поле.
                                 </span>
@@ -195,7 +189,7 @@
                         <div class="input-panel__field-box">
                             <label>
                                 <span class="caption db mandatory">Модель</span>
-                                <input type="text" name="name" class="inputbox" placeholder="Модель" autocomplete="off">
+                                <input type="text" name="doc_model" class="inputbox doc_model" placeholder="Модель" autocomplete="off">
                                 <span class="err-message">
                                     Пожалуйста, заполните это поле.
                                 </span>
@@ -203,7 +197,7 @@
                         </div>
                         <div class="input-panel__field-box">
                             <span class="caption db mandatory">Категория ТС</span>
-                            <select class="selectBox" name="type_ts">
+                            <select class="selectBox" name="doc_cat_ts" class="doc_cat_ts">
                                 <option value="А | L - Мототранспортные средства" selected>
                                     А | L - Мототранспортные средства
                                 </option>
@@ -242,7 +236,7 @@
                         <div class="input-panel__field-box">
                             <label>
                                 <span class="caption db mandatory">Идентификационный номер VIN</span>
-                                <input type="text" name="lastname" class="inputbox " placeholder="Идентификационный номер VIN" autocomplete="off">
+                                <input type="text" name="doc_vin" class="inputbox doc_vin" placeholder="Идентификационный номер VIN" autocomplete="off">
                                 <span class="err-message">
                                     Пожалуйста, заполните это поле.
                                 </span>
@@ -250,8 +244,8 @@
                         </div>
                         <div class="input-panel__field-box">
                             <label>
-                                <span class="caption db mandatory">Шасси №</span>
-                                <input type="text" name="name" class="inputbox" placeholder="Шасси №" autocomplete="off">
+                                <span class="caption db mandatory">Шасси № (или введите VIN)</span>
+                                <input type="text" name="doc_hassi" class="inputbox doc_hassi" placeholder="Шасси №" autocomplete="off">
                                 <span class="err-message">
                                     Пожалуйста, заполните это поле.
                                 </span>
@@ -259,8 +253,8 @@
                         </div>
                         <div class="input-panel__field-box">
                             <label>
-                                <span class="caption db mandatory">Кузов №</span>
-                                <input type="text" name="name" class="inputbox" placeholder="Кузов №" autocomplete="off">
+                                <span class="caption db mandatory">Кузов № (или введите VIN)</span>
+                                <input type="text" name="doc_kuzov" class="inputbox doc_kuzov" placeholder="Кузов №" autocomplete="off">
                                 <span class="err-message">
                                     Пожалуйста, заполните это поле.
                                 </span>
@@ -269,7 +263,7 @@
                         <div class="input-panel__field-box">
                             <label>
                                 <span class="caption db mandatory">Год выпуска ТС</span>
-                                <input type="text" name="name" class="inputbox" placeholder="Год выпуска ТС" autocomplete="off">
+                                <input type="number" name="doc_godvip" class="inputbox doc_godvip" placeholder="Год выпуска ТС" autocomplete="off">
                                 <span class="err-message">
                                     Пожалуйста, заполните это поле.
                                 </span>
@@ -278,7 +272,7 @@
                         <div class="input-panel__field-box">
                             <label>
                                 <span class="caption db mandatory">Разрешенная масса, кг</span>
-                                <input type="text" name="name" class="inputbox" placeholder="Разрешенная масса, кг" autocomplete="off">
+                                <input type="number" name="doc_r_massa" class="inputbox doc_r_massa" placeholder="Разрешенная масса, кг" autocomplete="off">
                                 <span class="err-message">
                                     Пожалуйста, заполните это поле.
                                 </span>
@@ -287,7 +281,7 @@
                         <div class="input-panel__field-box">
                             <label>
                                 <span class="caption db mandatory">Масса без нагрузки, кг</span>
-                                <input type="text" name="name" class="inputbox" placeholder="Масса без нагрузки, кг" autocomplete="off">
+                                <input type="number" name="doc_m_massa" class="inputbox doc_m_massa" placeholder="Масса без нагрузки, кг" autocomplete="off">
                                 <span class="err-message">
                                     Пожалуйста, заполните это поле.
                                 </span>
@@ -296,7 +290,7 @@
                     </div>
                     <div class="btn-box">
                         <a href="#" class="btn" id = "bacStep2">Назад</a>
-                        <a href="#" class="btn" id = "toStep3">Далее</a>
+                        <a href="#" class="btn" id = "toStep4">Далее</a>
                     </div>
                 </div>
                 <div id = "input-panel__step_4" class="input-panel__step ">
@@ -304,7 +298,7 @@
                         <div class="input-panel__field-box">
                             <label>
                                 <span class="caption db mandatory">Телефон</span>
-                                <input type="text" id="tel-field" name="lastname" class="inputbox " placeholder="+7 (999) 999-99-99" autocomplete="off">
+                                <input type="tel" id="pers_tel" name="pers_tel" class="inputbox pers_tel" placeholder="+7 (999) 999-99-99" autocomplete="off">
                                 <span class="err-message">
                                     Пожалуйста, заполните это поле.
                                 </span>
@@ -313,7 +307,7 @@
                         <div class="input-panel__field-box">
                             <label>
                                 <span class="caption db mandatory">E-mail</span>
-                                <input type="text" name="lastname" class="inputbox " placeholder="Выдано" autocomplete="off">
+                                <input type="email" name="pers_mail" class="inputbox pers_mail" placeholder="введите e-mail" autocomplete="off">
                                 <span class="err-message">
                                     Пожалуйста, заполните это поле.
                                 </span>
@@ -322,7 +316,7 @@
                         <div class="input-panel__field-box">
                             <label>
                                 <span class="caption db mandatory">Город</span>
-                                <input type="text" name="lastname" class="inputbox " placeholder="Выдано" autocomplete="off">
+                                <input type="text" name="pers_city" class="inputbox pers_city" placeholder="Введите город" autocomplete="off">
                                 <span class="err-message">
                                     Пожалуйста, заполните это поле.
                                 </span>
@@ -331,14 +325,14 @@
                     </div>
                     <label>
                         <span class="caption db">Ваш комментарий к заказу</span>
-                        <textarea name="message" class="textarea"></textarea>
+                        <textarea name="pers_message" class = "pers_message textarea" class="textarea"></textarea>
                         <span class="err-message">
                             Пожалуйста, заполните это поле.
                         </span>
                     </label>
                     <div class="consent-box">
                         <label class="consent">
-                            <input type="checkbox">
+                            <input class = "policy_checed" type="checkbox">
                             <span></span>
                         </label>
                         <span class="consent-mess">
