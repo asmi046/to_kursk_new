@@ -57,6 +57,7 @@ Tags: TO,OSAGO
 	font-family: 'FiraSans-regular', sans-serif;
 	color: #1A1818;
 	font-weight: normal; }
+
   
   table {
 	border-spacing: 0;
@@ -360,22 +361,22 @@ Tags: TO,OSAGO
   .inputbox::-webkit-input-placeholder {
 	opacity: 1;
 	transition: opacity 0.3s ease;
-	color: #1A1818; }
+	color: gray; }
   
   .inputbox::-moz-placeholder {
 	opacity: 1;
 	transition: opacity 0.3s ease;
-	color: #1A1818; }
+	color: gray; }
   
   .inputbox:-moz-placeholder {
 	opacity: 1;
 	transition: opacity 0.3s ease;
-	color: #1A1818; }
+	color: gray; }
   
   .inputbox:-ms-input-placeholder {
 	opacity: 1;
 	transition: opacity 0.3s ease;
-	color: #1A1818; }
+	color: gray; }
   
   .inputbox:focus::-webkit-input-placeholder {
 	opacity: 0;
@@ -1083,7 +1084,9 @@ Tags: TO,OSAGO
 		font-size: 18px;
 		line-height: 24px;
 		box-sizing: border-box;
-		margin-bottom: 18px; }
+		margin-bottom: 10px; 
+		margin-top: 10px; 
+	}
 		.input-panel .input-panel__step .caption.mandatory {
 		  position: relative;
 		  padding-left: 14px; }
@@ -1101,7 +1104,7 @@ Tags: TO,OSAGO
 		border: 1px solid #00B0ED;
 		border-radius: 30px;
 		font-family: 'FiraSans-regular', sans-serif;
-		font-size: 20px; }
+		font-size: 18px; }
 		.input-panel .input-panel__step .inputbox:hover, .input-panel .input-panel__step .inputbox:active, .input-panel .input-panel__step .selectBox:hover, .input-panel .input-panel__step .selectBox:active, .input-panel .input-panel__step .textarea:hover, .input-panel .input-panel__step .textarea:active {
 		  border: 1px solid #0078B1; }
 		.input-panel .input-panel__step .inputbox:focus, .input-panel .input-panel__step .selectBox:focus, .input-panel .input-panel__step .textarea:focus {
@@ -1118,7 +1121,7 @@ Tags: TO,OSAGO
 		position: absolute;
 		botttom: -10px;
 		display: none;
-		font-size: 16px;
+		font-size: 14px;
 		line-height: 24px;
 		color: red; }
 	  .input-panel .input-panel__step .error .inputbox {

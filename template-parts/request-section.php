@@ -3,9 +3,9 @@
         <h2 class="big-title">
             Заполните заявку
         </h2>
-        <form class="request-form">
+        <form class="request-form request-form-to ">
             <div class="control-panel">
-                <a href="" class="control-panel__item current">
+                <a href="" id = "control-panel_1" class="control-panel__item current">
                     <span class="db step">
                         Шаг 1
                     </span>
@@ -13,7 +13,7 @@
                         Информация о владельце
                     </span>
                 </a>
-                <a href="" class="control-panel__item">
+                <a href="" id = "control-panel_2" class="control-panel__item">
                     <span class="db step">
                         Шаг 2
                     </span>
@@ -21,7 +21,7 @@
                         Информация о машине
                     </span>
                 </a>
-                <a href="" class="control-panel__item">
+                <a href="" id = "control-panel_3" class="control-panel__item">
                     <span class="db step">
                         Шаг 3
                     </span>
@@ -29,7 +29,7 @@
                         Информация о машине
                     </span>
                 </a>
-                <a href="" class="control-panel__item">
+                <a href="" id = "control-panel_4" class="control-panel__item">
                     <span class="db step">
                         Шаг 4
                     </span>
@@ -39,46 +39,46 @@
                 </a>
             </div>
             <div class="input-panel">
-                <div class="input-panel__step active">
+                <div id = "input-panel__step_1" class="input-panel__step active">
                     <div class="row">
                         <div class="input-panel__field-box">
                             <label>
                                 <span class="caption db mandatory">Фамилия</span>
-                                <input type="text" name="lastname" class="inputbox " placeholder="Фамилия" autocomplete="off">
+                                <input type="text" name="lastname" class="inputbox lastname" placeholder="Фамилия" autocomplete="off">
                                 <span class="err-message">
-                                    Пожалуйста, заполните это поле.
+                                    Поле заполнено некорректно.
                                 </span>
                             </label>
                         </div>
                         <div class="input-panel__field-box">
                             <label>
                                 <span class="caption db mandatory">Имя</span>
-                                <input type="text" name="name" class="inputbox " placeholder="Имя" autocomplete="off">
+                                <input type="text" name="name" class="inputbox name" placeholder="Имя" autocomplete="off">
                                 <span class="err-message">
-                                    Пожалуйста, заполните это поле.
+                                    Поле заполнено некорректно.
                                 </span>
                             </label>
                         </div>
                         <div class="input-panel__field-box">
-                            <label class="error">
-                                <span class="caption db">Отчество</span>
-                                <input type="text" name="patronymic" class="inputbox " placeholder="Отчество" autocomplete="off">
+                            <label>
+                                <span class="caption db">*Отчество</span>
+                                <input type="text" name="patronymic" class="inputbox patronymic" placeholder="Отчество" autocomplete="off">
                                 <span class="err-message">
-                                    Пожалуйста, заполните это поле.
+                                     Поле заполнено некорректно.
                                 </span>
                             </label>
                         </div>
                     </div>
                     <div class="btn-box">
-                        <a href="#" class="btn">Далее</a>
+                        <a href="#" class="btn" id = "toStep2">Далее</a>
                     </div>
                 </div>
-                <div class="input-panel__step ">
+                <div id = "input-panel__step_2" class="input-panel__step ">
                     <div class="row">
                         <div class="input-panel__field-box">
                             <label>
                                 <span class="caption db mandatory">Шины марка</span>
-                                <input type="text" name="lastname" class="inputbox " placeholder="Шины марка" autocomplete="off">
+                                <input type="text" name="shini" class="inputbox shini" placeholder="Шины марка" autocomplete="off">
                                 <span class="err-message">
                                     Пожалуйста, заполните это поле.
                                 </span>
@@ -86,8 +86,8 @@
                         </div>
                         <div class="input-panel__field-box">
                             <label>
-                                <span class="caption db">Пробег ТС в км</span>
-                                <input type="text" name="name" class="inputbox" placeholder="Пробег" autocomplete="off">
+                                <span class="caption db">*Пробег ТС в км</span>
+                                <input type="text" name="probeg" class="inputbox probeg" placeholder="Пробег" autocomplete="off">
                                 <span class="err-message">
                                     Пожалуйста, заполните это поле.
                                 </span>
@@ -106,7 +106,7 @@
                         <div class="input-panel__field-box">
                             <label>
                                 <span class="caption db mandatory">Тип топлива</span>
-                                <input type="text" name="lastname" class="inputbox " placeholder="Тип топлива" autocomplete="off">
+                                <input type="text" name="toplivo" class="inputbox toplivo" placeholder="Тип топлива" autocomplete="off">
                                 <span class="err-message">
                                     Пожалуйста, заполните это поле.
                                 </span>
@@ -115,7 +115,7 @@
                         <div class="input-panel__field-box">
                             <label>
                                 <span class="caption db mandatory">Гос. рег. номер</span>
-                                <input type="text" name="name" class="inputbox" placeholder="Гос. рег. номер" autocomplete="off">
+                                <input type="text" name="gosnomer" class="inputbox gosnomer" placeholder="Гос. рег. номер" autocomplete="off">
                                 <span class="err-message">
                                     Пожалуйста, заполните это поле.
                                 </span>
@@ -123,11 +123,11 @@
                         </div>
                     </div>
                     <div class="btn-box">
-                        <a href="#" class="btn">Назад</a>
-                        <a href="#" class="btn">Далее</a>
+                        <a href="#" class="btn" id = "bacStep1">Назад</a>
+                        <a href="#" class="btn" id = "toStep3">Далее</a>
                     </div>
                 </div>
-                <div class="input-panel__step ">
+                <div id = "input-panel__step_3" class="input-panel__step ">
                     <div class="free-row">
                         <div class="input-panel__field-box input-panel__field-box__doc">
                             <span class="caption db mandatory">Документ</span>
@@ -295,11 +295,11 @@
                         </div>
                     </div>
                     <div class="btn-box">
-                        <a href="#" class="btn">Назад</a>
-                        <a href="#" class="btn">Далее</a>
+                        <a href="#" class="btn" id = "bacStep2">Назад</a>
+                        <a href="#" class="btn" id = "toStep3">Далее</a>
                     </div>
                 </div>
-                <div class="input-panel__step ">
+                <div id = "input-panel__step_4" class="input-panel__step ">
                     <div class="row">
                         <div class="input-panel__field-box">
                             <label>
@@ -347,8 +347,8 @@
                     </div>
 
                     <div class="btn-box">
-                        <a href="#" class="btn">Назад</a>
-                        <button type="submit" class="btn">Отправить</button>
+                        <a href="#" class="btn"  id = "bacStep3" >Назад</a>
+                        <button type="submit" class="btn" id = "sendTOform" >Отправить</button>
                     </div>
                 </div>
             </div>
