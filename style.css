@@ -1307,6 +1307,14 @@ Tags: TO,OSAGO
     cursor: pointer;
 }
 
+.banner .text-container .thencs_list li{
+	font-size: 18px;
+	font-weight: normal;
+}
+
+.banner .text-container-thencs {
+	min-height: 380px;
+  }  
   
 @media screen and (max-width: 1440px) {
 	.banner .text-container .decor-element {
@@ -1398,7 +1406,7 @@ Tags: TO,OSAGO
 	.banner {
 		margin-bottom: 30px;
 	}
-	
+
 	#header .header__bottom .main-menu ul li {
 	  box-sizing: border-box;
 	  padding: 0 5px; }
@@ -1538,6 +1546,8 @@ Tags: TO,OSAGO
   
 	.banner .text-container {
 	  max-width: 530px; }
+
+
 	  .banner .text-container h1 {
 		font-size: 2.5em;
 		line-height: 1.35; }
@@ -1620,6 +1630,9 @@ Tags: TO,OSAGO
 		  margin-bottom: 30px; }
 		  .banner .text-container ul li {
 			text-align: left; }
+		  .banner .text-container .thencs_list li {
+			text-align: center; }
+			
 		.banner .text-container .btn {
 		  margin: 0 auto;
 		  padding: 0 20px;

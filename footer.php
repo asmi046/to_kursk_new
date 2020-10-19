@@ -7,20 +7,20 @@
             </a>
             <nav class="footer-menu footer__item">
                 <ul>
-                    <li><a href="#">Техосмотр</a></li>
-                    <li><a href="#">Проверка карты</a></li>
-                    <li><a href="#">ОСАГО</a></li>
-                    <li><a href="#">Сотрудничество</a></li>
-                    <li><a href="#">Отзывы</a></li>
+                    <li><a href="<?echo get_home_url()?>">Техосмотр</a></li>
+                    <li><a href="<?echo get_home_url()?>/#services-section">Проверка карты</a></li>
+                    <li><a href="<?echo get_the_permalink(347); ?>">ОСАГО</a></li>
+                    <li><a href="<?echo get_the_permalink(350); ?>">Сотрудничество</a></li>
+                    <li><a href="<?echo get_category_link(4);?>">Отзывы</a></li>
                 </ul>
             </nav>
             <div class="footer__item work-time">
                 Работаем <span>24</span>/<span>7</span>
             </div>
             <div class="footer__item contact-box">
-                <span class="db desktop phone">8 (800)-000-00-00</span>
-                <a href="tel:88000000000" class="db mobil phone">8 (800)-000-00-00</a>
-                <a href="mailto:mail@mail.ru" class="email">mail@mail.ru</a>
+                <span class="db desktop phone"><? echo $tel = carbon_get_theme_option("to_phone"); ?></span>
+                <a href="tel:<? echo preg_replace('/[^0-9]/', '', $tel); ?>" class="db mobil phone"><? echo $tel; ?></a>
+                <a href="mailto:<? echo $mail = carbon_get_theme_option("to_mail"); ?>" class="email"><? echo $mail; ?></a>
             </div>
         </div>
     </footer>

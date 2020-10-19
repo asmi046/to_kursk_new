@@ -39,6 +39,8 @@ jQuery(document).ready(function() {
 		jQuery("#input-panel__step_"+index).addClass("active");
 	}
 
+	//----------------------Верификация ТО
+	
 	jQuery("#toStep2").click(function(e){ 
 		e.preventDefault();
 		
