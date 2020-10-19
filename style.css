@@ -29,7 +29,7 @@ Tags: TO,OSAGO
 	-moz-font-smoothing: antialiased;
 	-o-font-smoothing: antialiased;
 	font-family: 'Lato-Regular', sans-serif;
-	font-size: 18px;
+	font-size: 16px;
 	line-height: 30px;
 	color: #1A1818;
 	position: relative; }
@@ -478,10 +478,9 @@ Tags: TO,OSAGO
   
   .main-logo {
 	display: block;
-	width: 229px;
-	height: 73px; }
+	width: 229px; }
 	.main-logo img {
-	  max-width: 229px; }
+	  max-width: 175px; }
   
   .great-shadow {
 	position: fixed;
@@ -520,7 +519,7 @@ Tags: TO,OSAGO
   
   .big-title {
 	font-family: 'Lato-Heavy', sans-serif;
-	font-size: 2.3em;
+	font-size: 2em;
 	line-height: 1.7;
 	line-height: 1.2;
 	text-align: center;
@@ -531,7 +530,7 @@ Tags: TO,OSAGO
 	font-family: 'Lato-Heavy', sans-serif; }
   
   #header {
-	font-size: 1.51em;
+	font-size: 1.30em;
 	line-height: 1.2;
 	margin-bottom: 89px; }
 	#header .header__top {
@@ -627,12 +626,14 @@ Tags: TO,OSAGO
 		  #header .header__top .inner .contact-box .email {
 			color: #1A1818;
 			transition: all 100ms;
-			font-family: 'Lato-Regular', sans-serif; }
+			font-family: 'Lato-Regular', sans-serif; 
+			font-size: 18px;
+		}
 			#header .header__top .inner .contact-box .email:hover {
 			  text-decoration: none;
 			  color: #0078B1; }
 	#header .header__bottom {
-	  padding-top: 43px; }
+	  padding-top: 20px; }
 	  #header .header__bottom .main-menu {
 		position: relative;
 		z-index: 110; }
@@ -642,7 +643,7 @@ Tags: TO,OSAGO
 		  justify-content: space-between; }
 		  #header .header__bottom .main-menu ul li a {
 			font-family: 'Lato-Semibold', sans-serif;
-			font-size: 0.9em;
+			font-size: 0.8em;
 			line-height: 40px;
 			text-align: center;
 			color: #fff;
@@ -669,7 +670,7 @@ Tags: TO,OSAGO
 	font-family: 'Lato-Heavy'; }
 	.banner .text-container {
 	  padding-top: 67px;
-	  padding-bottom: 231px;
+	  padding-bottom: 20px;
 	  position: relative;
 	  float: right;
 	  max-width: 603px;
@@ -679,6 +680,9 @@ Tags: TO,OSAGO
 		position: absolute;
 		left: -135%;
 		top: -8px; }
+		.decor-element img {
+			max-width: 595px;
+		}
 	  .banner .text-container h1 {
 		position: relative;
 		font-family: 'Lato-Black', sans-serif;
@@ -807,7 +811,7 @@ Tags: TO,OSAGO
 	.order__item .caption {
 	  display: block;
 	  font-family: 'Lato-Heavy', sans-serif;
-	  font-size: 28px;
+	  font-size: 26px;
 	  line-height: 34px;
 	  margin-bottom: 31px;
 	  color: #0078B1; }
@@ -868,7 +872,7 @@ Tags: TO,OSAGO
 	  background-image: url(img/conveniently.svg); }
 	.advantage .caption {
 	  font-family: 'Lato-Heavy', sans-serif;
-	  font-size: 28px;
+	  font-size: 26px;
 	  line-height: 34px;
 	  margin-bottom: 21px; }
 	.advantage p {
@@ -896,8 +900,8 @@ Tags: TO,OSAGO
 	  position: absolute;
 	  z-index: 40;
 	  right: -15.2%;
-	  bottom: -19%;
-	  width: 743px;
+	  bottom: -30%;
+	  width: 710px;
 	  height: 695px;
 	  background-image: url(img/inform-section_decore-elem.png);
 	  background-repeat: no-repeat;
@@ -923,7 +927,7 @@ Tags: TO,OSAGO
 	.service:last-child {
 	  padding-left: 4.4%; }
 	.service .service__icon {
-	  height: 128px;
+	  height: 90px;
 	  margin-bottom: 40px;
 	  background-repeat: no-repeat;
 	  background-size: contain;
@@ -933,7 +937,7 @@ Tags: TO,OSAGO
 	  .service .service__icon.wrench-icon {
 		background-image: url(img/wrench.svg); }
 	.service .service__caption {
-	  font-size: 2.4em;
+	  font-size: 1.9em;
 	  line-height: 1.2;
 	  text-transform: uppercase;
 	  margin-bottom: 18px; }
@@ -1011,7 +1015,7 @@ Tags: TO,OSAGO
 		display: block;
 		width: 25%;
 		box-sizing: border-box;
-		padding-top: 30px;
+		padding-top: 25px;
 		padding-bottom: 23px;
 		background-color: #00B0ED;
 		cursor: pointer;
@@ -1019,6 +1023,9 @@ Tags: TO,OSAGO
 		padding-right: 2%;
 		color: #fff;
 		transition: all 200ms ease; }
+		.request-form .control-panel .control-panel__item .step-desk{
+			font-size: 16px;
+		}
 		.request-form .control-panel .control-panel__item:hover {
 		  text-decoration: none;
 		  background-color: #0078B1; }
@@ -1027,14 +1034,17 @@ Tags: TO,OSAGO
 		  cursor: default; }
 		.request-form .control-panel .control-panel__item .step {
 		  font-family: 'Lato-Heavy', sans-serif;
-		  font-size: 1.51em;
+		  font-size: 1.30em;
 		  line-height: 1.2;
-		  margin-bottom: 20px; }
+		  margin-bottom: 5px; }
 	.request-form .request-form__footer {
-	  padding: 48px 67px 75px 67px;
+	  padding: 35px 67px 35px 67px;
 	  box-sizing: border-box;
 	  background-color: #00B0ED;
-	  color: #fff; }
+	  color: #fff;
+	  font-size: 16px; 
+	}
+
 	  .request-form .request-form__footer p {
 		max-width: 1115px;
 		margin: 0 auto; }
@@ -1298,7 +1308,35 @@ Tags: TO,OSAGO
 }
 
   
-  @media screen and (max-width: 1300px) {
+@media screen and (max-width: 1440px) {
+	.banner .text-container .decor-element {
+		left: -120%;
+	}
+	
+}
+
+
+  @media screen and (max-width: 1330px) {
+
+	.banner .text-container {
+		padding-top: 20px;
+	}
+
+	.decor-element img {
+		max-width: 490px;
+	}
+	
+	.banner .text-container .decor-element {
+		left: -105%;
+	}
+	
+	.inform-section .decore-elem {
+		width: 685px;
+	}
+
+	#header {
+		margin-bottom: 45px;
+	}
 	.input-panel {
 	  padding: 28px 20px 0 20px; }
   
@@ -1349,6 +1387,18 @@ Tags: TO,OSAGO
 	#footer .footer-menu ul {
 	  left: 0; } }
   @media screen and (max-width: 1100px) {
+	.banner .text-container {
+		max-width: 410px;
+	}
+
+	.banner .text-container .decor-element {
+		left: -130%;
+	}
+
+	.banner {
+		margin-bottom: 30px;
+	}
+	
 	#header .header__bottom .main-menu ul li {
 	  box-sizing: border-box;
 	  padding: 0 5px; }
