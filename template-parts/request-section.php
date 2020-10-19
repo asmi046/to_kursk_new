@@ -1,4 +1,4 @@
-<section class="request-section">
+<section id = "request-section" class="request-section">
     <div class="inner">
         <h2 class="big-title">
             Заполните заявку
