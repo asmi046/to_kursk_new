@@ -1139,6 +1139,26 @@ Tags: TO,OSAGO
 			color: red;
 		}
 
+		.input-panel__title {
+		margin: 45px 0px 20px 0px;
+		}
+		.input-panel__title:first-child {
+		margin: 0px 0px 20px 0px;
+		}
+
+		.input-panel__dt-tb2 {
+			width: 200px !important;
+		}
+		.input-panel__city {
+			width: 415px !important;
+			padding-right: 10px !important;
+		}
+
+
+	#input-panel__data-os {
+		width: 100%;
+	}
+
 	  .input-panel .input-panel__step .error .inputbox {
 		border: 1px solid red; }
 	  .input-panel .input-panel__step .error .err-message {

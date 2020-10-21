@@ -1,7 +1,7 @@
 <section class="order-section">
   <div class="inner2">
     <h3 class="big-title">
-      Порядок оформления услуги
+      Порядок предоставления услуги
     </h3>
     <div class="order-greed">
       <div class="order_wr">
