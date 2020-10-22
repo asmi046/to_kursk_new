@@ -39,7 +39,7 @@
                 </a>
             </div>
             <div class="input-panel">
-                <div id = "input-panel__step_1" class="input-panel__step active">
+                <div id = "input-panel__step_1" class="input-panel__step ">
                     <div class="row">
                         <div class="input-panel__field-box">
                             <label>
@@ -82,7 +82,7 @@
                         <a href="#" class="btn" id = "toStep2">Далее</a>
                     </div>
                 </div>
-                <div id = "input-panel__step_2" class="input-panel__step ">
+                <div id = "input-panel__step_2" class="input-panel__step active">
                     <div class="row">
                         <div class="input-panel__field-box input-panel__field-box-date input-panel__dt-tb2">
                             <label>
