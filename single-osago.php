@@ -14,7 +14,7 @@ get_header(); ?>
 
 		<?php get_template_part('template-parts/osago-banner');?>
 
-		<?php get_template_part('template-parts/request-section');?>
+		<?php get_template_part('template-parts/osago-form-applic');?>
 
 		<?php get_template_part('template-parts/advantages-section');?>
 
@@ -22,3 +22,4 @@ get_header(); ?>
     
 	</main>
 <?php get_footer(); ?>   
+ 

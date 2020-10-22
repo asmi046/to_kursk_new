@@ -1,3 +1,15 @@
+// Аккордеон
+! function(i) {
+      var o, n;
+      i(".accordion__head").on("click", function() {
+        o = i(this).parents(".accordion"), n = o.find(".accordion__body"),
+          o.hasClass("active_block") ? (o.removeClass("active_block"),
+            n.slideUp()) : (o.addClass("active_block"), n.stop(!0, !0).slideDown(),
+            o.siblings(".active_block").removeClass("active_block").children(
+              ".accordion__body").stop(!0, !0).slideUp())
+      })
+    }(jQuery);
+
 // Функция верификации e-mail
 function isEmail(email) {
 	var regex = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/;

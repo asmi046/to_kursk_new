@@ -8,7 +8,7 @@
         <li><span class="list-marker"></span><? echo carbon_get_theme_option("to_price"); ?> рублей</li>
         <li><span class="list-marker"></span>10 минут</li>
       </ul>
-      <a href="#request-section" class="btn">Начать оформление</a>
+      <a href="#request-section" class="btn">Оставить заявку</a>
       <div class="decor-element">
         <img src="<?php echo get_template_directory_uri();?>/img/car.png" class="spacer" alt="">
       </div>
