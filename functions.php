@@ -190,6 +190,43 @@ add_action( 'wp_enqueue_scripts', 'my_assets' );
 		}
 	}
 	
+
+	add_action( 'wp_ajax_send_mail_agent', 'send_mail_agent' );
+	add_action( 'wp_ajax_nopriv_send_mail_agent', 'send_mail_agent' );
+
+	function send_mail_agent() {
+		if ( empty( $_REQUEST['nonce'] ) ) {
+			wp_die( '0' );
+		}
+		
+		if ( check_ajax_referer( 'NEHERTUTLAZIT', 'nonce', false ) ) {
+			$headers = array(
+				'From: '.COMPANY_NAME.' '.MAIL_RESEND,
+				'content-type: text/html',
+			);
+
+			parse_str($_REQUEST["alldata"], $param);
+
+			$message_telegram = 'Заказ на сотрудничество Агента с сайта' . $_SERVER['SERVER_NAME'] 
+					."\nТелефон: ".$param["pers_tel"]
+					."\nИмя: ".$param["name"];
+
+			message_to_telegram($message_telegram);
+
+			add_filter('wp_mail_content_type', create_function('', 'return "text/html";'));
+		
+		if (wp_mail(carbon_get_theme_option('to_main_sendmail'), 'Заказ на сотрудничество Агента ', 
+					"<strong>Телефон:</strong> ".$param["pers_tel"]
+					."<br/><strong>Имя:</strong> ".$param["name"]
+					, $headers))
+				wp_die($message_telegram);
+			else wp_die( 'Error!', '', 403 );;
+
+
+		} else {
+			wp_die( 'НО-НО-НО!', '', 403 );
+		}
+	}
 	
 	/* Отправка почты
 		
