@@ -6,7 +6,7 @@ Description: ТО, ОСАГО Курск
 Version: 1.0.1
 Tags: TO,OSAGO
 */
-
+ 
 * {
 	box-sizing: content-box;
 	outline: none !important; }
@@ -1042,6 +1042,56 @@ Tags: TO,OSAGO
 }
 
 
+
+.reviews {
+	padding: 30px 0px 50px 0px;}
+.reviews__body {
+	/* max-width: 1300px; */
+  /* width: 100%; */
+  margin: 0px auto;
+  padding: 30px;
+  /*border: 5px solid #00B0ED;
+  border-radius: 10px;*/
+}
+.reviews__title {
+	margin-bottom: 100px;}
+.reviews__title h1 {
+	font-size: 58px;
+	font-weight: 800;
+	line-height: 55px;
+}
+.reviews__title h2 {
+	font-size: 25px;}
+.reviews__card {
+	display: flex;
+  justify-content: space-between;
+  max-width: 1000px;
+  background: #F2F2F2;
+  border: 3px solid #00B0ED;
+  padding: 25px;
+  border-radius: 8px;
+  margin-bottom: 65px;
+  /*box-shadow: 3px 3px 5px 2px rgba(221, 221, 221, 1);*/
+}
+.reviews__image {
+	width: 280px;
+  height: 250px;
+  /*border: 3px solid grey;*/
+}
+.reviews__title-cont {
+	margin-bottom: 20px;}
+.reviews__content {
+	max-width: 650px;
+  width: 100%;
+  margin-left: 15px;
+}
+.reviews__subtitle {}
+.reviews__subtitle p {
+	font-size: 20px; }
+
+
+
+
 .footer-cooper {
 	margin-top: 0px !important;
 }
@@ -1367,12 +1417,14 @@ Tags: TO,OSAGO
   width: 1100px;
   margin: 0px auto;
   border-radius: 23px;
-  padding: 45px 45px 15px 45px; }
+  padding: 25px 20px 25px 20px;
+  /*padding: 45px 45px 15px 45px;*/ }
 
 .popup__title {
   font-size: 35px;
-  margin-bottom: 45px;
   margin-top: 30px;
+  /*margin-bottom: 45px;*/
+  margin-bottom: 55px;
   text-align: center; 
 }
 
@@ -1381,6 +1433,7 @@ Tags: TO,OSAGO
   display: -ms-flexbox;
   display: flex; 
   padding: 0 2%;
+  justify-content: center;
 }
 
 .popup__column-list {
@@ -1409,7 +1462,7 @@ Tags: TO,OSAGO
 }
 
 .popup__column {
-  margin-right: 45px; }
+  margin-right: 85px; }
 .popup__column:last-child {
   margin: 0px 0px 0px 0px; }
 
@@ -1849,6 +1902,11 @@ Tags: TO,OSAGO
 	.accordion .accordion__head {
 	  font-size: 1.3em; } }
   @media screen and (max-width: 600px) {
+  .reviews__card {
+  	flex-wrap: wrap;}
+  .reviews__image {
+    margin-bottom: 35px;
+		}
 	.order_wr,
 	.advantage_wr {
 	  width: 100%;
@@ -2165,8 +2223,29 @@ Tags: TO,OSAGO
 	box-shadow: 0 0 0 6px rgba(153, 153, 153, .3);
 	border-radius: 6px;
 }
-.box-modal_close { position: absolute; right: 10px; top: 6px; font-size: 11px; line-height: 15px; color: #999; cursor: pointer; }
-.box-modal_close:hover { color: #666; }
+
+
+
+.box-modal_close { 
+	position: absolute; 
+	 }
+/*.box-modal_close:hover { color: #666; }*/
+
+.box-modal_close:before { 
+	content: "";
+	top: 10px;
+  right:-3px;
+	width: 25px;
+  height: 25px;
+  position: absolute; 
+  background-repeat: no-repeat; 
+  background-position:center;
+  background-size:contain;
+	cursor: pointer;
+  background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pg0KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDE5LjAuMCwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPg0KPHN2ZyB2ZXJzaW9uPSIxLjEiIGlkPSJDYXBhXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB2aWV3Qm94PSIwIDAgNDA5LjgwNiA0MDkuODA2IiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCA0MDkuODA2IDQwOS44MDY7IiB4bWw6c3BhY2U9InByZXNlcnZlIj4NCjxnPg0KCTxnPg0KCQk8cGF0aCBmaWxsPSIjMDBCMEVEIiBkPSJNMjI4LjkyOSwyMDUuMDFMNDA0LjU5NiwyOS4zNDNjNi43OC02LjU0OCw2Ljk2OC0xNy4zNTIsMC40Mi0yNC4xMzJjLTYuNTQ4LTYuNzgtMTcuMzUyLTYuOTY4LTI0LjEzMi0wLjQyDQoJCQljLTAuMTQyLDAuMTM3LTAuMjgyLDAuMjc3LTAuNDIsMC40MkwyMDQuNzk2LDE4MC44NzhMMjkuMTI5LDUuMjFjLTYuNzgtNi41NDgtMTcuNTg0LTYuMzYtMjQuMTMyLDAuNDINCgkJCWMtNi4zODgsNi42MTQtNi4zODgsMTcuMDk5LDAsMjMuNzEzTDE4MC42NjQsMjA1LjAxTDQuOTk3LDM4MC42NzdjLTYuNjYzLDYuNjY0LTYuNjYzLDE3LjQ2OCwwLDI0LjEzMg0KCQkJYzYuNjY0LDYuNjYyLDE3LjQ2OCw2LjY2MiwyNC4xMzIsMGwxNzUuNjY3LTE3NS42NjdsMTc1LjY2NywxNzUuNjY3YzYuNzgsNi41NDgsMTcuNTg0LDYuMzYsMjQuMTMyLTAuNDINCgkJCWM2LjM4Ny02LjYxNCw2LjM4Ny0xNy4wOTksMC0yMy43MTJMMjI4LjkyOSwyMDUuMDF6Ii8+DQoJPC9nPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPC9zdmc+DQo=');
+}
+
+
 
 .arcticmodal-overlay,
 .arcticmodal-container { position: fixed; left: 0; top: 0; right: 0; bottom: 0; z-index: 1000; }
