@@ -1090,6 +1090,40 @@ Tags: TO,OSAGO
 	font-size: 20px; }
 
 
+/*Всплывашка город*/
+.city_vsp_vin {
+  padding: 25px 15px 10px 15px;
+  box-shadow: 0px 0px 0px 2px #00B0ED;
+  /* box-shadow: 0 0 3px 2px rgba(0,0,0,.3); */
+  max-width: 350px;
+  height: 145px;
+  z-index: 999;
+  border: 3px solid #00B0ED;
+  border-radius: 10px;
+}
+.city_vsp_vin .qq {
+  text-align: center;
+  font-size: 25px;
+}
+.city_vsp_vin .qq_btn {
+  margin-top: 45px;
+  display: flex;
+  justify-content: space-evenly;
+}
+.city_vsp_vin .qq_btn .yes_btn {
+  background-color: #00B0ED;}
+
+.city_vsp_vin .qq_btn .yes_no_btn {
+	font-size: 20px;
+  width: 135px;}
+
+.btn.btn-pink {
+  color: #ffffff;
+  background: #0078B1;
+  transition: all 0.5s;
+  text-decoration: none;
+  border-radius: 5px;
+}
 
 
 .footer-cooper {
@@ -1736,7 +1770,7 @@ Tags: TO,OSAGO
   
 	.service .service__desk {
 	  margin-bottom: 0; }
-  
+   
 	.subfooter {
 	  display: none; }
   
@@ -2061,6 +2095,9 @@ Tags: TO,OSAGO
 	.banner .text-container::before {
 	  height: 350px; } }
   @media screen and (max-width: 400px) {
+  	.city_vsp_vin .qq_btn .yes_no_btn {
+    margin-right: 10px;
+		}
 	#footer .inner {
 	  flex-direction: column; }
 	  #footer .inner .footer__item {
