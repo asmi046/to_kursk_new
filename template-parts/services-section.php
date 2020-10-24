@@ -9,7 +9,7 @@
                 <p class="service__desk">
                     Вы можете оформить <br>ОСАГО Онлайн на нашем сайте
                 </p>
-                <a href="#" class="btn upp">ОСАГО онлайн</a>
+                <a href="<?echo get_the_permalink(347); ?>" class="btn upp">ОСАГО онлайн</a>
             </div>
             <div class="service">
                 <div class="service__icon wrench-icon"></div>
@@ -19,7 +19,7 @@
                 <p class="service__desk">
                     Вы можете убедиться в легитимности Вашей диагностической карты и проверить ее по базе ЕАИСТО ГИБДД
                 </p>
-                <a href="#" class="btn upp">ЕАИСТО</a>
+                <a target="_blank" href="https://eaisto.info/" class="btn upp">ЕАИСТО</a>
             </div>
         </div>
     </div>

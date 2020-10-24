@@ -342,7 +342,39 @@ jQuery(document).ready(function() {
 				
 				
 		jqXHR.done(function (responce) {  //Всегда при удачной отправке переход для страницу благодарности
-					document.location.href = 'https://osagoprofi.su/stranica-blagodarnosti';	
+					document.location.href = toThencsPageUrl;	
+		});
+				
+		jqXHR.fail(function (responce) {
+					jQuery('#messgeModal #lineMsg').html("Произошла ошибка. Попробуйте позднее.");
+					jQuery('#messgeModal').arcticmodal();
+		});
+	});
+
+	jQuery(".agent-form-cooper__btn").click(function(e){ 
+
+		e.preventDefault();
+
+		let pers_tel = jQuery("#agent-form-cooper .pers_tel");
+		if ((pers_tel.val() == "" )||(pers_tel.val().indexOf('_') >= 0 )) {
+			jQuery(pers_tel).css("border-color", "red");
+			return;
+		} 
+
+
+		var  jqXHR = jQuery.post(
+					allAjax.ajaxurl,
+					{
+						action: 'send_mail_agent',		
+						nonce: allAjax.nonce,
+						alldata: jQuery("#agent-form-cooper").serialize(),
+					}
+					
+		);
+				
+				
+		jqXHR.done(function (responce) {  //Всегда при удачной отправке переход для страницу благодарности
+					document.location.href = agentThencsPageUrl;	
 		});
 				
 		jqXHR.fail(function (responce) {
