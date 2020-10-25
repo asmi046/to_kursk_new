@@ -29,6 +29,7 @@ jQuery(document).ready(function() {
 	var mask_gn = {"mask_gn": "999"};
 	jQuery(".gosnomer").inputmask("A999AA99[9]");
 	jQuery(".doc_data_v").inputmask("99.99.9999");
+	jQuery(".doc_data_god").inputmask("9999");
 	// Типовой скрипт для отправки сообщений на почту
 
 
@@ -350,6 +351,420 @@ jQuery(document).ready(function() {
 					jQuery('#messgeModal').arcticmodal();
 		});
 	});
+
+	//----------------------Верификация ОСАГО
+
+	jQuery("#toStepOsago2").click(function(e){ 
+		e.preventDefault();
+
+		let flag = true;
+
+		let car_marka = jQuery("#request-form-osago .car_marka");
+		if (car_marka.val() == "") {
+			jQuery(car_marka).parent().addClass("error");
+			flag = false;
+		} else {
+			jQuery(car_marka).parent().removeClass("error");
+		}
+
+		let car_model = jQuery("#request-form-osago .car_model");
+		if (car_model.val() == "") {
+			jQuery(car_model).parent().addClass("error");
+			flag = false;
+		} else {
+			jQuery(car_model).parent().removeClass("error");
+		}
+		
+		let car_godvip = jQuery("#request-form-osago .car_godvip");
+		if (car_godvip.val() == "") {
+			jQuery(car_godvip).parent().addClass("error");
+			flag = false;
+		} else {
+			jQuery(car_godvip).parent().removeClass("error");
+		}
+
+		let car_mosh = jQuery("#request-form-osago .car_mosh");
+		if (car_mosh.val() == "") {
+			jQuery(car_mosh).parent().addClass("error");
+			flag = false;
+		} else {
+			jQuery(car_mosh).parent().removeClass("error");
+		}
+
+		if (flag) {
+			toStapIndex(2);
+		}
+
+	});
+
+	jQuery("#toStepOsago3").click(function(e){ 
+		e.preventDefault();
+
+		let flag = true;
+
+		let str_data_n = jQuery("#request-form-osago .str_data_n");
+		if ((str_data_n.val() == "")||(str_data_n.val().indexOf('_') >= 0 )) {
+			jQuery(str_data_n).parent().addClass("error");
+			flag = false;
+		} else {
+			jQuery(str_data_n).parent().removeClass("error");
+		}
+
+		let pers_city = jQuery("#request-form-osago .pers_city");
+		if (!per_rus.test(pers_city.val())) {
+			jQuery(pers_city).parent().addClass("error");
+			flag = false;
+		} else {
+			jQuery(pers_city).parent().removeClass("error");
+		}
+
+		let sob_lastname = jQuery("#request-form-osago .sob_lastname");
+		if (!per_rus.test(sob_lastname.val())) {
+			jQuery(sob_lastname).parent().addClass("error");
+			flag = false;
+		} else {
+			jQuery(sob_lastname).parent().removeClass("error");
+		}
+
+		let sob_name = jQuery("#request-form-osago .sob_name");
+		if (!per_rus.test(sob_name.val())) {
+			jQuery(sob_name).parent().addClass("error");
+			flag = false;
+		} else {
+			jQuery(sob_name).parent().removeClass("error");
+		}
+
+		let sob_data_r = jQuery("#request-form-osago .sob_data_r");
+		if ((sob_data_r.val() == "")||(sob_data_r.val().indexOf('_') >= 0 )) {
+			jQuery(sob_data_r).parent().addClass("error");
+			flag = false;
+		} else {
+			jQuery(sob_data_r).parent().removeClass("error");
+		}
+
+		let sob_number_vu = jQuery("#request-form-osago .sob_number_vu");
+		if (sob_number_vu.val() == "") {
+			jQuery(sob_number_vu).parent().addClass("error");
+			flag = false;
+		} else {
+			jQuery(sob_number_vu).parent().removeClass("error");
+		}
+
+		let sob_data_st = jQuery("#request-form-osago .sob_data_st");
+		if ((sob_data_st.val() == "")||(sob_data_st.val().indexOf('_') >= 0 )) {
+			jQuery(sob_data_st).parent().addClass("error");
+			flag = false;
+		} else {
+			jQuery(sob_data_st).parent().removeClass("error");
+		}
+
+		//--------------------------------------
+
+		let strah_lastname = jQuery("#request-form-osago .strah_lastname");
+		if (!per_rus.test(strah_lastname.val())) {
+			jQuery(strah_lastname).parent().addClass("error");
+			flag = false;
+		} else {
+			jQuery(strah_lastname).parent().removeClass("error");
+		}
+
+		let strah_name = jQuery("#request-form-osago .strah_name");
+		if (!per_rus.test(strah_name.val())) {
+			jQuery(strah_name).parent().addClass("error");
+			flag = false;
+		} else {
+			jQuery(strah_name).parent().removeClass("error");
+		}
+
+		let strah_data_r = jQuery("#request-form-osago .strah_data_r");
+		if ((strah_data_r.val() == "")||(strah_data_r.val().indexOf('_') >= 0 )) {
+			jQuery(strah_data_r).parent().addClass("error");
+			flag = false;
+		} else {
+			jQuery(strah_data_r).parent().removeClass("error");
+		}
+
+		let strah_number_vu = jQuery("#request-form-osago .strah_number_vu");
+		if (strah_number_vu.val() == "") {
+			jQuery(strah_number_vu).parent().addClass("error");
+			flag = false;
+		} else {
+			jQuery(strah_number_vu).parent().removeClass("error");
+		}
+
+		let strah_data_st = jQuery("#request-form-osago .strah_data_st");
+		if ((strah_data_st.val() == "")||(strah_data_st.val().indexOf('_') >= 0 )) {
+			jQuery(strah_data_st).parent().addClass("error");
+			flag = false;
+		} else {
+			jQuery(strah_data_st).parent().removeClass("error");
+		}
+
+
+		if (flag) {
+			toStapIndex(3);
+		}
+
+	});
+
+	jQuery("#toStepOsago4").click(function(e){ 
+		e.preventDefault();
+		let flag = true;
+
+		let lastname_v1 = jQuery("#request-form-osago .lastname_v1");
+		if (!per_rus.test(lastname_v1.val())) {
+			jQuery(lastname_v1).parent().addClass("error");
+			flag = false;
+		} else {
+			jQuery(lastname_v1).parent().removeClass("error");
+		}
+
+
+		let name_v1 = jQuery("#request-form-osago .name_v1");
+		if (!per_rus.test(name_v1.val())) {
+			jQuery(name_v1).parent().addClass("error");
+			flag = false;
+		} else {
+			jQuery(name_v1).parent().removeClass("error");
+		}
+
+		let data_r_v1 = jQuery("#request-form-osago .data_r_v1");
+		if ((data_r_v1.val() == "")||(data_r_v1.val().indexOf('_') >= 0 )) {
+			jQuery(data_r_v1).parent().addClass("error");
+			flag = false;
+		} else {
+			jQuery(data_r_v1).parent().removeClass("error");
+		}
+
+		let number_vu_v1 = jQuery("#request-form-osago .number_vu_v1");
+		if (number_vu_v1.val() == "") {
+			jQuery(number_vu_v1).parent().addClass("error");
+			flag = false;
+		} else {
+			jQuery(number_vu_v1).parent().removeClass("error");
+		}
+
+		let data_st_v1 = jQuery("#request-form-osago .data_st_v1");
+		if ((data_st_v1.val() == "")||(data_st_v1.val().indexOf('_') >= 0 )) {
+			jQuery(data_st_v1).parent().addClass("error");
+			flag = false;
+		} else {
+			jQuery(data_st_v1).parent().removeClass("error");
+		}
+
+		if (jQuery("#voditel_2").css("display") == "flex") {
+			let lastname_v2 = jQuery("#request-form-osago .lastname_v2");
+			if (!per_rus.test(lastname_v2.val())) {
+				jQuery(lastname_v2).parent().addClass("error");
+				flag = false;
+			} else {
+				jQuery(lastname_v2).parent().removeClass("error");
+			}
+
+
+			let name_v2 = jQuery("#request-form-osago .name_v2");
+			if (!per_rus.test(name_v2.val())) {
+				jQuery(name_v2).parent().addClass("error");
+				flag = false;
+			} else {
+				jQuery(name_v2).parent().removeClass("error");
+			}
+
+			let data_r_v2 = jQuery("#request-form-osago .data_r_v2");
+			if ((data_r_v2.val() == "")||(data_r_v2.val().indexOf('_') >= 0 )) {
+				jQuery(data_r_v2).parent().addClass("error");
+				flag = false;
+			} else {
+				jQuery(data_r_v2).parent().removeClass("error");
+			}
+
+			let number_vu_v2 = jQuery("#request-form-osago .number_vu_v2");
+			if (number_vu_v2.val() == "") {
+				jQuery(number_vu_v2).parent().addClass("error");
+				flag = false;
+			} else {
+				jQuery(number_vu_v2).parent().removeClass("error");
+			}
+
+			let data_st_v2 = jQuery("#request-form-osago .data_st_v2");
+			if ((data_st_v2.val() == "")||(data_st_v2.val().indexOf('_') >= 0 )) {
+				jQuery(data_st_v2).parent().addClass("error");
+				flag = false;
+			} else {
+				jQuery(data_st_v2).parent().removeClass("error");
+			}
+		}
+
+		if (jQuery("#voditel_3").css("display") == "flex") {
+			let lastname_v3 = jQuery("#request-form-osago .lastname_v3");
+			if (!per_rus.test(lastname_v3.val())) {
+				jQuery(lastname_v3).parent().addClass("error");
+				flag = false;
+			} else {
+				jQuery(lastname_v3).parent().removeClass("error");
+			}
+
+
+			let name_v3 = jQuery("#request-form-osago .name_v3");
+			if (!per_rus.test(name_v3.val())) {
+				jQuery(name_v3).parent().addClass("error");
+				flag = false;
+			} else {
+				jQuery(name_v3).parent().removeClass("error");
+			}
+
+			let data_r_v3 = jQuery("#request-form-osago .data_r_v3");
+			if ((data_r_v3.val() == "")||(data_r_v3.val().indexOf('_') >= 0 )) {
+				jQuery(data_r_v3).parent().addClass("error");
+				flag = false;
+			} else {
+				jQuery(data_r_v3).parent().removeClass("error");
+			}
+
+			let number_vu_v3 = jQuery("#request-form-osago .number_vu_v3");
+			if (number_vu_v3.val() == "") {
+				jQuery(number_vu_v3).parent().addClass("error");
+				flag = false;
+			} else {
+				jQuery(number_vu_v3).parent().removeClass("error");
+			}
+
+			let data_st_v3 = jQuery("#request-form-osago .data_st_v3");
+			if ((data_st_v3.val() == "")||(data_st_v3.val().indexOf('_') >= 0 )) {
+				jQuery(data_st_v3).parent().addClass("error");
+				flag = false;
+			} else {
+				jQuery(data_st_v3).parent().removeClass("error");
+			}
+		}
+
+		if (flag) {
+			toStapIndex(4);
+		}
+	});
+
+
+	jQuery("#sendOSAGOform").click(function(e){ 
+		e.preventDefault();
+		
+		let flag = true;
+
+		let pers_tel = jQuery("#request-form-osago .pers_tel");
+		if ((pers_tel.val() == "" )||(pers_tel.val().indexOf('_') >= 0 )) {
+			jQuery(pers_tel).parent().addClass("error");
+			flag = false;
+		} else {
+			jQuery(pers_tel).parent().removeClass("error");
+		}
+
+		let pers_mail = jQuery("#request-form-osago .pers_mail");
+		if ((pers_mail.val() == "")||(!isEmail(pers_mail.val()))) {
+			jQuery(pers_mail).parent().addClass("error");
+			flag = false;
+		} else {
+			jQuery(pers_mail).parent().removeClass("error");
+		}
+
+		let pers_city = jQuery("#request-form-osago .pers_city");
+		if (!per_rus.test(pers_city.val())) {
+			jQuery(pers_city).parent().addClass("error");
+			flag = false;
+		} else {
+			jQuery(pers_city).parent().removeClass("error");
+		}
+
+		let policy_checed = jQuery("#request-form-osago .policy_checed");
+		if (!jQuery(policy_checed).is(':checked')) {
+			jQuery(policy_checed).parent().siblings(".consent-mess").addClass("error");
+			flag = false;
+		} else {
+			jQuery(policy_checed).parent().siblings(".consent-mess").removeClass("error");
+		}
+
+		if (flag) {
+			console.log("COOL");
+
+			var  jqXHR = jQuery.post(
+				allAjax.ajaxurl,
+				{
+					action: 'sendOSAGO',		
+					nonce: allAjax.nonce,
+					alldata: jQuery("#request-form-osago").serialize(),
+				}
+				
+			);
+			
+			
+			jqXHR.done(function (responce) {  
+				console.log(responce);
+				document.location.href = osagoThencsPageUrl;	
+			});
+					
+			jqXHR.fail(function (responce) {
+				alert("Произошла ошибка попробуйте позднее");
+			});
+
+		}
+	});
+
+	jQuery(".addVoditel").click(function(e){ 
+		e.preventDefault();
+		let vod_index = jQuery(this).data("voditelindex");
+
+		if (jQuery("#voditel_"+vod_index).css("display") == "flex") {
+			jQuery("#voditel_"+vod_index).css("display","none");
+			jQuery(this).html("+ Добавить водителя");
+		} else {
+			jQuery("#voditel_"+vod_index).css("display","flex");
+			jQuery(this).html("- Удалить водителя");
+		}
+	});
+
+	jQuery(".copyVod").click(function(e){ 
+		e.preventDefault();
+		jQuery(".strah_lastname").val(jQuery(".sob_lastname").val());
+		jQuery(".strah_name").val(jQuery(".sob_name").val());
+		jQuery(".strah_patronymic").val(jQuery(".sob_patronymic").val());
+		jQuery(".strah_data_r").val(jQuery(".sob_data_r").val());
+		jQuery(".strah_number_vu").val(jQuery(".sob_number_vu").val());
+		jQuery(".strah_data_st").val(jQuery(".sob_data_st").val());
+		
+	});
+
+	jQuery(".copyVod_v1").click(function(e){ 
+		e.preventDefault();
+		jQuery(".lastname_v1").val(jQuery(".sob_lastname").val());
+		jQuery(".name_v1").val(jQuery(".sob_name").val());
+		jQuery(".patronymic_v1").val(jQuery(".sob_patronymic").val());
+		jQuery(".data_r_v1").val(jQuery(".sob_data_r").val());
+		jQuery(".number_vu_v1").val(jQuery(".sob_number_vu").val());
+		jQuery(".data_st_v1").val(jQuery(".sob_data_st").val());
+		
+	});
+
+	jQuery(".copyVod_v2").click(function(e){ 
+		e.preventDefault();
+		jQuery(".lastname_v2").val(jQuery(".sob_lastname").val());
+		jQuery(".name_v2").val(jQuery(".sob_name").val());
+		jQuery(".patronymic_v2").val(jQuery(".sob_patronymic").val());
+		jQuery(".data_r_v2").val(jQuery(".sob_data_r").val());
+		jQuery(".number_vu_v2").val(jQuery(".sob_number_vu").val());
+		jQuery(".data_st_v2").val(jQuery(".sob_data_st").val());
+	});
+
+	jQuery(".copyVod_v3").click(function(e){ 
+		e.preventDefault();
+		jQuery(".lastname_v3").val(jQuery(".sob_lastname").val());
+		jQuery(".name_v3").val(jQuery(".sob_name").val());
+		jQuery(".patronymic_v3").val(jQuery(".sob_patronymic").val());
+		jQuery(".data_r_v3").val(jQuery(".sob_data_r").val());
+		jQuery(".number_vu_v3").val(jQuery(".sob_number_vu").val());
+		jQuery(".data_st_v3").val(jQuery(".sob_data_st").val());
+	});
+
+
+
+	//-----------------------------------------------------
 
 	jQuery(".agent-form-cooper__btn").click(function(e){ 
 

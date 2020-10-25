@@ -609,8 +609,8 @@ Tags: TO,OSAGO
 			margin-right: 6px;
 			top: 2px;
 			display: inline-block;
-			width: 21px;
-			height: 27px;
+			width: 14px;
+			height: 19px;
 			background-image: url(img/marker.svg);
 			background-repeat: no-repeat;
 			background-position: center center;
@@ -682,6 +682,9 @@ Tags: TO,OSAGO
 		top: -8px; }
 		.decor-element img {
 			max-width: 595px;
+		}
+		.decor-element-thencs-osago img {
+			max-width: 535px;
 		}
 	  .banner .text-container h1 {
 		position: relative;
@@ -1240,6 +1243,11 @@ Tags: TO,OSAGO
 	  display: none; }
 	  .input-panel .input-panel__step.active {
 		display: block; }
+
+		#voditel_2, #voditel_3 {
+			display: none;
+		} 
+
 	  .input-panel .input-panel__step .row {
 		display: flex;
 		flex-wrap: wrap;
@@ -1252,7 +1260,7 @@ Tags: TO,OSAGO
 		  padding-right: 71px;
 		  margin-bottom: 20px; }
 	  .input-panel .input-panel__step .input-panel__field-box-date label {
-		width: 150px; }
+		width: 235px; }
 	  .input-panel .input-panel__step .free-row {
 		font-size: 0; }
 		.input-panel .input-panel__step .free-row .input-panel__field-box {
@@ -1319,14 +1327,27 @@ Tags: TO,OSAGO
 		}
 
 		.input-panel__title {
-		margin: 45px 0px 20px 0px;
+			margin: 45px 0px 20px 0px;
+			width: 100%;
 		}
+
+		.copyVod_v1,
+		.copyVod_v2,
+		.copyVod_v3,
+		.copyVod,
+		.addVoditel {
+			width: 100%;
+			color: gray;
+			margin: 10px 0;
+			cursor: pointer;
+		}
+	
 		.input-panel__title:first-child {
 		margin: 0px 0px 20px 0px;
 		}
 
 		.input-panel__dt-tb2 {
-			width: 200px !important;
+			width: 315px !important;
 		}
 		.input-panel__city {
 			width: 415px !important;

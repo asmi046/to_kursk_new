@@ -39,66 +39,66 @@
                 </a>
             </div>
             <div class="input-panel">
-                <div id = "input-panel__step_1" class="input-panel__step ">
+                <div id = "input-panel__step_1" class="input-panel__step active">
                     <div class="row">
                         <div class="input-panel__field-box">
                             <label>
                                 <span class="caption db mandatory">Марка</span>
-                                <input type="text" name="doc_marka" class="inputbox doc_marka" placeholder="Марка" autocomplete="off">
+                                <input type="text" name="car_marka" class="inputbox car_marka" placeholder="Марка" autocomplete="off">
                                 <span class="err-message">
-                                    Пожалуйста, заполните это поле.
+                                    Поле заполнено не корректно.
                                 </span>
                             </label>
                         </div>
                         <div class="input-panel__field-box">
                             <label>
                                 <span class="caption db mandatory">Модель</span>
-                                <input type="text" name="doc_model" class="inputbox doc_model" placeholder="Модель" autocomplete="off">
+                                <input type="text" name="car_model" class="inputbox car_model" placeholder="Модель" autocomplete="off">
                                 <span class="err-message">
-                                    Пожалуйста, заполните это поле.
+                                    Поле заполнено не корректно.
                                 </span>
                             </label>
                         </div>
                         <div class="input-panel__field-box">
                             <label>
                                 <span class="caption db mandatory">Год выпуска</span>
-                                <input type="number" name="doc_godvip" class="inputbox doc_godvip" placeholder="Год выпуска" autocomplete="off">
+                                <input type="number" name="car_godvip" class="inputbox car_godvip" min = "1890" max = "<? echo date("Y")?>" placeholder="Год выпуска" autocomplete="off">
                                 <span class="err-message">
-                                    Пожалуйста, заполните это поле.
+                                    Поле заполнено не корректно.
                                 </span>
                             </label>
                         </div>
                         <div class="input-panel__field-box">
                             <label>
                                 <span class="caption db mandatory">Мощность двигателя</span>
-                                <input type="text" name="doc_model" class="inputbox doc_model" placeholder="Мощность двигателя" autocomplete="off">
+                                <input type="text" name="car_mosh" class="inputbox car_mosh" placeholder="Мощность двигателя" autocomplete="off">
                                 <span class="err-message">
-                                    Пожалуйста, заполните это поле.
+                                    Поле заполнено не корректно.
                                 </span>
                             </label>
                         </div>
                     </div>
                     <div class="btn-box">
-                        <a href="#" class="btn" id = "toStep2">Далее</a>
+                        <a href="#" class="btn" id = "toStepOsago2">Далее</a>
                     </div>
                 </div>
-                <div id = "input-panel__step_2" class="input-panel__step active">
+                <div id = "input-panel__step_2" class="input-panel__step">
                     <div class="row">
                         <div class="input-panel__field-box input-panel__field-box-date input-panel__dt-tb2">
                             <label>
-                                <span class="caption db mandatory">Дата начала</span>
-                                <input type="text" id="field-date" name="doc_data_v" class="inputbox doc_data_v" placeholder="дд.мм.гггг" autocomplete="off">
+                                <span class="caption db mandatory">Дата начала страховки</span>
+                                <input type="text" id="field-date" name="str_data_n" class="inputbox str_data_n doc_data_v" placeholder="дд.мм.гггг" autocomplete="off">
                                 <span class="err-message">
-                                    Пожалуйста, заполните это поле.
+                                    Поле заполнено не корректно.
                                 </span>
                             </label>
                         </div>
                         <div class="input-panel__field-box input-panel__city">
                             <label>
-                                <span class="caption db mandatory">Город прописки собственника автомобиля</span>
+                                <span class="caption db mandatory">Город прописки собственника</span>
                                 <input type="text" name="pers_city" class="inputbox pers_city" placeholder="Город прописки собственника автомобиля" autocomplete="off">
                                 <span class="err-message">
-                                    Пожалуйста, заполните это поле.
+                                    Поле заполнено не корректно.
                                 </span>
                             </label>
                         </div>
@@ -110,7 +110,7 @@
                         <div class="input-panel__field-box">
                             <label>
                                 <span class="caption db mandatory">Фамилия</span>
-                                <input type="text" name="lastname" class="inputbox lastname" placeholder="Фамилия" autocomplete="off">
+                                <input type="text" name="sob_lastname" class="inputbox sob_lastname" placeholder="Фамилия" autocomplete="off">
                                 <span class="err-message">
                                     Поле заполнено некорректно.
                                 </span>
@@ -119,7 +119,7 @@
                         <div class="input-panel__field-box">
                             <label>
                                 <span class="caption db mandatory">Имя</span>
-                                <input type="text" name="name" class="inputbox name" placeholder="Имя" autocomplete="off">
+                                <input type="text" name="sob_name" class="inputbox sob_name" placeholder="Имя" autocomplete="off">
                                 <span class="err-message">
                                     Поле заполнено некорректно.
                                 </span>
@@ -127,8 +127,8 @@
                         </div>
                         <div class="input-panel__field-box">
                             <label>
-                                <span class="caption db">*Отчество</span>
-                                <input type="text" name="patronymic" class="inputbox patronymic" placeholder="Отчество" autocomplete="off">
+                                <span class="caption db">Отчество</span>
+                                <input type="text" name="sob_patronymic" class="inputbox sob_patronymic" placeholder="Отчество" autocomplete="off">
                                 <span class="err-message">
                                    Поле заполнено некорректно.
                                </span>
@@ -137,30 +137,31 @@
                        <div class="input-panel__field-box input-panel__field-box-date">
                         <label id="input-panel__data-os">
                             <span class="caption db mandatory">Дата рождения</span>
-                            <input type="text" id="field-date" name="doc_data_v" class="inputbox doc_data_v" placeholder="дд.мм.гггг" autocomplete="off">
+                            <input type="text" id="field-date" name="sob_data_r" class="inputbox sob_data_r doc_data_v" placeholder="дд.мм.гггг" autocomplete="off">
                             <span class="err-message">
-                                Пожалуйста, заполните это поле.
+                                Поле заполнено не корректно.
                             </span>
                         </label>
                     </div>
                     <div class="input-panel__field-box">
                         <label>
                             <span class="caption db mandatory">Серия и номер ВУ</span>
-                            <input type="text" name="doc_number" class="inputbox doc_number" placeholder="123456" autocomplete="off">
+                            <input type="text" name="sob_number_vu" class="inputbox sob_number_vu" placeholder="123456" autocomplete="off">
                             <span class="err-message">
-                                Пожалуйста, заполните это поле.
+                                Поле заполнено не корректно.
                             </span>
                         </label>
                     </div>
                     <div class="input-panel__field-box input-panel__field-box-date">
                         <label id="input-panel__data-os">
-                            <span class="caption db mandatory">Дата начала стажа</span>
-                            <input type="text" id="field-date" name="doc_data_v" class="inputbox doc_data_v" placeholder="дд.мм.гггг" autocomplete="off">
+                            <span class="caption db mandatory">Год начала стажа</span>
+                            <input type="text" id="field-date" name="sob_data_st" class="inputbox sob_data_st doc_data_god" placeholder="гггг" autocomplete="off">
                             <span class="err-message">
-                                Пожалуйста, заполните это поле.
+                                Поле заполнено не корректно.
                             </span>
                         </label>
                     </div>
+                    <span class = "copyVod">&darr; Скопировать данные собственника</span>
                 </div>
                 <div class="input-panel__title">
                     <h2>Страхователь</h2>
@@ -169,7 +170,7 @@
                     <div class="input-panel__field-box">
                         <label>
                             <span class="caption db mandatory">Фамилия</span>
-                            <input type="text" name="lastname" class="inputbox lastname" placeholder="Фамилия" autocomplete="off">
+                            <input type="text" name="strah_lastname" class="inputbox strah_lastname" placeholder="Фамилия" autocomplete="off">
                             <span class="err-message">
                                 Поле заполнено некорректно.
                             </span>
@@ -178,7 +179,7 @@
                     <div class="input-panel__field-box">
                         <label>
                             <span class="caption db mandatory">Имя</span>
-                            <input type="text" name="name" class="inputbox name" placeholder="Имя" autocomplete="off">
+                            <input type="text" name="strah_name" class="inputbox strah_name" placeholder="Имя" autocomplete="off">
                             <span class="err-message">
                                 Поле заполнено некорректно.
                             </span>
@@ -186,8 +187,8 @@
                     </div>
                     <div class="input-panel__field-box">
                         <label>
-                            <span class="caption db">*Отчество</span>
-                            <input type="text" name="patronymic" class="inputbox patronymic" placeholder="Отчество" autocomplete="off">
+                            <span class="caption db">Отчество</span>
+                            <input type="text" name="strah_patronymic" class="inputbox strah_patronymic" placeholder="Отчество" autocomplete="off">
                             <span class="err-message">
                                Поле заполнено некорректно.
                            </span>
@@ -196,45 +197,47 @@
                    <div class="input-panel__field-box input-panel__field-box-date">
                     <label id="input-panel__data-os">
                         <span class="caption db mandatory">Дата рождения</span>
-                        <input type="text" id="field-date" name="doc_data_v" class="inputbox doc_data_v" placeholder="дд.мм.гггг" autocomplete="off">
+                        <input type="text" id="field-date" name="strah_data_r" class="inputbox strah_data_r doc_data_v" placeholder="дд.мм.гггг" autocomplete="off">
                         <span class="err-message">
-                            Пожалуйста, заполните это поле.
+                            Поле заполнено не корректно.
                         </span>
                     </label>
                 </div>
                 <div class="input-panel__field-box">
                     <label>
                         <span class="caption db mandatory">Серия и номер ВУ</span>
-                        <input type="text" name="doc_number" class="inputbox doc_number" placeholder="123456" autocomplete="off">
+                        <input type="text" name="strah_number_vu" class="inputbox strah_number_vu" placeholder="123456" autocomplete="off">
                         <span class="err-message">
-                            Пожалуйста, заполните это поле.
+                            Поле заполнено не корректно.
                         </span>
                     </label>
                 </div>
                 <div class="input-panel__field-box input-panel__field-box-date">
                     <label id="input-panel__data-os">
                         <span class="caption db mandatory">Дата начала стажа</span>
-                        <input type="text" id="field-date" name="doc_data_v" class="inputbox doc_data_v" placeholder="дд.мм.гггг" autocomplete="off">
+                        <input type="text" id="field-date" name="strah_data_st" class="inputbox strah_data_st doc_data_god" placeholder="гггг" autocomplete="off">
                         <span class="err-message">
-                            Пожалуйста, заполните это поле.
+                            Поле заполнено не корректно.
                         </span>
                     </label>
                 </div>
             </div>
             <div class="btn-box">
                 <a href="#" class="btn" id = "bacStep1">Назад</a>
-                <a href="#" class="btn" id = "toStep3">Далее</a>
+                <a href="#" class="btn" id = "toStepOsago3">Далее</a>
             </div>
         </div>
         <div id = "input-panel__step_3" class="input-panel__step ">
-            <div class="input-panel__title">
-                <h2>Водитель 1</h2>
-            </div>
-            <div class="row">
+            
+            <div class="row"  id = "voditel_1">
+                <div class="input-panel__title">
+                    <h2>Водитель 1</h2>
+                </div>
+
                 <div class="input-panel__field-box">
                     <label>
                         <span class="caption db mandatory">Фамилия</span>
-                        <input type="text" name="lastname" class="inputbox lastname" placeholder="Фамилия" autocomplete="off">
+                        <input type="text" name="lastname_v1" class="inputbox lastname_v1" placeholder="Фамилия" autocomplete="off">
                         <span class="err-message">
                             Поле заполнено некорректно.
                         </span>
@@ -243,7 +246,7 @@
                 <div class="input-panel__field-box">
                     <label>
                         <span class="caption db mandatory">Имя</span>
-                        <input type="text" name="name" class="inputbox name" placeholder="Имя" autocomplete="off">
+                        <input type="text" name="name_v1" class="inputbox name_v1" placeholder="Имя" autocomplete="off">
                         <span class="err-message">
                             Поле заполнено некорректно.
                         </span>
@@ -252,48 +255,56 @@
                 <div class="input-panel__field-box">
                     <label>
                         <span class="caption db">*Отчество</span>
-                        <input type="text" name="patronymic" class="inputbox patronymic" placeholder="Отчество" autocomplete="off">
+                        <input type="text" name="patronymic_v1" class="inputbox patronymic_v1" placeholder="Отчество" autocomplete="off">
                         <span class="err-message">
                            Поле заполнено некорректно.
                        </span>
                    </label>
                </div>
+        
                <div class="input-panel__field-box input-panel__field-box-date">
-                <label id="input-panel__data-os">
-                    <span class="caption db mandatory">Дата рождения</span>
-                    <input type="text" id="field-date" name="doc_data_v" class="inputbox doc_data_v" placeholder="дд.мм.гггг" autocomplete="off">
-                    <span class="err-message">
-                        Пожалуйста, заполните это поле.
-                    </span>
-                </label>
-            </div>
-            <div class="input-panel__field-box">
-                <label>
-                    <span class="caption db mandatory">Серия и номер ВУ</span>
-                    <input type="text" name="doc_number" class="inputbox doc_number" placeholder="123456" autocomplete="off">
-                    <span class="err-message">
-                        Пожалуйста, заполните это поле.
-                    </span>
-                </label>
-            </div>
-            <div class="input-panel__field-box input-panel__field-box-date">
-                <label id="input-panel__data-os">
-                    <span class="caption db mandatory">Дата начала стажа</span>
-                    <input type="text" id="field-date" name="doc_data_v" class="inputbox doc_data_v" placeholder="дд.мм.гггг" autocomplete="off">
-                    <span class="err-message">
-                        Пожалуйста, заполните это поле.
-                    </span>
-                </label>
-            </div>
+                    <label id="input-panel__data-os">
+                        <span class="caption db mandatory">Дата рождения</span>
+                        <input type="text" id="field-date" name="data_r_v1" class="inputbox data_r_v1 doc_data_v" placeholder="дд.мм.гггг" autocomplete="off">
+                        <span class="err-message">
+                            Поле заполнено не корректно.
+                        </span>
+                    </label>
+                </div>
+
+                <div class="input-panel__field-box">
+                    <label>
+                        <span class="caption db mandatory">Серия и номер ВУ</span>
+                        <input type="text" name="number_vu_v1" class="inputbox number_vu_v1" placeholder="123456" autocomplete="off">
+                        <span class="err-message">
+                            Поле заполнено не корректно.
+                        </span>
+                    </label>
+                </div>
+
+                <div class="input-panel__field-box input-panel__field-box-date">
+                    <label id="input-panel__data-os">
+                        <span class="caption db mandatory">Дата начала стажа</span>
+                        <input type="text" id="field-date" name="data_st_v1" class="inputbox doc_data_god data_st_v1" placeholder="гггг" autocomplete="off">
+                        <span class="err-message">
+                            Поле заполнено не корректно.
+                        </span>
+                    </label>
+                </div>
+                <span class = "copyVod_v1">&uarr; Скопировать данные собственника</span>
+                <span class = "addVoditel" data-voditelindex = "2">+ Добавить водителя</span>  
         </div>
-        <div class="input-panel__title">
-            <h2>Водитель 2</h2>
-        </div>
-        <div class="row">
+        
+
+        <div class="row"  id = "voditel_2">
+            <div class="input-panel__title">
+                <h2>Водитель 2</h2>
+            </div>
+
             <div class="input-panel__field-box">
                 <label>
                     <span class="caption db mandatory">Фамилия</span>
-                    <input type="text" name="lastname" class="inputbox lastname" placeholder="Фамилия" autocomplete="off">
+                    <input type="text" name="lastname_v2" class="inputbox lastname_v2" placeholder="Фамилия" autocomplete="off">
                     <span class="err-message">
                         Поле заполнено некорректно.
                     </span>
@@ -302,7 +313,7 @@
             <div class="input-panel__field-box">
                 <label>
                     <span class="caption db mandatory">Имя</span>
-                    <input type="text" name="name" class="inputbox name" placeholder="Имя" autocomplete="off">
+                    <input type="text" name="name_v2" class="inputbox name_v2" placeholder="Имя" autocomplete="off">
                     <span class="err-message">
                         Поле заполнено некорректно.
                     </span>
@@ -311,7 +322,7 @@
             <div class="input-panel__field-box">
                 <label>
                     <span class="caption db">*Отчество</span>
-                    <input type="text" name="patronymic" class="inputbox patronymic" placeholder="Отчество" autocomplete="off">
+                    <input type="text" name="patronymic_v2" class="inputbox patronymic_v2" placeholder="Отчество" autocomplete="off">
                     <span class="err-message">
                        Поле заполнено некорректно.
                    </span>
@@ -320,39 +331,44 @@
            <div class="input-panel__field-box input-panel__field-box-date">
             <label id="input-panel__data-os">
                 <span class="caption db mandatory">Дата рождения</span>
-                <input type="text" id="field-date" name="doc_data_v" class="inputbox doc_data_v" placeholder="дд.мм.гггг" autocomplete="off">
+                <input type="text" id="field-date" name="data_r_v2" class="inputbox data_r_v2 doc_data_v" placeholder="дд.мм.гггг" autocomplete="off">
                 <span class="err-message">
-                    Пожалуйста, заполните это поле.
+                    Поле заполнено не корректно.
                 </span>
             </label>
         </div>
         <div class="input-panel__field-box">
             <label>
                 <span class="caption db mandatory">Серия и номер ВУ</span>
-                <input type="text" name="doc_number" class="inputbox doc_number" placeholder="123456" autocomplete="off">
+                <input type="text" name="number_vu_v2" class="inputbox number_vu_v2" placeholder="123456" autocomplete="off">
                 <span class="err-message">
-                    Пожалуйста, заполните это поле.
+                    Поле заполнено не корректно.
                 </span>
             </label>
         </div>
         <div class="input-panel__field-box input-panel__field-box-date">
             <label id="input-panel__data-os">
                 <span class="caption db mandatory">Дата начала стажа</span>
-                <input type="text" id="field-date" name="doc_data_v" class="inputbox doc_data_v" placeholder="дд.мм.гггг" autocomplete="off">
+                <input type="text" id="field-date" name="data_st_v2" class="inputbox data_st_v2" placeholder="дд.мм.гггг" autocomplete="off">
                 <span class="err-message">
-                    Пожалуйста, заполните это поле.
+                    Поле заполнено не корректно.
                 </span>
             </label>
         </div>
+        <span class = "copyVod_v2">&uarr; Скопировать данные собственника</span>
+        <span class = "addVoditel" data-voditelindex = "3">+ Добавить водителя</span>
     </div>
-    <div class="input-panel__title">
-        <h2>Водитель 3</h2>
-    </div>
-    <div class="row">
+
+
+    <div class="row" id = "voditel_3" >
+        <div class="input-panel__title">
+            <h2>Водитель 3</h2>
+        </div>
+
         <div class="input-panel__field-box">
             <label>
                 <span class="caption db mandatory">Фамилия</span>
-                <input type="text" name="lastname" class="inputbox lastname" placeholder="Фамилия" autocomplete="off">
+                <input type="text" name="lastname_v3" class="inputbox lastname_v3" placeholder="Фамилия" autocomplete="off">
                 <span class="err-message">
                     Поле заполнено некорректно.
                 </span>
@@ -361,7 +377,7 @@
         <div class="input-panel__field-box">
             <label>
                 <span class="caption db mandatory">Имя</span>
-                <input type="text" name="name" class="inputbox name" placeholder="Имя" autocomplete="off">
+                <input type="text" name="name_v3" class="inputbox name_v3" placeholder="Имя" autocomplete="off">
                 <span class="err-message">
                     Поле заполнено некорректно.
                 </span>
@@ -370,7 +386,7 @@
         <div class="input-panel__field-box">
             <label>
                 <span class="caption db">*Отчество</span>
-                <input type="text" name="patronymic" class="inputbox patronymic" placeholder="Отчество" autocomplete="off">
+                <input type="text" name="patronymic_v3" class="inputbox patronymic_v3" placeholder="Отчество" autocomplete="off">
                 <span class="err-message">
                    Поле заполнено некорректно.
                </span>
@@ -379,34 +395,37 @@
        <div class="input-panel__field-box input-panel__field-box-date">
         <label id="input-panel__data-os">
             <span class="caption db mandatory">Дата рождения</span>
-            <input type="text" id="field-date" name="doc_data_v" class="inputbox doc_data_v" placeholder="дд.мм.гггг" autocomplete="off">
+            <input type="text" id="field-date" name="data_r_v3" class="inputbox data_r_v3 doc_data_v" placeholder="дд.мм.гггг" autocomplete="off">
             <span class="err-message">
-                Пожалуйста, заполните это поле.
+                Поле заполнено не корректно.
             </span>
         </label>
     </div>
     <div class="input-panel__field-box">
         <label>
             <span class="caption db mandatory">Серия и номер ВУ</span>
-            <input type="text" name="doc_number" class="inputbox doc_number" placeholder="123456" autocomplete="off">
+            <input type="text" name="number_vu_v3" class="inputbox number_vu_v3" placeholder="123456" autocomplete="off">
             <span class="err-message">
-                Пожалуйста, заполните это поле.
+                Поле заполнено не корректно.
             </span>
         </label>
     </div>
     <div class="input-panel__field-box input-panel__field-box-date">
         <label id="input-panel__data-os">
             <span class="caption db mandatory">Дата начала стажа</span>
-            <input type="text" id="field-date" name="doc_data_v" class="inputbox doc_data_v" placeholder="дд.мм.гггг" autocomplete="off">
+            <input type="text" id="field-date" name="data_st_v3" class="inputbox data_st_v3" placeholder="дд.мм.гггг" autocomplete="off">
             <span class="err-message">
-                Пожалуйста, заполните это поле.
+                Поле заполнено не корректно.
             </span>
         </label>
     </div>
+
+    <span class = "copyVod_v3">&uarr; Скопировать данные собственника</span>
+
 </div>
 <div class="btn-box">
-    <a href="#" class="btn" id = "bacStep2">Назад</a>
-    <a href="#" class="btn" id = "toStep4">Далее</a>
+    <a href="#" class="btn" id = "bacStepOsago2">Назад</a>
+    <a href="#" class="btn" id = "toStepOsago4">Далее</a>
 </div>
 </div>
 <div id = "input-panel__step_4" class="input-panel__step ">
@@ -416,7 +435,7 @@
                 <span class="caption db mandatory">Телефон</span>
                 <input type="tel" id="pers_tel" name="pers_tel" class="inputbox pers_tel" placeholder="+7 (999) 999-99-99" autocomplete="off">
                 <span class="err-message">
-                    Пожалуйста, заполните это поле.
+                    Поле заполнено не корректно.
                 </span>
             </label>
         </div>
@@ -425,7 +444,7 @@
                 <span class="caption db mandatory">E-mail</span>
                 <input type="email" name="pers_mail" class="inputbox pers_mail" placeholder="введите e-mail" autocomplete="off">
                 <span class="err-message">
-                    Пожалуйста, заполните это поле.
+                    Поле заполнено не корректно.
                 </span>
             </label>
         </div>
@@ -434,7 +453,7 @@
                 <span class="caption db mandatory">Город</span>
                 <input type="text" name="pers_city" class="inputbox pers_city" placeholder="Введите город" autocomplete="off">
                 <span class="err-message">
-                    Пожалуйста, заполните это поле.
+                    Поле заполнено не корректно.
                 </span>
             </label>
         </div>
@@ -443,7 +462,7 @@
         <span class="caption db">Ваш комментарий к заказу</span>
         <textarea name="pers_message" class = "pers_message textarea" class="textarea"></textarea>
         <span class="err-message">
-            Пожалуйста, заполните это поле.
+            Поле заполнено не корректно.
         </span>
     </label>
     <div class="consent-box">
@@ -457,8 +476,8 @@
     </div>
 
     <div class="btn-box">
-        <a href="#" class="btn"  id = "bacStep3" >Назад</a>
-        <button type="submit" class="btn" id = "sendTOform" >Отправить</button>
+        <a href="#" class="btn"  id = "bacStepOsago3" >Назад</a>
+        <button type="submit" class="btn" id = "sendOSAGOform" >Отправить</button>
     </div>
 </div>
 </div>

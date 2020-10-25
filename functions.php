@@ -191,6 +191,133 @@ add_action( 'wp_enqueue_scripts', 'my_assets' );
 	}
 	
 
+	add_action( 'wp_ajax_sendOSAGO', 'sendOSAGO' );
+	add_action( 'wp_ajax_nopriv_sendOSAGO', 'sendOSAGO' );
+
+	function sendOSAGO() {
+		if ( empty( $_REQUEST['nonce'] ) ) {
+			wp_die( '0' );
+		}
+		
+		if ( check_ajax_referer( 'NEHERTUTLAZIT', 'nonce', false ) ) {
+			$headers = array(
+				'From: '.COMPANY_NAME.' '.MAIL_RESEND,
+				'content-type: text/html',
+			);
+
+			parse_str($_REQUEST["alldata"], $param);
+
+			$message_telegram = 'Заказ на оформление ОСАГО c сайта ' . $_SERVER['SERVER_NAME'] 
+					."\nМарка авто: ".$param["car_marka"]
+					."\nМодель авто: ".$param["car_model"]
+					."\nГод выпуска: ".$param["car_godvip"]
+					."\nМощность двигателя: ".$param["car_mosh"]
+					."\nМощность двигателя: ".$param["car_mosh"]
+					."\nДата начала страховки: ".$param["str_data_n"]
+					."\nГород прописки собственника: ".$param["pers_city"]
+					."\nФамилия собственника: ".$param["sob_lastname"]
+					."\nИмя собственника: ".$param["sob_name"]
+					."\nОтчество собственника: ".$param["sob_patronymic"]
+					."\nДата рождения собственника: ".$param["sob_data_r"]
+					."\nВодительское удостоверение собственника: ".$param["sob_number_vu"]
+					."\nГод начала собственника: ".$param["sob_data_st"]
+
+					."\nФамилия страхователя: ".$param["strah_lastname"]
+					."\nИмя страхователя: ".$param["strah_name"]
+					."\nОтчество страхователя: ".$param["strah_patronymic"]
+					."\nДата рождения страхователя: ".$param["strah_data_r"]
+					."\nВодительское удостоверение страхователя: ".$param["strah_number_vu"]
+					."\nГод начала страхователя: ".$param["strah_data_st"]
+
+					."\nФамилия водителя #1: ".$param["lastname_v1"]
+					."\nИмя водителя #1: ".$param["name_v1"]
+					."\nОтчество водителя #1: ".$param["patronymic_v1"]
+					."\nДата рождения водителя #1: ".$param["data_r_v1"]
+					."\nВодительское удостоверение водителя #1: ".$param["number_vu_v1"]
+					."\nГод начала водителя #1: ".$param["data_st_v1"]
+
+					."\nФамилия водителя #2: ".$param["lastname_v2"]
+					."\nИмя водителя #2: ".$param["name_v2"]
+					."\nОтчество водителя #2: ".$param["patronymic_v2"]
+					."\nДата рождения водителя #2: ".$param["data_r_v2"]
+					."\nВодительское удостоверение водителя #2: ".$param["number_vu_v2"]
+					."\nГод начала водителя #2: ".$param["data_st_v2"]
+
+					."\nФамилия водителя #3: ".$param["lastname_v3"]
+					."\nИмя водителя #3: ".$param["name_v3"]
+					."\nОтчество водителя #3: ".$param["patronymic_v3"]
+					."\nДата рождения водителя #3: ".$param["data_r_v3"]
+					."\nВодительское удостоверение водителя #3: ".$param["number_vu_v3"]
+					."\nГод начала водителя #3: ".$param["data_st_v3"]
+					
+					."\nТелефон: ".$param["pers_tel"]
+					."\E-mail: ".$param["pers_mail"]
+					."\nГород: ".$param["pers_city"]
+					."\nСообщение: ".$param["pers_message"];
+
+			message_to_telegram($message_telegram);
+			add_filter('wp_mail_content_type', create_function('', 'return "text/html";'));
+		
+		if (wp_mail(carbon_get_theme_option('to_main_sendmail'), 'Заказ на оформление ОСАГО', 
+					'<h2>Заказ на оформление ОСАГО c сайта ' . $_SERVER['SERVER_NAME']."</h2>" 
+					."<br/><strong>Марка авто:</strong> ".$param["car_marka"]
+					."<br/><strong>Модель авто:</strong> ".$param["car_model"]
+					."<br/><strong>Год выпуска:</strong> ".$param["car_godvip"]
+					."<br/><strong>Мощность двигателя:</strong> ".$param["car_mosh"]
+					."<br/><strong>Мощность двигателя:</strong> ".$param["car_mosh"]
+					."<br/><strong>Дата начала страховки:</strong> ".$param["str_data_n"]
+					."<br/><strong>Город прописки собственника:</strong> ".$param["pers_city"]
+					."<br/><strong>Фамилия собственника:</strong> ".$param["sob_lastname"]
+					."<br/><strong>Имя собственника:</strong> ".$param["sob_name"]
+					."<br/><strong>Отчество собственника:</strong> ".$param["sob_patronymic"]
+					."<br/><strong>Дата рождения собственника:</strong> ".$param["sob_data_r"]
+					."<br/><strong>Водительское удостоверение собственника:</strong> ".$param["sob_number_vu"]
+					."<br/><strong>Год начала собственника:</strong> ".$param["sob_data_st"]
+
+					."<br/><strong>Фамилия страхователя:</strong> ".$param["strah_lastname"]
+					."<br/><strong>Имя страхователя:</strong> ".$param["strah_name"]
+					."<br/><strong>Отчество страхователя:</strong> ".$param["strah_patronymic"]
+					."<br/><strong>Дата рождения страхователя:</strong> ".$param["strah_data_r"]
+					."<br/><strong>Водительское удостоверение страхователя:</strong> ".$param["strah_number_vu"]
+					."<br/><strong>Год начала страхователя:</strong> ".$param["strah_data_st"]
+
+					."<br/><strong>Фамилия водителя #1:</strong> ".$param["lastname_v1"]
+					."<br/><strong>Имя водителя #1:</strong> ".$param["name_v1"]
+					."<br/><strong>Отчество водителя #1:</strong> ".$param["patronymic_v1"]
+					."<br/><strong>Дата рождения водителя #1:</strong> ".$param["data_r_v1"]
+					."<br/><strong>Водительское удостоверение водителя #1:</strong> ".$param["number_vu_v1"]
+					."<br/><strong>Год начала водителя #1:</strong> ".$param["data_st_v1"]
+
+					."<br/><strong>Фамилия водителя #2:</strong> ".$param["lastname_v2"]
+					."<br/><strong>Имя водителя #2:</strong> ".$param["name_v2"]
+					."<br/><strong>Отчество водителя #2:</strong> ".$param["patronymic_v2"]
+					."<br/><strong>Дата рождения водителя #2:</strong> ".$param["data_r_v2"]
+					."<br/><strong>Водительское удостоверение водителя #2:</strong> ".$param["number_vu_v2"]
+					."<br/><strong>Год начала водителя #2:</strong> ".$param["data_st_v2"]
+
+					."<br/><strong>Фамилия водителя #3:</strong> ".$param["lastname_v3"]
+					."<br/><strong>Имя водителя #3:</strong> ".$param["name_v3"]
+					."<br/><strong>Отчество водителя #3:</strong> ".$param["patronymic_v3"]
+					."<br/><strong>Дата рождения водителя #3:</strong> ".$param["data_r_v3"]
+					."<br/><strong>Водительское удостоверение водителя #3:</strong> ".$param["number_vu_v3"]
+					."<br/><strong>Год начала водителя #3:</strong> ".$param["data_st_v3"]
+					
+					."<br/><strong>Телефон:</strong> ".$param["pers_tel"]
+					."\E-mail:</strong> ".$param["pers_mail"]
+					."<br/><strong>Город:</strong> ".$param["pers_city"]
+					."<br/><strong>Сообщение:</strong> ".$param["pers_message"]
+					
+					, $headers))
+				wp_die($message_telegram);
+			else wp_die( 'Error!', '', 403 );;
+
+
+		} else {
+			wp_die( 'НО-НО-НО!', '', 403 );
+		}
+	}
+
+
 	add_action( 'wp_ajax_send_mail_agent', 'send_mail_agent' );
 	add_action( 'wp_ajax_nopriv_send_mail_agent', 'send_mail_agent' );
 
