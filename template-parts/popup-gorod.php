@@ -4,4 +4,4 @@
 		<button class="yes_no_btn yes_btn btn btn-pink">Да, спасибо</button>
 		<button class="yes_no_btn no_btn btn btn-pink">Нет, другой</button>
 	</div>
-</div>
+</div> 

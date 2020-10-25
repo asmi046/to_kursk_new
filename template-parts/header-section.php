@@ -10,9 +10,12 @@
             <div class="header__top__item work-time">
                 Работаем <span>24</span>/<span>7</span>
             </div>
-            <a href="#" class="header__top__item location">
-                <span class="marker"></span>Курск
-            </a>
+            <div class="header__item-city">
+                <a href="#" class="header__top__item location">
+                    <span class="marker"></span>Курск
+                </a>
+                <?php get_template_part('template-parts/popup-gorod');?>
+            </div>
             <div class="header__top__item contact-box">
                 <span class="db desktop phone"><? echo $tel = carbon_get_theme_option("to_phone"); ?></span>
                 <a href="tel:<? echo preg_replace('/[^0-9]/', '', $tel); ?>" class="db mobil phone"><? echo $tel; ?></a>
@@ -21,6 +24,5 @@
         </div>
     </div>
     <?php get_template_part('template-parts/popups');?>
-    <?php get_template_part('template-parts/popup-gorod');?>
     <?php get_template_part('template-parts/menu-button');?>
 </header>

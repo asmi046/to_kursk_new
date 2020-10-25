@@ -665,6 +665,10 @@ Tags: TO,OSAGO
 			  background-image: none;
 			  background-color: #0078B1; }
   
+			.header__item-city {
+				position: relative;
+			}
+
   .banner {
 	margin-bottom: 102px;
 	font-family: 'Lato-Heavy'; }
@@ -1095,13 +1099,17 @@ Tags: TO,OSAGO
 
 /*Всплывашка город*/
 .city_vsp_vin {
-  padding: 25px 15px 10px 15px;
+  padding: 15px 15px 15px 15px;
+  background: #fff;
   box-shadow: 0px 0px 0px 2px #00B0ED;
   /* box-shadow: 0 0 3px 2px rgba(0,0,0,.3); */
-  max-width: 350px;
-  height: 145px;
+  max-width: 300px;
+  height: 100px;
+  position: absolute;
+  top: 50px;
+  left: -110px;
   z-index: 999;
-  border: 3px solid #00B0ED;
+  border: 1px solid #00B0ED;
   border-radius: 10px;
 }
 .city_vsp_vin .qq {
@@ -1109,16 +1117,18 @@ Tags: TO,OSAGO
   font-size: 25px;
 }
 .city_vsp_vin .qq_btn {
-  margin-top: 45px;
+  margin-top: 25px;
   display: flex;
-  justify-content: space-evenly;
+  /* justify-content: space-evenly; */
+  justify-content: space-between;
+  width: 290px;
 }
 .city_vsp_vin .qq_btn .yes_btn {
   background-color: #00B0ED;}
 
 .city_vsp_vin .qq_btn .yes_no_btn {
-	font-size: 20px;
-  width: 135px;}
+	width: 135px;
+  font-size: 0.8em;}
 
 .btn.btn-pink {
   color: #ffffff;
