@@ -544,7 +544,7 @@ Tags: TO,OSAGO
 		justify-content: space-between;
 		align-items: center; }
 		#header .header__top .inner .burger-btn {
-		  position: absolute;
+		  position: fixed;
 		  display: none;
 		  width: 40px;
 		  height: 30px;
@@ -717,10 +717,12 @@ Tags: TO,OSAGO
 			background-position: center center;
 			background-size: contain; }
 	  .banner .text-container .slogan {
-		font-size: 2.45em;
+		font-size: 1.7em;
 		margin-bottom: 70px;
 		line-height: 1.6;
-		letter-spacing: 1px; }
+		letter-spacing: 1px; 
+		display: block;
+	}
 	.banner.osago-banner {
 	  margin-bottom: 120px; }
 	  .banner.osago-banner .text-container {
@@ -1072,7 +1074,7 @@ Tags: TO,OSAGO
 .reviews__card {
 	display: flex;
   justify-content: space-between;
-  max-width: 1000px;
+  max-width: 100%;
   background: #F2F2F2;
   border: 3px solid #00B0ED;
   padding: 25px;
@@ -1082,15 +1084,13 @@ Tags: TO,OSAGO
 }
 .reviews__image {
 	width: 280px;
-  height: 250px;
-  /*border: 3px solid grey;*/
+
 }
 .reviews__title-cont {
 	margin-bottom: 20px;}
 .reviews__content {
-	max-width: 650px;
   width: 100%;
-  margin-left: 15px;
+  margin-left: 35px;
 }
 .reviews__subtitle {}
 .reviews__subtitle p {
@@ -1724,7 +1724,9 @@ Tags: TO,OSAGO
 		padding: 15px 0 15px 0; }
 		#header .header__top .inner {
 		  flex-wrap: wrap; }
-		  #header .header__top .inner .header__top__item {
+		  #header .header__top .inner .header__top__item,
+		  #header .header__top .inner .header__item-city
+		  {
 			position: relative;
 			margin-bottom: 20px; }
 		  #header .header__top .inner .burger-btn {
@@ -2045,6 +2047,9 @@ Tags: TO,OSAGO
 	  #footer .inner .footer-logo img {
 		max-width: 190px; } }
   @media screen and (max-width: 500px) {
+	.input-panel__cooper input {
+		width: 100%;
+	}
 	.big-title {
 	  font-size: 1.9em; }
   
@@ -2060,6 +2065,7 @@ Tags: TO,OSAGO
 	#header .header__top .inner .burger-btn {
 	  top: 13px; }
   
+	#header .header__top .inner .header__item-city,
 	#header .header__top .inner .header__top__item {
 	  width: 50%;
 	  text-align: center; }
@@ -2120,7 +2126,7 @@ Tags: TO,OSAGO
 	  font-size: 0.9em; }
   
 	.banner .text-container .slogan {
-	  font-size: 2em;
+	  font-size: 1.5em;
 	  letter-spacing: 0px; } }
   @media screen and (max-width: 450px) {
 	.banner .text-container::before {

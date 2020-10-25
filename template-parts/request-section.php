@@ -316,7 +316,7 @@
                         <div class="input-panel__field-box">
                             <label>
                                 <span class="caption db mandatory">Город</span>
-                                <input type="text" name="pers_city" class="inputbox pers_city" placeholder="Введите город" autocomplete="off">
+                                <input type="text" name="pers_city" class="inputbox pers_city city_prost_val" placeholder="Введите город" value = "<? echo $GLOBALS["city"];?>" autocomplete="off">
                                 <span class="err-message">
                                     Пожалуйста, заполните это поле.
                                 </span>

@@ -12,7 +12,8 @@
             </div>
             <div class="header__item-city">
                 <a href="#" class="header__top__item location">
-                    <span class="marker"></span>Курск
+                    <span class="marker"></span>
+                    <span class = "city_prost"><? echo $GLOBALS["city"];?></span>
                 </a>
                 <?php get_template_part('template-parts/popup-gorod');?>
             </div>

@@ -96,7 +96,7 @@
                         <div class="input-panel__field-box input-panel__city">
                             <label>
                                 <span class="caption db mandatory">Город прописки собственника</span>
-                                <input type="text" name="pers_city" class="inputbox pers_city" placeholder="Город прописки собственника автомобиля" autocomplete="off">
+                                <input type="text" name="pers_city" class="inputbox pers_city city_prost_val" placeholder="Город прописки собственника автомобиля" value = "<? echo $GLOBALS["city"];?>" autocomplete="off">
                                 <span class="err-message">
                                     Поле заполнено не корректно.
                                 </span>
@@ -451,7 +451,7 @@
         <div class="input-panel__field-box">
             <label>
                 <span class="caption db mandatory">Город</span>
-                <input type="text" name="pers_city" class="inputbox pers_city" placeholder="Введите город" autocomplete="off">
+                <input type="text" name="pers_city" class="inputbox pers_city city_prost_val" placeholder="Введите город" value = "<? echo $GLOBALS["city"];?>" autocomplete="off">
                 <span class="err-message">
                     Поле заполнено не корректно.
                 </span>

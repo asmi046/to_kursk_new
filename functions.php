@@ -1,8 +1,11 @@
 <?php
 
-if (!empty($_COOKIE["city"])) {
+if (empty($_COOKIE["city"])) {
 	$objGeo = json_decode(file_get_contents("http://api.sypexgeo.net/c2300/json/".$_SERVER['REMOTE_ADDR']));
 	setcookie("city", $objGeo->city->name_ru, time() + 518400);
+	$GLOBALS["city"] = $objGeo->city->name_ru;
+} else {
+	$GLOBALS["city"] = $_COOKIE["city"];
 }
 
 define("COMPANY_NAME", "ТО и ОСАГО");

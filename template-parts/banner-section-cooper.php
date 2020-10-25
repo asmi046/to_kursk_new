@@ -4,9 +4,9 @@
       <h1>
        Техосмотр страховым агентам
       </h1>
-      <ul>
-        <li>Выгодное сотрудничество по техническому осмотру</li>
-      </ul>
+      
+        <span class = "slogan">Выгодное сотрудничество по техническому осмотру</span>
+      
       <a href="#form-agent-cooper" class="btn">Оставить заявку</a>
       <div class="decor-element">
         <img src="<?php echo get_template_directory_uri();?>/img/cooper-bn.jpg" class="spacer" alt="">

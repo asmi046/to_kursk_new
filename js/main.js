@@ -22,6 +22,51 @@ var per_cur =/^([0-9]+)$/i;
 
 jQuery(document).ready(function() {
 	
+    //    MOBIL MENU
+	let $burgerBtn = jQuery('.burger-btn');
+	let $greatShadow = jQuery('.great-shadow');
+	let $mainMenu = jQuery('.main-menu');
+	let $mainMenuItems = jQuery('.main-menu ul');
+	let menuController = false;
+	
+	
+	
+	
+	
+		function openMenu() {
+			menuController = true;
+			$burgerBtn.addClass('active');
+			$greatShadow.fadeIn(300);
+			$mainMenu.addClass('active');
+			$mainMenuItems.addClass('active');
+			
+		}
+		
+		function closeMenu(){ 
+			$mainMenuItems.removeClass('active');
+			setTimeout(function(){
+				$mainMenu.removeClass('active');
+			},800);
+			setTimeout(function(){ 
+				$greatShadow.fadeOut(300);
+			}, 800);
+			setTimeout(function(){
+				$burgerBtn.removeClass('active'); 
+				menuController = false;
+			}, 800);
+		}
+	
+		$burgerBtn.on('click', function (e) {
+			e.preventDefault();
+			if (!menuController) {
+				openMenu(); 
+			}
+			else{
+				closeMenu(); 
+			} 
+		});
+
+
 	// Сразу маскируем все поля телефонов
 	var inputmask_phone = {"mask": "+7(999)999-99-99"};
 	jQuery("input[type=tel]").inputmask(inputmask_phone);
@@ -33,10 +78,28 @@ jQuery(document).ready(function() {
 	// Типовой скрипт для отправки сообщений на почту
 
 
-	jQuery(".location").click(function(e){ 
+	jQuery(".location, .no_btn_sv").click(function(e){ 
 		e.preventDefault();
-		console.log(111);
+		jQuery(".city_vsp_vin").hide();
 		jQuery("#popupTO").arcticmodal();
+	});
+
+	jQuery(".yes_btn_sv").click(function(e){ 
+		e.preventDefault();
+		jQuery(".city_vsp_vin").hide();
+		document.cookie = "cityChec=yes; max-age=518400";
+	});
+
+	jQuery("#popupTO a").click(function(e){ 
+		e.preventDefault();
+		document.cookie = "city="+jQuery(this).html()+"; max-age=518400";
+
+		jQuery(".city_prost").html(jQuery(this).html());
+
+		jQuery(".city_prost_val").val(jQuery(this).html());
+
+		jQuery("#popupTO").arcticmodal("close");
+		
 	});
 
 	jQuery(".location-2").click(function(e){ 
@@ -44,6 +107,11 @@ jQuery(document).ready(function() {
 		console.log(111);
 		jQuery("#popupOS").arcticmodal();
 	});
+
+	jQuery(".control-panel__item").click(function(e){ 
+		e.preventDefault();
+	});
+
 
 	function toStapIndex(index) {
 		jQuery(".control-panel__item").removeClass("current");
