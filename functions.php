@@ -1,5 +1,10 @@
 <?php
 
+if (!empty($_COOKIE["city"])) {
+	$objGeo = json_decode(file_get_contents("http://api.sypexgeo.net/c2300/json/".$_SERVER['REMOTE_ADDR']));
+	setcookie("city", $objGeo->city->name_ru, time() + 518400);
+}
+
 define("COMPANY_NAME", "ТО и ОСАГО");
 define("MAIL_RESEND", "<noreply@tehosago24.ru>");
 
