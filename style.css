@@ -804,7 +804,8 @@ Tags: TO,OSAGO
 	background-color: #F2F2F2;
 	border-radius: 20px;
 	box-sizing: border-box;
-	padding: 40px 26px;
+	/*padding: 40px 26px;*/
+	padding: 40px 23px;
 	max-width: 327px;
 	height: 100%;
 	margin: 0 10px;
