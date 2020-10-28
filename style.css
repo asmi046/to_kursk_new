@@ -1231,7 +1231,7 @@ Tags: TO,OSAGO
 }
 .order-payment__table td {
 	border: 1px solid gray;
-  padding: 15px 30px 10px 15px;
+  padding: 15px 10px 10px 15px;
   font-size: 18px;
 }
 .order-payment__btn {
@@ -2308,8 +2308,16 @@ Tags: TO,OSAGO
 	  padding-left: 0;
 	  padding-right: 0; } }
   @media screen and (max-width: 350px) {
+  	.text__body h1 {
+    font-size: 48px;
+}
 	.banner .text-container::before {
-	  height: 250px; } }
+	  height: 250px; }
+	.kom-p h1 {
+    font-size: 43px;}
+	.kom-p__form input {
+    width: 300px;
+} }
   select,
   .selectBox {
 	display: inline-block;
