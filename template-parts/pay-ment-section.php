@@ -1,23 +1,17 @@
 <section class="payment">
 	<div class="inner">
-		<div class="payment__body">
-			<div class="payment__title">
+		<div class="text__body">
 				<h1>Способы оплаты</h1>
-			</div>
 
-			<div class="payment__under-title">
 				<h2>НАЛИЧНЫЙ РАСЧЁТ</h2>
-			</div>
-			<div class="payment__subtitle">
+
 				<p>
 					Если товар доставляется курьером, то оплата осуществляется наличными курьеру в руки. 
 					При получении товара обязательно проверьте комплектацию товара, наличие гарантийного талона и чека.
 				</p>
-			</div>
-			<div class="payment__under-title">
+
 				<h2>БАНКОВСКОЙ КАРТОЙ</h2>
-			</div>
-			<div class="payment__subtitle payment__subtitle_mn">
+
 				<p>
 					Для выбора оплаты товара с помощью банковской карты на соответствующей странице необходимо нажать кнопку Оплата заказа банковской картой. 
 					Оплата происходит через ПАО СБЕРБАНК с использованием банковских карт следующих платёжных систем:
@@ -29,11 +23,11 @@
 					<li>Mastercard Worldwide;</li>
 					<li>JCB.</li>
 				</ul>
-			</div>
-			<div class="payment__img">
+
+			<picture>
 				<img src="<?php echo get_template_directory_uri();?>/img/payment.png" alt="">
-			</div>
-			<div class="payment__subtitle">
+			</picture>
+
 				<p>
 					Для оплаты (ввода реквизитов Вашей карты) Вы будете перенаправлены на платёжный шлюз ПАО СБЕРБАНК. 
 					Соединение с платёжным шлюзом и передача информации осуществляется в защищённом режиме с использованием протокола шифрования SSL. 
@@ -46,7 +40,6 @@
 					Проведение платежей по банковским картам осуществляется в строгом соответствии с требованиями платёжных систем МИР, Visa Int., 
 					MasterCard Europe Sprl, JCB.
 				</p>
-			</div>
 		</div>
 	</div>
 </section>

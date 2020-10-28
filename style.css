@@ -322,7 +322,7 @@ Tags: TO,OSAGO
 	height: auto;
 	margin: 0 auto;
 	position: relative;
-	min-height: 100%;
+	/*min-height: 100%;*/
 	overflow: hidden; }
   
   .footer {
@@ -1097,103 +1097,54 @@ Tags: TO,OSAGO
 .reviews__subtitle p {
 	font-size: 20px; }
 
-
-.requisites__title {margin-bottom: 100px;}
-.requisites__title h1 {
+.requisites {
+	padding-bottom: 80px;
+}
+.activity {
+	padding-bottom: 30px;
+}
+.text__body h1 {
 	font-size: 50px;
 	font-weight: 800;
 	line-height: 55px;
+	margin-bottom: 80px;
 }
-.requisites__under-title {
-	margin-bottom: 20px;
-}
-.requisites__under-title h2 {
+.text__body h2 {
 	font-size: 30px;
   font-weight: 800;
-}
-.requisites__subtitle p, a {
-	font-size: 23px;
-  font-weight: 400;
-  line-height: 45px;
-  color: #000;
-}
-.requisites__subtitle a:hover {
-	text-decoration: none;
-}
-
-
-.activity__title {margin-bottom: 100px;}
-.activity__title h1 {
-	font-size: 50px;
-	font-weight: 800;
-	line-height: 55px;
-}
-.activity__under-title {
+  line-height: 38px;
 	margin-bottom: 20px;
 }
-.activity__under-title h2 {
-	font-size: 28px;
-  font-weight: 800;
-  line-height: 35px;
-}
-.activity__subtitle {
-	margin-bottom: 55px;
-}
-.activity__subtitle p {
+.text__body p, a {
 	font-size: 23px;
-  font-weight: 400;
-  line-height: 35px;
+  line-height: 30px;
+  color: #000;
 }
-
+.text__body p {
+	margin-bottom: 30px;
+}
+.text__body a:hover {
+	text-decoration: none;
+}
+.text__body_activity p {
+	font-size: 18px;
+}
 
 .payment {
 	padding-bottom: 30px;
 }
-.payment__title {margin-bottom: 100px;}
-.payment__title h1 {
-	font-size: 50px;
-	font-weight: 800;
-	line-height: 55px;
-}
-.payment__under-title {
-	margin-bottom: 20px;
-}
-.payment__under-title h2 {
-	font-size: 28px;
-  font-weight: 800;
-  line-height: 35px;
-}
-.payment__subtitle {
-	margin-bottom: 35px;
-}
-.payment__subtitle_mn {
-	margin: 0;
-}
-.payment__subtitle p {
-	font-size: 23px;
-  font-weight: 400;
-  line-height: 35px;
-  margin-bottom: 25px;
-}
-.payment__list li {
-	font-size: 23px;
-  font-weight: 400;
-  margin: 0px 0px 10px 0px;
-}
 .payment__list li:before {
 	content: " ";
-  width: 30px;
-  height: 30px;
+  width: 20px;
+  height: 25px;
   float: left;
-  padding-left: 20px;
+  padding-top: 3px;
+  padding-left: px;
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
 	background-image: url('data:image/svg+xml;base64,PHN2ZyBpZD0iZ2Fsa2FfYmFuZXIiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHdpZHRoPSIzOS4zMzMiIGhlaWdodD0iMzYuNzgyIiB2aWV3Qm94PSIwIDAgMzkuMzMzIDM2Ljc4MiI+DQogIDxkZWZzPg0KICAgIDxsaW5lYXJHcmFkaWVudCBpZD0ibGluZWFyLWdyYWRpZW50IiB4MT0iLTAuMDAxIiB5MT0iMC41IiB4Mj0iMS4wMDEiIHkyPSIwLjUiIGdyYWRpZW50VW5pdHM9Im9iamVjdEJvdW5kaW5nQm94Ij4NCiAgICAgIDxzdG9wIG9mZnNldD0iMCIgc3RvcC1jb2xvcj0iIzAwYmNmMCIvPg0KICAgICAgPHN0b3Agb2Zmc2V0PSIwLjM0NyIgc3RvcC1jb2xvcj0iIzAwYjllZCIvPg0KICAgICAgPHN0b3Agb2Zmc2V0PSIwLjY0MiIgc3RvcC1jb2xvcj0iIzAwYjJlNiIvPg0KICAgICAgPHN0b3Agb2Zmc2V0PSIwLjkxNiIgc3RvcC1jb2xvcj0iIzAwYTZkYiIvPg0KICAgICAgPHN0b3Agb2Zmc2V0PSIxIiBzdG9wLWNvbG9yPSIjMDBhMWQ4Ii8+DQogICAgPC9saW5lYXJHcmFkaWVudD4NCiAgPC9kZWZzPg0KICA8ZWxsaXBzZSBpZD0i0K3Qu9C70LjQv9GBXzQiIGRhdGEtbmFtZT0i0K3Qu9C70LjQv9GBIDQiIGN4PSIxOC4zOTEiIGN5PSIxOC4zOTEiIHJ4PSIxOC4zOTEiIHJ5PSIxOC4zOTEiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDAgMCkiIGZpbGw9InVybCgjbGluZWFyLWdyYWRpZW50KSIvPg0KICA8cGF0aCBpZD0i0JrQvtC90YLRg9GAXzY4IiBkYXRhLW5hbWU9ItCa0L7QvdGC0YPRgCA2OCIgZD0iTTU3LjE0NSw2OS42NTlhNy44Miw3LjgyLDAsMCwwLDUuNDIyLTIuMjMyTDc1LjExMSw1NC44ODJhNy44MjksNy44MjksMCwwLDAsMC0xMC45NUE3LjU1NSw3LjU1NSwwLDAsMCw2OS42ODksNDEuN2E3LjgyLDcuODIsMCwwLDAtNS40MjIsMi4yMzJsLTcuMTIzLDcuMTIzLTEuMTY5LTEuMTY5YTcuNTU1LDcuNTU1LDAsMCwwLTUuNDIyLTIuMjMyLDcuNzA3LDcuNzA3LDAsMCwwLTUuNDIyLDEzLjE4Mmw2LjcsNi43YTcuNDcxLDcuNDcxLDAsMCwwLDUuMzE1LDIuMTI2Wk00OC43NDcsNTMuNWEyLjQ5LDIuNDksMCwwLDEsMS44MDctLjc0NCwyLjc3NCwyLjc3NCwwLDAsMSwxLjgwNy43NDRsMi45NzcsMi45NzdhMi42MzUsMi42MzUsMCwwLDAsMy42MTQsMGw4LjkzLTguOTNhMi40OSwyLjQ5LDAsMCwxLDEuODA3LS43NDQsMi43NzQsMi43NzQsMCwwLDEsMS44MDcuNzQ0LDIuNjM1LDIuNjM1LDAsMCwxLDAsMy42MTRMNTguOTUyLDYzLjgxMmEyLjQ5LDIuNDksMCwwLDEtMS44MDcuNzQ0LDIuNzc0LDIuNzc0LDAsMCwxLTEuODA3LS43NDRsLTYuNy02LjdhMi41MzcsMi41MzcsMCwwLDEsLjEwNi0zLjYxNFoiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC0zOC4wMSAtMzkuMzYxKSIgZmlsbD0iI2ZmZiIvPg0KPC9zdmc+DQo=');
-
 }
-
-
 
 
 /*Всплывашка город*/
@@ -1288,7 +1239,7 @@ Tags: TO,OSAGO
   
 	.footer__item-list a {
 		font-family: 'Lato-Semibold', sans-serif;
-    font-size: 0.9em;
+    font-size: 16px;
     line-height: 1.6;
     color: #fff;
 	}
@@ -1586,16 +1537,16 @@ Tags: TO,OSAGO
 
 
 #popupTO, #popupOS {
-  width: 1100px;
+  max-width: 1100px;
+  width: 100%;
   margin: 0px auto;
   border-radius: 23px;
-  padding: 25px 20px 25px 20px;
-  /*padding: 45px 45px 15px 45px;*/ }
+  padding: 25px 20px 25px 20px; }
 
 .popup__title {
   font-size: 35px;
   margin-top: 30px;
-  /*margin-bottom: 45px;*/
+  line-height: 35px;
   margin-bottom: 55px;
   text-align: center; 
 }
@@ -1637,7 +1588,10 @@ Tags: TO,OSAGO
   margin-right: 85px; }
 .popup__column:last-child {
   margin: 0px 0px 0px 0px; }
-
+ 
+.arcticmodal-container_i2 {
+	display: flex;
+}
 .arcticmodal-close {
 	position: absolute;
     right: 35px;
@@ -1701,9 +1655,6 @@ Tags: TO,OSAGO
 	.input-panel .input-panel__step .free-row .input-panel__field-box {
 	  margin-right: 20px; } }
   @media screen and (max-width: 1240px) {
-  	.popup__menu{
-		flex-wrap: wrap;
-   }
 	.inform-section .decore-elem {
 	  right: -20%; }
 	#header .header__bottom .main-menu ul li a {
@@ -1938,6 +1889,18 @@ Tags: TO,OSAGO
 	  position: absolute;
 	  left: -144%;
 	  top: -8px; } }
+	@media screen and (max-width: 812px) {
+.popup__menu {
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.popup__column {
+    margin-right: 55px;
+}
+.popup__column-list {
+  margin-bottom: 25px; 
+} }
+
   @media screen and (max-width: 800px) {
 	.banner {
 	  margin-bottom: 0; }
