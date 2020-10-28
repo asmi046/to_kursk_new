@@ -1116,7 +1116,7 @@ Tags: TO,OSAGO
 	margin-bottom: 20px;
 }
 .text__body p, a {
-	font-size: 23px;
+	font-size: 18px;
   line-height: 30px;
   color: #000;
 }
@@ -1126,8 +1126,9 @@ Tags: TO,OSAGO
 .text__body a:hover {
 	text-decoration: none;
 }
-.text__body_activity p {
-	font-size: 18px;
+.text__body img {
+	max-width: 633px;
+	width: 100%;
 }
 
 .payment {
@@ -1135,11 +1136,11 @@ Tags: TO,OSAGO
 }
 .payment__list li:before {
 	content: " ";
-  width: 20px;
-  height: 25px;
+  width: 30px;
+  height: 22px;
   float: left;
-  padding-top: 3px;
-  padding-left: px;
+  padding-top: 5px;
+  padding-left: 8px;
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
@@ -2379,8 +2380,8 @@ Tags: TO,OSAGO
 	content: "";
 	top: 10px;
   right:-3px;
-	width: 25px;
-  height: 25px;
+	width: 20px;
+  height: 20px;
   position: absolute; 
   background-repeat: no-repeat; 
   background-position:center;
