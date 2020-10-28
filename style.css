@@ -1190,6 +1190,55 @@ Tags: TO,OSAGO
 }
 
 
+.kom-p {padding: 0px 0px 80px 0px;}
+.kom-p h1 {
+	font-size: 50px;
+  font-weight: 800;
+  line-height: 55px;
+  margin-bottom: 80px;
+}
+.kom-p__form label {
+	display: block;
+  margin-bottom: 14px;
+  font-size: 20px;
+}
+.kom-p__form input {
+    width: 330px;
+    height: 50px;
+    box-sizing: border-box;
+    padding: 0px 20px;
+    border: 1px solid #00B0ED;
+    border-radius: 30px;
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+
+.order-payment {
+	padding: 30px 0px 130px 0px;
+}
+.order-payment h1 {
+	font-size: 50px;
+  font-weight: 800;
+  line-height: 55px;
+  margin-bottom: 60px;
+}
+.order-payment__table {
+	border: 3px solid gray;
+  border-radius: 8px;
+	border-collapse: separate;
+	margin-bottom: 15px;
+}
+.order-payment__table td {
+	border: 1px solid gray;
+  padding: 15px 30px 10px 15px;
+  font-size: 18px;
+}
+.order-payment__btn {
+	border-radius: 5px;
+}
+
+
 .footer-cooper {
 	margin-top: 0px !important;
 }
