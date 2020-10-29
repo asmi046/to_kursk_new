@@ -23,12 +23,13 @@ var per_cur =/^([0-9]+)$/i;
 jQuery(document).ready(function() {
 	
     //    MOBIL MENU
-	let $burgerBtn = jQuery('.burger-btn');
+	let $burgerBtn = jQuery('.burger-btn'); 
 	let $greatShadow = jQuery('.great-shadow');
 	let $mainMenu = jQuery('.main-menu');
 	let $mainMenuItems = jQuery('.main-menu ul');
 	let menuController = false;
-	
+	let $body = jQuery('body');
+	 
 	
 	
 	
@@ -39,7 +40,7 @@ jQuery(document).ready(function() {
 			$greatShadow.fadeIn(300);
 			$mainMenu.addClass('active');
 			$mainMenuItems.addClass('active');
-			
+			$body.addClass('lock');
 		}
 		
 		function closeMenu(){ 
@@ -54,6 +55,7 @@ jQuery(document).ready(function() {
 				$burgerBtn.removeClass('active'); 
 				menuController = false;
 			}, 800);
+			$body.toggleClass('lock');
 		}
 	
 		$burgerBtn.on('click', function (e) {
