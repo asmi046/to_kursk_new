@@ -1959,11 +1959,12 @@ Tags: TO,OSAGO
   flex-wrap: wrap;
 }
 .popup__column {
-    margin-right: 55px;
-}
+     margin-right: 0; 
+    width: 60%; }
 .popup__column-list {
-  margin-bottom: 25px; 
-} }
+    display: flex;
+    flex-direction: column;
+    align-items: center; } }
 
   @media screen and (max-width: 800px) {
 	.banner {
