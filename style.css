@@ -518,6 +518,10 @@ Tags: TO,OSAGO
 	  text-decoration: none;
 	  box-shadow: 0 0 0 0 rgba(0, 0, 0, 0); }
   
+.btn_uni {
+	padding:  0 30px;
+}
+
   .big-title {
 	font-family: 'Lato-Heavy', sans-serif;
 	font-size: 2em;
@@ -1196,8 +1200,24 @@ Tags: TO,OSAGO
 	font-size: 50px;
   font-weight: 800;
   line-height: 55px;
-  margin-bottom: 80px;
+  margin-bottom: 50px;
+  margin-top: 80px;
 }
+.kom-p__form {
+	display: flex;
+	flex-wrap: wrap;
+	width: 100%;
+}
+.kom-p__form  .input-panel__field-box{
+	margin-bottom: 30px;
+	margin-right: 30px;
+}
+
+.btn_wraper {
+	width: 100%;
+	margin-top: 30px;
+}
+
 .kom-p__form label {
 	display: block;
   margin-bottom: 14px;
@@ -1211,7 +1231,6 @@ Tags: TO,OSAGO
     border: 1px solid #00B0ED;
     border-radius: 30px;
     font-size: 20px;
-    margin-bottom: 30px;
 }
 
 
@@ -1225,13 +1244,12 @@ Tags: TO,OSAGO
   margin-bottom: 60px;
 }
 .order-payment__table {
-	border: 3px solid gray;
-  border-radius: 8px;
+	border: 1px solid lightgray;
 	border-collapse: separate;
 	margin-bottom: 15px;
 }
 .order-payment__table td {
-	border: 1px solid gray;
+	border: 1px solid lightgray;
   padding: 15px 10px 10px 15px;
   font-size: 18px;
 }
@@ -1433,6 +1451,7 @@ Tags: TO,OSAGO
 		margin-bottom: 20px; }
 	  .input-panel .input-panel__step .selectBox {
 		padding-right: 37px; }
+		.err-message,
 	  .input-panel .input-panel__step .err-message {
 		position: absolute;
 		botttom: -10px;
@@ -1478,8 +1497,10 @@ Tags: TO,OSAGO
 		width: 100%;
 	}
 
+	.error .inputbox,	
 	  .input-panel .input-panel__step .error .inputbox {
 		border: 1px solid red; }
+		.error .err-message,
 	  .input-panel .input-panel__step .error .err-message {
 		display: block; }
 	  .input-panel .input-panel__step .btn-box {
@@ -2182,6 +2203,13 @@ Tags: TO,OSAGO
 	  #footer .inner .footer-logo img {
 		max-width: 190px; } }
   @media screen and (max-width: 500px) {
+
+	.order-payment h1,
+	.kom-p h1 {
+
+	  margin-top: 110px;
+	}
+
 	.input-panel__cooper input {
 		width: 100%;
 	}
@@ -2255,9 +2283,17 @@ Tags: TO,OSAGO
   
 	.request-form .control-panel {
 	  display: flex;
-	  flex-wrap: wrap;
-	  flex-direction: column; }
+	  
+	  }
+
+	  .step-desk {
+		  display: none;
+	  }
   
+	  .request-form .control-panel .control-panel__item .step {
+		font-size: 18px;
+	  }
+
 	.request-form .control-panel .control-panel__item {
 	  width: 100%;
 	  padding-top: 10px;

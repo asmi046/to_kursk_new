@@ -461,6 +461,15 @@ jQuery(document).ready(function() {
 			jQuery(car_mosh).parent().removeClass("error");
 		}
 
+		let gosnomer = jQuery("#request-form-osago .gosnomer");
+
+		if ((gosnomer.val() == "" )||(gosnomer.val().indexOf('_') >= 0 )) {
+			jQuery(gosnomer).parent().addClass("error");
+			flag = false;
+		} else {
+			jQuery(gosnomer).parent().removeClass("error");
+		}
+
 		if (flag) {
 			toStapIndex(2);
 		}
@@ -867,5 +876,106 @@ jQuery(document).ready(function() {
 					jQuery('#messgeModal').arcticmodal();
 		});
 	});
+
+
+	//--------------------
+
+	jQuery(".offer-submit").click(function(e){ 
+		e.preventDefault();
+
+		let flag = true;
+
+		let pers_mail = jQuery("#kp_form .email");
+		if ((pers_mail.val() == "")||(!isEmail(pers_mail.val()))) {
+			jQuery(pers_mail).parent().addClass("error");
+			flag = false;
+		} else {
+			jQuery(pers_mail).parent().removeClass("error");
+		}
+
+		let category = jQuery("#kp_form #category");
+		if (category.val() == "") {
+			jQuery(category).parent().addClass("error");
+			flag = false;
+		} else {
+			jQuery(category).parent().removeClass("error");
+		}
+
+		let marka = jQuery("#kp_form #marka");
+		if (marka.val() == "") {
+			jQuery(marka).parent().addClass("error");
+			flag = false;
+		} else {
+			jQuery(marka).parent().removeClass("error");
+		}
+
+		let model = jQuery("#kp_form #model");
+		if (model.val() == "") {
+			jQuery(model).parent().addClass("error");
+			flag = false;
+		} else {
+			jQuery(model).parent().removeClass("error");
+		}
+
+		let number = jQuery("#kp_form #number");
+		if (number.val() == "") {
+			jQuery(number).parent().addClass("error");
+			flag = false;
+		} else {
+			jQuery(number).parent().removeClass("error");
+		}
+
+		let power = jQuery("#kp_form #power");
+		if (power.val() == "") {
+			jQuery(power).parent().addClass("error");
+			flag = false;
+		} else {
+			jQuery(power).parent().removeClass("error");
+		}
+
+		let price = jQuery("#kp_form #price");
+		if (price.val() == "") {
+			jQuery(price).parent().addClass("error");
+			flag = false;
+		} else {
+			jQuery(price).parent().removeClass("error");
+		}
+
+		if (!flag) {
+			return;
+		}
+
+        var  jqXHR = jQuery.post(
+          allAjax.ajaxurl,
+          {
+            action: 'offer_client_send',    
+            nonce: allAjax.nonce,
+			email: pers_mail.val(),
+			category: category.val(),
+			marka:marka.val(),
+			model:model.val(),
+			number:number.val(),
+			power:power.val(),
+			price:price.val(),
+          }
+          
+        );
+        
+        
+        jqXHR.done(function (responce) {
+          
+          alert("Коммерческое предложение отправлено.");
+          
+          
+        });
+        
+        jqXHR.fail(function (responce) {
+		  
+			alert("Произошла ошибка! Попробуйте позднее.");
+          
+        });
+      
+    });
+
 });
 

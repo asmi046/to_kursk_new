@@ -12,7 +12,10 @@ define("COMPANY_NAME", "ТО и ОСАГО");
 define("MAIL_RESEND", "<noreply@tehosago24.ru>");
 
 
-define('TELEGRAM_TOKEN', '1277609895:AAG_TP96PFSd3Lp04dleM6I5RT8VjXDySFQ');
+// define('TELEGRAM_TOKEN', '1277609895:AAG_TP96PFSd3Lp04dleM6I5RT8VjXDySFQ');
+// define('TELEGRAM_CHATID', '86447923');
+
+define('TELEGRAM_TOKEN', '1339936644:AAFoJC0GEAFdJSxmPKTA8Ei6YMgjDg8KgD0');
 define('TELEGRAM_CHATID', '86447923');
 function message_to_telegram($text)
 {
@@ -215,12 +218,25 @@ add_action( 'wp_enqueue_scripts', 'my_assets' );
 
 			parse_str($_REQUEST["alldata"], $param);
 
+			
+			$lnk = get_the_permalink(373)."?".http_build_query(
+				array(
+				"email" => $param["pers_mail"],
+				"marka" => $param["car_marka"],
+				"model" => $param["car_model"],
+				"gosnomer" => $param["gosnomer"],
+				"categoria" => $param["doc_cat_ts"],
+				"power" => $param["car_mosh"]
+				));
+
 			$message_telegram = 'Заказ на оформление ОСАГО c сайта ' . $_SERVER['SERVER_NAME'] 
 					."\nМарка авто: ".$param["car_marka"]
 					."\nМодель авто: ".$param["car_model"]
 					."\nГод выпуска: ".$param["car_godvip"]
 					."\nМощность двигателя: ".$param["car_mosh"]
 					."\nМощность двигателя: ".$param["car_mosh"]
+					."\nГосномер: ".$param["gosnomer"]
+					."\nКатегория ТС: ".$param["doc_cat_ts"]
 					."\nДата начала страховки: ".$param["str_data_n"]
 					."\nГород прописки собственника: ".$param["pers_city"]
 					."\nФамилия собственника: ".$param["sob_lastname"]
@@ -262,7 +278,7 @@ add_action( 'wp_enqueue_scripts', 'my_assets' );
 					."\E-mail: ".$param["pers_mail"]
 					."\nГород: ".$param["pers_city"]
 					."\nСообщение: ".$param["pers_message"]
-					."\n <a href = '".get_the_permalink(373)."/?email=" . $param["pers_mail"] . "&marka=" . $param['car_marka']. "&model=" . $param['car_model']. "&power=" . $param['car_mosh']."'>Сформировать КП </a> ";
+					."\n".$lnk;
 
 			message_to_telegram($message_telegram);
 			add_filter('wp_mail_content_type', create_function('', 'return "text/html";'));
@@ -273,7 +289,8 @@ add_action( 'wp_enqueue_scripts', 'my_assets' );
 					."<br/><strong>Модель авто:</strong> ".$param["car_model"]
 					."<br/><strong>Год выпуска:</strong> ".$param["car_godvip"]
 					."<br/><strong>Мощность двигателя:</strong> ".$param["car_mosh"]
-					."<br/><strong>Мощность двигателя:</strong> ".$param["car_mosh"]
+					."<br/><strong>Госномер:</strong> ".$param["gosnomer"]
+					."<br/><strong>Категория ТС:</strong> ".$param["doc_cat_ts"]
 					."<br/><strong>Дата начала страховки:</strong> ".$param["str_data_n"]
 					."<br/><strong>Город прописки собственника:</strong> ".$param["pers_city"]
 					."<br/><strong>Фамилия собственника:</strong> ".$param["sob_lastname"]
@@ -315,7 +332,8 @@ add_action( 'wp_enqueue_scripts', 'my_assets' );
 					."\E-mail:</strong> ".$param["pers_mail"]
 					."<br/><strong>Город:</strong> ".$param["pers_city"]
 					."<br/><strong>Сообщение:</strong> ".$param["pers_message"]
-					."(Сформировать КП)[".get_the_permalink(373)."?email=" . $param["pers_mail"] . "&marka=" . $param['car_marka']. "&model=" . $param['car_model']. "&power=" . $param['car_mosh']."]"
+					."<a href = '".$lnk."'>Сформировать КП </a> "
+				
 					, $headers))
 				wp_die($message_telegram);
 			else wp_die( 'Error!', '', 403 );;
@@ -364,6 +382,43 @@ add_action( 'wp_enqueue_scripts', 'my_assets' );
 		}
 	}
 	
+	add_action( 'wp_ajax_offer_client_send', 'offer_client_send' );
+	add_action( 'wp_ajax_nopriv_offer_client_send', 'offer_client_send' );
+
+	function offer_client_send() {
+		if ( empty( $_REQUEST['nonce'] ) ) {
+		wp_die( '0' );
+		}
+		
+		if ( check_ajax_referer( 'NEHERTUTLAZIT', 'nonce', false ) ) {
+		
+		$headers = array(
+			'From: Сайт ТО-Профи <noreply@osagoprofi.su',
+			'content-type: text/html',
+		);
+		
+		$lnk = get_the_permalink(376)."?".http_build_query(
+			array(
+			"email" => $_REQUEST["email"],
+			"marka" => $_REQUEST["marka"],
+			"model" => $_REQUEST["model"],
+			"gosnomer" => $_REQUEST["number"],
+			"categoria" => $_REQUEST["category"],
+			"power" => $_REQUEST["power"],
+			"price" => $_REQUEST["price"]
+		));
+
+		add_filter('wp_mail_content_type', create_function('', 'return "text/html";'));
+		if (wp_mail(carbon_get_theme_option('to_main_sendmail'), 'Оплата ОСАГО', '<strong>Оплата ОСАГО:</strong> Для оплаты ОСАГО онлайн перейдите по ссылке <a href="' . $lnk . '">Страница оплаты</a>', $headers))
+			wp_die("<span style = 'color:green;'>Мы свяжемся с Вами в ближайшее время.</span>");
+		else wp_die("<span style = 'color:red;'>Сервис недоступен попробуйте позднее.</span>");
+		
+		} else {
+		wp_die( 'НО-НО-НО!', '', 403 );
+		}
+	}
+
+
 	/* Отправка почты
 		
 			$headers = array(
