@@ -24,6 +24,8 @@
         let toThencsPageUrl = "<?echo get_the_permalink(341); ?>";
         let osagoThencsPageUrl = "<?echo get_the_permalink(343); ?>";
         let agentThencsPageUrl = "<?echo get_the_permalink(345); ?>";
+        let kommercialPredl = "<?echo get_the_permalink(373); ?>";
+        let oplata = "<?echo get_the_permalink(376); ?>";
     </script>
 </head>
    
