@@ -10,7 +10,7 @@
                         Шаг 1
                     </span>
                     <span class="db step-desk">
-                        Информация об автомобиле
+                        Информация об автомобиле 
                     </span>
                 </a>
                 <a href="" id = "control-panel_2" class="control-panel__item">
@@ -76,6 +76,53 @@
                                     Поле заполнено не корректно.
                                 </span>
                             </label>
+                        </div>
+                        <div class="input-panel__field-box">
+                            <label>
+                                <span class="caption db mandatory">Гос. рег. номер</span>
+                                <input type="text" name="gosnomer" class="inputbox gosnomer" placeholder="Гос. рег. номер" autocomplete="off">
+                                <span class="err-message">
+                                    Пожалуйста, заполните это поле.
+                                </span>
+                            </label>
+                        </div>
+                        <div class="input-panel__field-box">
+                            <span class="caption db mandatory">Категория ТС</span>
+                            <select class="selectBox" name="doc_cat_ts" class="doc_cat_ts">
+                                <option value="А | L - Мототранспортные средства" selected>
+                                    А | L - Мототранспортные средства
+                                </option>
+                                <option value="B | M1 - Легковые автомобили">
+                                    B | M1 - Легковые автомобили
+                                </option>
+                                <option value="B | N1 - Грузовые автомобили до 3.5 тонн">
+                                    B | N1 - Грузовые автомобили до 3.5 тонн
+                                </option>
+                                <option value="C | N2 - Грузовые автомобили 3.5 - 12 тонн">
+                                    C | N2 - Грузовые автомобили 3.5 - 12 тонн
+                                </option>
+                                <option value="C | N3 - Грузовые автомобили свыше 12 тонн">
+                                    C | N3 - Грузовые автомобили свыше 12 тонн
+                                </option>
+                                <option value="D | M2 - Автобусы до 5 тонн">
+                                    D | M2 - Автобусы до 5 тонн
+                                </option>
+                                <option value="D | M3 - Автобусы свыше 5 тонн">
+                                    D | M3 - Автобусы свыше 5 тонн
+                                </option>
+                                <option value="E | O1 - Прицепы до 0.75 тонн">
+                                    E | O1 - Прицепы до 0.75 тонн
+                                </option>
+                                <option value="E | O2 - Прицепы 0.75 - 3.5 тонн">
+                                    E | O2 - Прицепы 0.75 - 3.5 тонн
+                                </option>
+                                <option value="E | O3 - Прицепы 3.5 - 12 тонн">
+                                    E | O3 - Прицепы 3.5 - 12 тонн
+                                </option>
+                                <option value="E | O4 - Прицепы свыше 12 тонн">
+                                    E | O4 - Прицепы свыше 12 тонн
+                                </option>
+                            </select>
                         </div>
                     </div>
                     <div class="btn-box">
