@@ -16,6 +16,11 @@
             </nav>
             <div class="footer__item work-time">
                 Работаем <span>24</span>/<span>7</span>
+                <ul class="footer__item-list">
+                    <li><a href="<?php echo get_permalink(361);?>">Контакты и реквизиты компании</a></li>
+                    <li><a href="<?php echo get_permalink(365);?>">Описание деятельности компании</a></li>
+                    <li><a href="<?php echo get_permalink(369);?>">Способы оплаты</a></li>
+                </ul>
             </div>
             <div class="footer__item contact-box">
                 <span class="db desktop phone"><? echo $tel = carbon_get_theme_option("to_phone"); ?></span>

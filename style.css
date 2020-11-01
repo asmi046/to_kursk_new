@@ -322,7 +322,7 @@ Tags: TO,OSAGO
 	height: auto;
 	margin: 0 auto;
 	position: relative;
-	min-height: 100%;
+	/*min-height: 100%;*/
 	overflow: hidden; }
   
   .footer {
@@ -488,7 +488,8 @@ Tags: TO,OSAGO
 	left: 0;
 	width: 100%;
 	height: 100%;
-	background-color: rgba(0, 0, 0, 0.8);
+	/*background-color: rgba(0, 0, 0, 0.9);*/
+	background-color: #fff; 
 	z-index: 100;
 	display: none; }
   
@@ -804,7 +805,8 @@ Tags: TO,OSAGO
 	background-color: #F2F2F2;
 	border-radius: 20px;
 	box-sizing: border-box;
-	padding: 40px 26px;
+	/*padding: 40px 26px;*/
+	padding: 40px 23px;
 	max-width: 327px;
 	height: 100%;
 	margin: 0 10px;
@@ -1096,6 +1098,56 @@ Tags: TO,OSAGO
 .reviews__subtitle p {
 	font-size: 20px; }
 
+.requisites {
+	padding-bottom: 80px;
+}
+.activity {
+	padding-bottom: 30px;
+}
+.text__body h1 {
+	font-size: 50px;
+	font-weight: 800;
+	line-height: 55px;
+	margin-bottom: 80px;
+}
+.text__body h2 {
+	font-size: 30px;
+  font-weight: 800;
+  line-height: 38px;
+	margin-bottom: 20px;
+}
+.text__body p, a {
+	font-size: 18px;
+  line-height: 30px;
+  color: #000;
+}
+.text__body p {
+	margin-bottom: 30px;
+}
+.text__body a:hover {
+	text-decoration: none;
+}
+.text__body img {
+	max-width: 633px;
+	width: 100%;
+}
+
+.payment {
+	padding-bottom: 30px;
+}
+.payment__list li:before {
+	content: " ";
+  width: 30px;
+  height: 22px;
+  float: left;
+  padding-top: 5px;
+  padding-left: 8px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+	background-image: url('data:image/svg+xml;base64,PHN2ZyBpZD0iZ2Fsa2FfYmFuZXIiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHdpZHRoPSIzOS4zMzMiIGhlaWdodD0iMzYuNzgyIiB2aWV3Qm94PSIwIDAgMzkuMzMzIDM2Ljc4MiI+DQogIDxkZWZzPg0KICAgIDxsaW5lYXJHcmFkaWVudCBpZD0ibGluZWFyLWdyYWRpZW50IiB4MT0iLTAuMDAxIiB5MT0iMC41IiB4Mj0iMS4wMDEiIHkyPSIwLjUiIGdyYWRpZW50VW5pdHM9Im9iamVjdEJvdW5kaW5nQm94Ij4NCiAgICAgIDxzdG9wIG9mZnNldD0iMCIgc3RvcC1jb2xvcj0iIzAwYmNmMCIvPg0KICAgICAgPHN0b3Agb2Zmc2V0PSIwLjM0NyIgc3RvcC1jb2xvcj0iIzAwYjllZCIvPg0KICAgICAgPHN0b3Agb2Zmc2V0PSIwLjY0MiIgc3RvcC1jb2xvcj0iIzAwYjJlNiIvPg0KICAgICAgPHN0b3Agb2Zmc2V0PSIwLjkxNiIgc3RvcC1jb2xvcj0iIzAwYTZkYiIvPg0KICAgICAgPHN0b3Agb2Zmc2V0PSIxIiBzdG9wLWNvbG9yPSIjMDBhMWQ4Ii8+DQogICAgPC9saW5lYXJHcmFkaWVudD4NCiAgPC9kZWZzPg0KICA8ZWxsaXBzZSBpZD0i0K3Qu9C70LjQv9GBXzQiIGRhdGEtbmFtZT0i0K3Qu9C70LjQv9GBIDQiIGN4PSIxOC4zOTEiIGN5PSIxOC4zOTEiIHJ4PSIxOC4zOTEiIHJ5PSIxOC4zOTEiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDAgMCkiIGZpbGw9InVybCgjbGluZWFyLWdyYWRpZW50KSIvPg0KICA8cGF0aCBpZD0i0JrQvtC90YLRg9GAXzY4IiBkYXRhLW5hbWU9ItCa0L7QvdGC0YPRgCA2OCIgZD0iTTU3LjE0NSw2OS42NTlhNy44Miw3LjgyLDAsMCwwLDUuNDIyLTIuMjMyTDc1LjExMSw1NC44ODJhNy44MjksNy44MjksMCwwLDAsMC0xMC45NUE3LjU1NSw3LjU1NSwwLDAsMCw2OS42ODksNDEuN2E3LjgyLDcuODIsMCwwLDAtNS40MjIsMi4yMzJsLTcuMTIzLDcuMTIzLTEuMTY5LTEuMTY5YTcuNTU1LDcuNTU1LDAsMCwwLTUuNDIyLTIuMjMyLDcuNzA3LDcuNzA3LDAsMCwwLTUuNDIyLDEzLjE4Mmw2LjcsNi43YTcuNDcxLDcuNDcxLDAsMCwwLDUuMzE1LDIuMTI2Wk00OC43NDcsNTMuNWEyLjQ5LDIuNDksMCwwLDEsMS44MDctLjc0NCwyLjc3NCwyLjc3NCwwLDAsMSwxLjgwNy43NDRsMi45NzcsMi45NzdhMi42MzUsMi42MzUsMCwwLDAsMy42MTQsMGw4LjkzLTguOTNhMi40OSwyLjQ5LDAsMCwxLDEuODA3LS43NDQsMi43NzQsMi43NzQsMCwwLDEsMS44MDcuNzQ0LDIuNjM1LDIuNjM1LDAsMCwxLDAsMy42MTRMNTguOTUyLDYzLjgxMmEyLjQ5LDIuNDksMCwwLDEtMS44MDcuNzQ0LDIuNzc0LDIuNzc0LDAsMCwxLTEuODA3LS43NDRsLTYuNy02LjdhMi41MzcsMi41MzcsMCwwLDEsLjEwNi0zLjYxNFoiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC0zOC4wMSAtMzkuMzYxKSIgZmlsbD0iI2ZmZiIvPg0KPC9zdmc+DQo=');
+}
+
 
 /*Всплывашка город*/
 .city_vsp_vin {
@@ -1136,6 +1188,55 @@ Tags: TO,OSAGO
   transition: all 0.5s;
   text-decoration: none;
   border-radius: 5px;
+}
+
+
+.kom-p {padding: 0px 0px 80px 0px;}
+.kom-p h1 {
+	font-size: 50px;
+  font-weight: 800;
+  line-height: 55px;
+  margin-bottom: 80px;
+}
+.kom-p__form label {
+	display: block;
+  margin-bottom: 14px;
+  font-size: 20px;
+}
+.kom-p__form input {
+    width: 330px;
+    height: 50px;
+    box-sizing: border-box;
+    padding: 0px 20px;
+    border: 1px solid #00B0ED;
+    border-radius: 30px;
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+
+.order-payment {
+	padding: 30px 0px 130px 0px;
+}
+.order-payment h1 {
+	font-size: 50px;
+  font-weight: 800;
+  line-height: 55px;
+  margin-bottom: 60px;
+}
+.order-payment__table {
+	border: 3px solid gray;
+  border-radius: 8px;
+	border-collapse: separate;
+	margin-bottom: 15px;
+}
+.order-payment__table td {
+	border: 1px solid gray;
+  padding: 15px 10px 10px 15px;
+  font-size: 18px;
+}
+.order-payment__btn {
+	border-radius: 5px;
 }
 
 
@@ -1187,6 +1288,14 @@ Tags: TO,OSAGO
 	  #footer .contact-box .email {
 		color: #fff; }
   
+	.footer__item-list a {
+		font-family: 'Lato-Semibold', sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    color: #fff;
+	}
+
+
   .request-section {
 	margin-bottom: 141px; }
   
@@ -1479,16 +1588,16 @@ Tags: TO,OSAGO
 
 
 #popupTO, #popupOS {
-  width: 1100px;
+  max-width: 1100px;
+  width: 100%;
   margin: 0px auto;
   border-radius: 23px;
-  padding: 25px 20px 25px 20px;
-  /*padding: 45px 45px 15px 45px;*/ }
+  padding: 25px 20px 25px 20px; }
 
 .popup__title {
   font-size: 35px;
   margin-top: 30px;
-  /*margin-bottom: 45px;*/
+  line-height: 35px;
   margin-bottom: 55px;
   text-align: center; 
 }
@@ -1530,7 +1639,10 @@ Tags: TO,OSAGO
   margin-right: 85px; }
 .popup__column:last-child {
   margin: 0px 0px 0px 0px; }
-
+ 
+.arcticmodal-container_i2 {
+	display: flex;
+}
 .arcticmodal-close {
 	position: absolute;
     right: 35px;
@@ -1594,9 +1706,6 @@ Tags: TO,OSAGO
 	.input-panel .input-panel__step .free-row .input-panel__field-box {
 	  margin-right: 20px; } }
   @media screen and (max-width: 1240px) {
-  	.popup__menu{
-		flex-wrap: wrap;
-   }
 	.inform-section .decore-elem {
 	  right: -20%; }
 	#header .header__bottom .main-menu ul li a {
@@ -1716,10 +1825,20 @@ Tags: TO,OSAGO
   
 	.desktop {
 	  display: none; }
+
+	.lock {
+    	overflow: hidden;}
   
 	#header {
 	  font-size: 1.2em;
-	  margin-bottom: 30px; }
+	  margin-bottom: 30px;
+
+	  margin-bottom: 30px;
+    position: fixed;
+    z-index: 1000;
+    width: 100%;
+    box-shadow: 0 6px 6px -4px rgba(0, 0, 0, .6);
+	   }
 	  #header .header__top {
 		padding: 15px 0 15px 0; }
 		#header .header__top .inner {
@@ -1745,7 +1864,7 @@ Tags: TO,OSAGO
 		  #header .header__bottom .main-menu ul {
 			width: 100%;
 			display: block;
-			padding: 0 15px;
+			padding: 130px 15px;
 			box-sizing: border-box; }
 			#header .header__bottom .main-menu ul li {
 			  transform-origin: center center;
@@ -1780,6 +1899,9 @@ Tags: TO,OSAGO
 			left: 50%;
 			transform: translateX(-50%); }
   
+	.banner {
+	  padding-top: 180px; }
+
 	.banner .text-container {
 	  max-width: 530px; }
 
@@ -1831,6 +1953,19 @@ Tags: TO,OSAGO
 	  position: absolute;
 	  left: -144%;
 	  top: -8px; } }
+	@media screen and (max-width: 812px) {
+.popup__menu {
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.popup__column {
+     margin-right: 0; 
+    width: 60%; }
+.popup__column-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center; } }
+
   @media screen and (max-width: 800px) {
 	.banner {
 	  margin-bottom: 0; }
@@ -2063,15 +2198,24 @@ Tags: TO,OSAGO
 	  padding-top: 5px; }
   
 	#header .header__top .inner .burger-btn {
-	  top: 13px; }
+    width: 35px;
+    height: 25px;
+    top: 20px;
+    right: 25px;
+}
   
 	#header .header__top .inner .header__item-city,
 	#header .header__top .inner .header__top__item {
-	  width: 50%;
-	  text-align: center; }
+		width: 55%;
+	  /*width: 50%;
+	  text-align: center;*/ }
+	.work-time {
+		display: none;
+	}
   
 	#header .header__top .inner .main-logo {
-	  width: 100%; }
+		width: 30%;
+	  /*width: 100%;*/ }
   
 	#header .header__top .inner .contact-box {
 	  display: none; }
@@ -2130,7 +2274,12 @@ Tags: TO,OSAGO
 	  letter-spacing: 0px; } }
   @media screen and (max-width: 450px) {
 	.banner .text-container::before {
-	  height: 350px; } }
+	  height: 350px; }
+	  #header .header__bottom .main-menu ul {
+		padding: 10px 15px; }
+		.banner {
+	  padding-top: 80px; }
+	   }
   @media screen and (max-width: 400px) {
   	.city_vsp_vin .qq_btn .yes_no_btn {
     margin-right: 10px;
@@ -2188,8 +2337,21 @@ Tags: TO,OSAGO
 	  padding-left: 0;
 	  padding-right: 0; } }
   @media screen and (max-width: 350px) {
+  	.text__body h1 {
+    font-size: 48px;
+}
 	.banner .text-container::before {
-	  height: 250px; } }
+	  height: 250px; }
+	.kom-p h1 {
+    font-size: 43px;}
+	.kom-p__form input {
+    width: 300px;
+} }
+
+@media screen and (max-width: 350px) {
+#header .header__top .inner .burger-btn {
+	  top: 20px; } }
+
   select,
   .selectBox {
 	display: inline-block;
@@ -2309,8 +2471,8 @@ Tags: TO,OSAGO
 	content: "";
 	top: 10px;
   right:-3px;
-	width: 25px;
-  height: 25px;
+	width: 20px;
+  height: 20px;
   position: absolute; 
   background-repeat: no-repeat; 
   background-position:center;
