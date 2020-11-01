@@ -24,6 +24,8 @@
     let toThencsPageUrl = "<?echo get_the_permalink(341); ?>";
     let osagoThencsPageUrl = "<?echo get_the_permalink(343); ?>";
     let agentThencsPageUrl = "<?echo get_the_permalink(345); ?>";
+    let comPredlPage = "<?echo get_the_permalink(373); ?>";
+    let oplataPredl = "<?echo get_the_permalink(376); ?>";
   </script>
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-181621805-1"></script>

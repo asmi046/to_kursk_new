@@ -261,7 +261,8 @@ add_action( 'wp_enqueue_scripts', 'my_assets' );
 					."\nТелефон: ".$param["pers_tel"]
 					."\E-mail: ".$param["pers_mail"]
 					."\nГород: ".$param["pers_city"]
-					."\nСообщение: ".$param["pers_message"];
+					."\nСообщение: ".$param["pers_message"]
+					."\n <a href = '".get_the_permalink(373)."/?email=" . $param["pers_mail"] . "&marka=" . $param['car_marka']. "&model=" . $param['car_model']. "&power=" . $param['car_mosh']."'>Сформировать КП </a> ";
 
 			message_to_telegram($message_telegram);
 			add_filter('wp_mail_content_type', create_function('', 'return "text/html";'));
@@ -314,7 +315,7 @@ add_action( 'wp_enqueue_scripts', 'my_assets' );
 					."\E-mail:</strong> ".$param["pers_mail"]
 					."<br/><strong>Город:</strong> ".$param["pers_city"]
 					."<br/><strong>Сообщение:</strong> ".$param["pers_message"]
-					
+					."(Сформировать КП)[".get_the_permalink(373)."?email=" . $param["pers_mail"] . "&marka=" . $param['car_marka']. "&model=" . $param['car_model']. "&power=" . $param['car_mosh']."]"
 					, $headers))
 				wp_die($message_telegram);
 			else wp_die( 'Error!', '', 403 );;
