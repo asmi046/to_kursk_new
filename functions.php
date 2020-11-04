@@ -12,22 +12,26 @@ define("COMPANY_NAME", "ТО и ОСАГО");
 define("MAIL_RESEND", "<noreply@tehosago24.ru>");
 
 
-// define('TELEGRAM_TOKEN', '1277609895:AAG_TP96PFSd3Lp04dleM6I5RT8VjXDySFQ');
-// define('TELEGRAM_CHATID', '86447923');
+define('TELEGRAM_TOKEN_TO', '1277609895:AAG_TP96PFSd3Lp04dleM6I5RT8VjXDySFQ');
 
-define('TELEGRAM_TOKEN', '1339936644:AAFoJC0GEAFdJSxmPKTA8Ei6YMgjDg8KgD0');
-define('TELEGRAM_CHATID', '86447923');
-function message_to_telegram($text)
+define('TELEGRAM_TOKEN_OSAGO', '1339936644:AAFoJC0GEAFdJSxmPKTA8Ei6YMgjDg8KgD0');
+
+function message_to_telegram($text, $chat)
 {
 	$arr_chat = carbon_get_theme_option('to_telegramm_id');
 	if($arr_chat) {
 		$arr_chat = explode(",",$arr_chat);
 	    $ch = curl_init();
+		
+		$chatSend = TELEGRAM_TOKEN_TO;
+		if ($chat === "TO") $chatSend = TELEGRAM_TOKEN_TO;
+		if ($chat === "OSAGO") $chatSend = TELEGRAM_TOKEN_OSAGO;
+		
 		for ($i = 0; $i<count($arr_chat); $i++) {
 		    curl_setopt_array(
 		        $ch,
 		        array(
-		            CURLOPT_URL => 'https://api.telegram.org/bot' . TELEGRAM_TOKEN . '/sendMessage',
+		            CURLOPT_URL => 'https://api.telegram.org/bot' . $chatSend . '/sendMessage',
 		            CURLOPT_POST => TRUE,
 		            CURLOPT_RETURNTRANSFER => TRUE,
 		            CURLOPT_TIMEOUT => 10,
@@ -161,7 +165,7 @@ add_action( 'wp_enqueue_scripts', 'my_assets' );
 					."\nТип топлива: ".$param["toplivo"]
 					."\nГород: ".$param["pers_city"]
 					."\nКомментарий: ".$param["pers_message"];
-			message_to_telegram($message_telegram);
+			message_to_telegram($message_telegram, "ТО");
 			add_filter('wp_mail_content_type', create_function('', 'return "text/html";'));
 		
 		if (wp_mail(carbon_get_theme_option('to_main_sendmail'), 'Заказ на оформление ТО', 
@@ -280,7 +284,7 @@ add_action( 'wp_enqueue_scripts', 'my_assets' );
 					."\nСообщение: ".$param["pers_message"]
 					."\n".$lnk;
 
-			message_to_telegram($message_telegram);
+			message_to_telegram($message_telegram, "OSAGO");
 			add_filter('wp_mail_content_type', create_function('', 'return "text/html";'));
 		
 		if (wp_mail(carbon_get_theme_option('to_main_sendmail'), 'Заказ на оформление ОСАГО', 
@@ -365,7 +369,7 @@ add_action( 'wp_enqueue_scripts', 'my_assets' );
 					."\nТелефон: ".$param["pers_tel"]
 					."\nИмя: ".$param["name"];
 
-			message_to_telegram($message_telegram);
+			message_to_telegram($message_telegram, "TO");
 
 			add_filter('wp_mail_content_type', create_function('', 'return "text/html";'));
 		
