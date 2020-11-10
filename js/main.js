@@ -155,6 +155,10 @@ jQuery(document).ready(function() {
 
 		if (flag) {
 			toStapIndex(2);
+		} else {
+			jQuery('html, body').animate({
+				scrollTop: jQuery(".error").offset().top - 50
+			}, 1000);
 		}
 	});
 	
@@ -204,6 +208,10 @@ jQuery(document).ready(function() {
 
 		if (flag) {
 			toStapIndex(3);
+		}  else {
+			jQuery('html, body').animate({
+				scrollTop: jQuery(".error").offset().top - 50
+			}, 1000);
 		}
 	});
 	
@@ -316,6 +324,10 @@ jQuery(document).ready(function() {
 
 		if (flag) {
 			toStapIndex(4);
+		}  else {
+			jQuery('html, body').animate({
+				scrollTop: jQuery(".error").offset().top - 50
+			}, 1000);
 		}
 	});
 	
@@ -386,6 +398,10 @@ jQuery(document).ready(function() {
 				alert("Произошла ошибка попробуйте позднее");
 			});
 
+		}  else {
+			jQuery('html, body').animate({
+				scrollTop: jQuery(".error").offset().top - 50
+			}, 1000);
 		}
 	});
 
@@ -470,8 +486,54 @@ jQuery(document).ready(function() {
 			jQuery(gosnomer).parent().removeClass("error");
 		}
 
+		let doc_vin = jQuery("#request-form-osago .doc_vin");
+		if (doc_vin.val() == "") {
+			jQuery(doc_vin).parent().addClass("error");
+			flag = false;
+		} else {
+			jQuery(doc_vin).parent().removeClass("error");
+		}
+
+		let doc_max_mass = jQuery("#request-form-osago .doc_max_mass");
+		if ((doc_max_mass.parent().parent().is(':visible'))&&(doc_max_mass.val() == "")) {
+			jQuery(doc_max_mass).parent().addClass("error");
+			flag = false;
+		} else {
+			jQuery(doc_max_mass).parent().removeClass("error");
+		}
+
+		
+		let doc_max_mesta = jQuery("#request-form-osago .doc_max_mesta");
+		console.log(doc_max_mesta.parent().parent().is(':visible'));
+		if ((doc_max_mesta.parent().parent().is(':visible'))&&(doc_max_mesta.val() == "")) {
+			jQuery(doc_max_mesta).parent().addClass("error");
+			flag = false;
+		} else {
+			jQuery(doc_max_mesta).parent().removeClass("error");
+		}
+
+		let doc_seria = jQuery("#request-form-osago .doc_seria");
+		if (doc_seria.val() == "") {
+			jQuery(doc_seria).parent().addClass("error");
+			flag = false;
+		} else {
+			jQuery(doc_seria).parent().removeClass("error");
+		}
+
+		let doc_number = jQuery("#request-form-osago .doc_number");
+		if (doc_number.val() == "") {
+			jQuery(doc_number).parent().addClass("error");
+			flag = false;
+		} else {
+			jQuery(doc_number).parent().removeClass("error");
+		}
+
 		if (flag) {
 			toStapIndex(2);
+		} else {
+			jQuery('html, body').animate({
+				scrollTop: jQuery(".error").offset().top - 50
+			}, 1000);
 		}
 
 	});
@@ -537,6 +599,14 @@ jQuery(document).ready(function() {
 			jQuery(sob_data_st).parent().removeClass("error");
 		}
 
+		let sob_propiska = jQuery("#request-form-osago .sob_propiska");
+		if (sob_propiska.val() == "") {
+			jQuery(sob_propiska).parent().addClass("error");
+			flag = false;
+		} else {
+			jQuery(sob_propiska).parent().removeClass("error");
+		}
+
 		//--------------------------------------
 
 		let strah_lastname = jQuery("#request-form-osago .strah_lastname");
@@ -582,6 +652,10 @@ jQuery(document).ready(function() {
 
 		if (flag) {
 			toStapIndex(3);
+		} else {
+			jQuery('html, body').animate({
+				scrollTop: jQuery(".error").offset().top - 50
+			}, 1000);
 		}
 
 	});
@@ -719,6 +793,10 @@ jQuery(document).ready(function() {
 
 		if (flag) {
 			toStapIndex(4);
+		} else {
+			jQuery('html, body').animate({
+				scrollTop: jQuery(".error").offset().top - 50
+			}, 1000);
 		}
 	});
 
@@ -783,6 +861,10 @@ jQuery(document).ready(function() {
 				alert("Произошла ошибка попробуйте позднее");
 			});
 
+		} else {
+			jQuery('html, body').animate({
+				scrollTop: jQuery(".error").offset().top - 50
+			}, 1000);
 		}
 	});
 
@@ -839,6 +921,25 @@ jQuery(document).ready(function() {
 		jQuery(".data_r_v3").val(jQuery(".sob_data_r").val());
 		jQuery(".number_vu_v3").val(jQuery(".sob_number_vu").val());
 		jQuery(".data_st_v3").val(jQuery(".sob_data_st").val());
+	});
+
+	jQuery("select[name=doc_cat_ts]").click(function(e){  
+		e.preventDefault();
+
+		let carType = jQuery(this).val();
+
+		jQuery(".show_max_mass").hide();
+		jQuery(".show_max_mesta").hide();
+
+		if ((carType == "C | N2 - Грузовые автомобили 3.5 - 12 тонн") || (carType == "C | N3 - Грузовые автомобили свыше 12 тонн"))
+		{
+			jQuery(".show_max_mass").show();
+		}
+
+		if ((carType == "D | M2 - Автобусы до 5 тонн") || (carType == "D | M3 - Автобусы свыше 5 тонн"))
+		{
+			jQuery(".show_max_mesta").show();
+		}
 	});
 
 
@@ -975,7 +1076,8 @@ jQuery(document).ready(function() {
           
         });
       
-    });
-
+	});
+	
+	//----------------------
 });
 

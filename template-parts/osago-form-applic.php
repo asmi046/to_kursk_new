@@ -70,7 +70,7 @@
                         </div>
                         <div class="input-panel__field-box">
                             <label>
-                                <span class="caption db mandatory">Мощность двигателя</span>
+                                <span class="caption db mandatory">Мощность двигателя (л.с.)</span>
                                 <input type="text" name="car_mosh" class="inputbox car_mosh" placeholder="Мощность двигателя" autocomplete="off">
                                 <span class="err-message">
                                     Поле заполнено не корректно.
@@ -123,6 +123,81 @@
                                     E | O4 - Прицепы свыше 12 тонн
                                 </option>
                             </select>
+                        </div>
+
+                        <div class="input-panel__field-box show_max_mesta">
+                            <label>
+                                <span class="caption db mandatory">Количество пассажирских мест</span>
+                                <input type="text" name="doc_max_mesta" class="inputbox doc_max_mesta" placeholder="Количество пассажирских мест" autocomplete="off">
+                                <span class="err-message">
+                                    Пожалуйста, заполните это поле.
+                                </span>
+                            </label>
+                        </div>
+
+                        <div class="input-panel__field-box show_max_mass">
+                            <label>
+                                <span class="caption db mandatory">Максимально разрешенная масса</span>
+                                <input type="text" name="doc_max_mass" class="inputbox doc_max_mass" placeholder="Максимально разрешенная масса" autocomplete="off">
+                                <span class="err-message">
+                                    Пожалуйста, заполните это поле.
+                                </span>
+                            </label>
+                        </div>
+
+                        <div class="input-panel__field-box">
+                            <label>
+                                <span class="caption db mandatory">Идентификационный номер VIN</span>
+                                <input type="text" name="doc_vin" class="inputbox doc_vin" placeholder="Идентификационный номер VIN" autocomplete="off">
+                                <span class="err-message">
+                                    Пожалуйста, заполните это поле.
+                                </span>
+                            </label>
+                        </div>
+
+                        <div class="input-panel__field-box input-panel__field-box__doc">
+                            <span class="caption db mandatory">Цель использования</span>
+                            <select class="selectBox" class = "doc_tsel" name="doc_tsel">
+                                <option value="Личное" selected>Личное</option>
+                                <option value="Дорожные и специальные ТС">Дорожные и специальные ТС</option>
+                                <option value="Инкассация">Инкассация</option>
+                                <option value="Перевозка опасных и легко воспламеняющихся грузов">Перевозка опасных и легко воспламеняющихся грузов</option>
+                                <option value="Прокат/Краткосрочная аренда">Прокат/Краткосрочная аренда</option>
+                                <option value="Прочие">Прочие</option>
+                                <option value="Регулярные/по заказам пассажирские перевозки">Регулярные/по заказам пассажирские перевозки</option>
+                                <option value="Скорая помощь">Скорая помощь</option>
+                                <option value="Такси">Такси</option>
+                                <option value="Учебная езда">Учебная езда</option>
+                                <option value="Экстренные и коммунальные службы">Экстренные и коммунальные службы</option>
+                            </select>
+                        </div>
+                        <div class = "row">
+                            <div class="input-panel__field-box input-panel__field-box__doc">
+                                <span class="caption db mandatory">Документ</span>
+                                <select class="selectBox" class = "type_doc" name="type_doc">
+                                    <option value="СТС" selected>СТС</option>
+                                    <option value="ПТС">ПТС</option>
+                                    <option value="ЭПТС">ЭПТС</option>
+                                </select>
+                            </div>
+                            <div class="input-panel__field-box input-panel__field-box-series">
+                                <label>
+                                    <span class="caption db mandatory">Серия</span>
+                                    <input type="text" name="doc_seria" class="inputbox doc_seria" placeholder="0000" autocomplete="off">
+                                    <span class="err-message">
+                                        Пожалуйста, заполните это поле.
+                                    </span>
+                                </label>
+                            </div>
+                            <div class="input-panel__field-box">
+                                <label>
+                                    <span class="caption db mandatory">Номер</span>
+                                    <input type="text" name="doc_number" class="inputbox doc_number" placeholder="123456" autocomplete="off">
+                                    <span class="err-message">
+                                        Пожалуйста, заполните это поле.
+                                    </span>
+                                </label>
+                            </div>
                         </div>
                     </div>
                     <div class="btn-box">
@@ -182,17 +257,19 @@
                            </label>
                        </div>
                        <div class="input-panel__field-box input-panel__field-box-date">
-                        <label id="input-panel__data-os">
-                            <span class="caption db mandatory">Дата рождения</span>
-                            <input type="text" id="field-date" name="sob_data_r" class="inputbox sob_data_r doc_data_v" placeholder="дд.мм.гггг" autocomplete="off">
-                            <span class="err-message">
-                                Поле заполнено не корректно.
-                            </span>
-                        </label>
-                    </div>
+                            <label id="input-panel__data-os">
+                                <span class="caption db mandatory">Дата рождения</span>
+                                <input type="text" id="field-date" name="sob_data_r" class="inputbox sob_data_r doc_data_v" placeholder="дд.мм.гггг" autocomplete="off">
+                                <span class="err-message">
+                                    Поле заполнено не корректно.
+                                </span>
+                            </label>
+                        </div>
+                       
+
                     <div class="input-panel__field-box">
                         <label>
-                            <span class="caption db mandatory">Серия и номер ВУ</span>
+                            <span class="caption db mandatory">Серия и номер Паспорта</span>
                             <input type="text" name="sob_number_vu" class="inputbox sob_number_vu" placeholder="123456" autocomplete="off">
                             <span class="err-message">
                                 Поле заполнено не корректно.
@@ -201,13 +278,23 @@
                     </div>
                     <div class="input-panel__field-box input-panel__field-box-date">
                         <label id="input-panel__data-os">
-                            <span class="caption db mandatory">Год начала стажа</span>
+                            <span class="caption db mandatory">Дата выдачи паспорта</span>
                             <input type="text" id="field-date" name="sob_data_st" class="inputbox sob_data_st doc_data_god" placeholder="гггг" autocomplete="off">
                             <span class="err-message">
                                 Поле заполнено не корректно.
                             </span>
                         </label>
                     </div>
+                    <div class="input-panel__field-box input-panel__field-box-date">
+                            <label id="input-panel__data-os">
+                                <span class="caption db mandatory">Адрес места жительства (как в паспорте)</span>
+                                <input type="text" id="sob_propiska" name="sob_propiska" class="inputbox sob_propiska" placeholder="Адрес" autocomplete="off">
+                                <span class="err-message">
+                                    Поле заполнено не корректно.
+                                </span>
+                            </label>
+                        </div>
+
                     <span class = "copyVod">&darr; Скопировать данные собственника</span>
                 </div>
                 <div class="input-panel__title">

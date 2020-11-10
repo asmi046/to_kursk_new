@@ -1390,7 +1390,15 @@ Tags: TO,OSAGO
 		flex-wrap: wrap;
 		margin-right: -71px;
 		position: relative;
-		overflow: hidden; }
+		overflow: hidden; 
+		width:100%;
+	}
+
+		.show_max_mass,
+		.show_max_mesta {
+			display: none;
+		}
+
 		.input-panel .input-panel__step .row .input-panel__field-box {
 		  box-sizing: border-box;
 		  width: 33.3333%;
@@ -2114,7 +2122,11 @@ Tags: TO,OSAGO
 	  flex-direction: column; }
   
 	.input-panel .input-panel__step .row .input-panel__field-box {
-	  width: 100%; } }
+	  padding-right: 0;
+		width: 100%; 
+	} 
+	
+	}
   @media screen and (max-width: 700px) {
 	.request-section {
 	  margin-bottom: 60px; }

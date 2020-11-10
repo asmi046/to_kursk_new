@@ -234,21 +234,32 @@ add_action( 'wp_enqueue_scripts', 'my_assets' );
 				));
 
 			$message_telegram = 'Заказ на оформление ОСАГО c сайта ' . $_SERVER['SERVER_NAME'] 
+					."\nE-mail: ".$param["pers_mail"]
+					."\nГород: ".$param["pers_city"]
 					."\nМарка авто: ".$param["car_marka"]
 					."\nМодель авто: ".$param["car_model"]
 					."\nГод выпуска: ".$param["car_godvip"]
 					."\nМощность двигателя: ".$param["car_mosh"]
-					."\nМощность двигателя: ".$param["car_mosh"]
 					."\nГосномер: ".$param["gosnomer"]
 					."\nКатегория ТС: ".$param["doc_cat_ts"]
+					
+					."\nМаксимально разрешенная масса: ".$param["doc_max_mass"]
+					."\nКоличество пассажирских мест: ".$param["doc_max_mesta"]
+					."\nИдентификационный номер VIN: ".$param["doc_vin"]
+					."\nЦель использования: ".$param["doc_tsel"]
+					."\nДокумент: ".$param["type_doc"]
+					."\nСерия: ".$param["doc_seria"]
+					."\nНомер: ".$param["doc_number"]
+
 					."\nДата начала страховки: ".$param["str_data_n"]
 					."\nГород прописки собственника: ".$param["pers_city"]
 					."\nФамилия собственника: ".$param["sob_lastname"]
 					."\nИмя собственника: ".$param["sob_name"]
 					."\nОтчество собственника: ".$param["sob_patronymic"]
 					."\nДата рождения собственника: ".$param["sob_data_r"]
-					."\nВодительское удостоверение собственника: ".$param["sob_number_vu"]
-					."\nГод начала собственника: ".$param["sob_data_st"]
+					."\nПаспорт собственника: ".$param["sob_number_vu"]
+					."\nДата выдачи паспорта: ".$param["sob_data_st"]
+					."\nАдрес прописки: ".$param["sob_propiska"]
 
 					."\nФамилия страхователя: ".$param["strah_lastname"]
 					."\nИмя страхователя: ".$param["strah_name"]
@@ -279,8 +290,7 @@ add_action( 'wp_enqueue_scripts', 'my_assets' );
 					."\nГод начала водителя #3: ".$param["data_st_v3"]
 					
 					."\nТелефон: ".$param["pers_tel"]
-					."\E-mail: ".$param["pers_mail"]
-					."\nГород: ".$param["pers_city"]
+					
 					."\nСообщение: ".$param["pers_message"]
 					."\n".$lnk;
 
@@ -289,20 +299,32 @@ add_action( 'wp_enqueue_scripts', 'my_assets' );
 		
 		if (wp_mail(carbon_get_theme_option('to_main_sendmail'), 'Заказ на оформление ОСАГО', 
 					'<h2>Заказ на оформление ОСАГО c сайта ' . $_SERVER['SERVER_NAME']."</h2>" 
+					."<br/><strong>Телефон:</strong> ".$param["pers_tel"]
+					."<br/><strong>E-mail:</strong> ".$param["pers_mail"]
 					."<br/><strong>Марка авто:</strong> ".$param["car_marka"]
 					."<br/><strong>Модель авто:</strong> ".$param["car_model"]
 					."<br/><strong>Год выпуска:</strong> ".$param["car_godvip"]
 					."<br/><strong>Мощность двигателя:</strong> ".$param["car_mosh"]
 					."<br/><strong>Госномер:</strong> ".$param["gosnomer"]
 					."<br/><strong>Категория ТС:</strong> ".$param["doc_cat_ts"]
+					
+					."<br/><strong>Максимально разрешенная масса:</strong> ".$param["doc_max_mass"]
+					."<br/><strong>Количество пассажирских мест:</strong> ".$param["doc_max_mesta"]
+					."<br/><strong>Идентификационный номер VIN:</strong> ".$param["doc_vin"]
+					."<br/><strong>Цель использования:</strong> ".$param["doc_tsel"]
+					."<br/><strong>Документ:</strong> ".$param["type_doc"]
+					."<br/><strong>Серия:</strong> ".$param["doc_seria"]
+					."<br/><strong>Номер:</strong> ".$param["doc_number"]
+					
 					."<br/><strong>Дата начала страховки:</strong> ".$param["str_data_n"]
 					."<br/><strong>Город прописки собственника:</strong> ".$param["pers_city"]
 					."<br/><strong>Фамилия собственника:</strong> ".$param["sob_lastname"]
 					."<br/><strong>Имя собственника:</strong> ".$param["sob_name"]
 					."<br/><strong>Отчество собственника:</strong> ".$param["sob_patronymic"]
 					."<br/><strong>Дата рождения собственника:</strong> ".$param["sob_data_r"]
-					."<br/><strong>Водительское удостоверение собственника:</strong> ".$param["sob_number_vu"]
-					."<br/><strong>Год начала собственника:</strong> ".$param["sob_data_st"]
+					."<br/><strong>Серия и номер Паспорта:</strong> ".$param["sob_number_vu"]
+					."<br/><strong>Дата выдачи паспорта:</strong> ".$param["sob_data_st"]
+					."<br/><strong>Адрес пропики:</strong> ".$param["sob_propiska"]
 
 					."<br/><strong>Фамилия страхователя:</strong> ".$param["strah_lastname"]
 					."<br/><strong>Имя страхователя:</strong> ".$param["strah_name"]
@@ -332,8 +354,7 @@ add_action( 'wp_enqueue_scripts', 'my_assets' );
 					."<br/><strong>Водительское удостоверение водителя #3:</strong> ".$param["number_vu_v3"]
 					."<br/><strong>Год начала водителя #3:</strong> ".$param["data_st_v3"]
 					
-					."<br/><strong>Телефон:</strong> ".$param["pers_tel"]
-					."\E-mail:</strong> ".$param["pers_mail"]
+
 					."<br/><strong>Город:</strong> ".$param["pers_city"]
 					."<br/><strong>Сообщение:</strong> ".$param["pers_message"]
 					."<a href = '".$lnk."'>Сформировать КП </a> "
@@ -413,7 +434,7 @@ add_action( 'wp_enqueue_scripts', 'my_assets' );
 		));
 
 		add_filter('wp_mail_content_type', create_function('', 'return "text/html";'));
-		if (wp_mail(carbon_get_theme_option('to_main_sendmail'), 'Оплата ОСАГО', '<strong>Оплата ОСАГО:</strong> Для оплаты ОСАГО онлайн перейдите по ссылке <a href="' . $lnk . '">Страница оплаты</a>', $headers))
+		if (wp_mail($_REQUEST["email"], 'Оплата ОСАГО', '<strong>Оплата ОСАГО:</strong> Для оплаты ОСАГО онлайн перейдите по ссылке <a href="' . $lnk . '">Страница оплаты</a>', $headers))
 			wp_die("<span style = 'color:green;'>Мы свяжемся с Вами в ближайшее время.</span>");
 		else wp_die("<span style = 'color:red;'>Сервис недоступен попробуйте позднее.</span>");
 		
