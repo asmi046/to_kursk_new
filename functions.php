@@ -265,8 +265,8 @@ add_action( 'wp_enqueue_scripts', 'my_assets' );
 					."\nИмя страхователя: ".$param["strah_name"]
 					."\nОтчество страхователя: ".$param["strah_patronymic"]
 					."\nДата рождения страхователя: ".$param["strah_data_r"]
-					."\nВодительское удостоверение страхователя: ".$param["strah_number_vu"]
-					."\nГод начала страхователя: ".$param["strah_data_st"]
+					."\nПаспорт собственника: ".$param["strah_number_vu"]
+					."\nДата выдачи паспорта: ".$param["strah_data_st"]
 
 					."\nФамилия водителя #1: ".$param["lastname_v1"]
 					."\nИмя водителя #1: ".$param["name_v1"]
@@ -330,8 +330,8 @@ add_action( 'wp_enqueue_scripts', 'my_assets' );
 					."<br/><strong>Имя страхователя:</strong> ".$param["strah_name"]
 					."<br/><strong>Отчество страхователя:</strong> ".$param["strah_patronymic"]
 					."<br/><strong>Дата рождения страхователя:</strong> ".$param["strah_data_r"]
-					."<br/><strong>Водительское удостоверение страхователя:</strong> ".$param["strah_number_vu"]
-					."<br/><strong>Год начала страхователя:</strong> ".$param["strah_data_st"]
+					."<br/><strong>Паспорт страхователя:</strong> ".$param["strah_number_vu"]
+					."<br/><strong>Дата выдачи паспорта:</strong> ".$param["strah_data_st"]
 
 					."<br/><strong>Фамилия водителя #1:</strong> ".$param["lastname_v1"]
 					."<br/><strong>Имя водителя #1:</strong> ".$param["name_v1"]

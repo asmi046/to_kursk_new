@@ -279,7 +279,7 @@
                     <div class="input-panel__field-box input-panel__field-box-date">
                         <label id="input-panel__data-os">
                             <span class="caption db mandatory">Дата выдачи паспорта</span>
-                            <input type="text" id="field-date" name="sob_data_st" class="inputbox sob_data_st doc_data_god" placeholder="гггг" autocomplete="off">
+                            <input type="text" id="field-date" name="sob_data_st" class="inputbox sob_data_st doc_data_v" placeholder="дд.мм.гггг" autocomplete="off">
                             <span class="err-message">
                                 Поле заполнено не корректно.
                             </span>
@@ -339,7 +339,7 @@
                 </div>
                 <div class="input-panel__field-box">
                     <label>
-                        <span class="caption db mandatory">Серия и номер ВУ</span>
+                        <span class="caption db mandatory">Серия и номер Паспорта</span>
                         <input type="text" name="strah_number_vu" class="inputbox strah_number_vu" placeholder="123456" autocomplete="off">
                         <span class="err-message">
                             Поле заполнено не корректно.
@@ -348,8 +348,8 @@
                 </div>
                 <div class="input-panel__field-box input-panel__field-box-date">
                     <label id="input-panel__data-os">
-                        <span class="caption db mandatory">Дата начала стажа</span>
-                        <input type="text" id="field-date" name="strah_data_st" class="inputbox strah_data_st doc_data_god" placeholder="гггг" autocomplete="off">
+                        <span class="caption db mandatory">Выдачи паспорта</span>
+                        <input type="text" id="field-date" name="strah_data_st" class="inputbox strah_data_st doc_data_v" placeholder="дд.мм.гггг" autocomplete="off">
                         <span class="err-message">
                             Поле заполнено не корректно.
                         </span>
@@ -558,7 +558,7 @@
 
 </div>
 <div class="btn-box">
-    <a href="#" class="btn" id = "bacStepOsago2">Назад</a>
+    <a href="#" class="btn" id = "bacStep2">Назад</a>
     <a href="#" class="btn" id = "toStepOsago4">Далее</a>
 </div>
 </div>
@@ -610,7 +610,7 @@
     </div>
 
     <div class="btn-box">
-        <a href="#" class="btn"  id = "bacStepOsago3" >Назад</a>
+        <a href="#" class="btn"  id = "bacStep3" >Назад</a>
         <button type="submit" class="btn" id = "sendOSAGOform" >Отправить</button>
     </div>
 </div>
