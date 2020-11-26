@@ -16,7 +16,7 @@ get_header(); ?>
 
 		<?php get_template_part('template-parts/osago-form-applic');?>
 
-		<?php get_template_part('template-parts/advantages-section');?>
+		<?php get_template_part('template-parts/advantages-section-osago');?>
 
 		<?php get_template_part('template-parts/useful-info');?>
     
