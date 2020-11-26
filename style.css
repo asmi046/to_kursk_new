@@ -1525,7 +1525,14 @@ Tags: TO,OSAGO
   
   .consent-box {
 	margin-bottom: 20px; }
-  
+  .flexed_cb {
+	  display: flex;
+  }
+
+  .flexed_cb *{
+	  margin: auto 0;
+  }
+
   .consent {
 	display: inline-block;
 	margin-right: 10px; }

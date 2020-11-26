@@ -528,6 +528,32 @@ jQuery(document).ready(function() {
 			jQuery(doc_number).parent().removeClass("error");
 		}
 
+		let doc_data_vid = jQuery("#request-form-osago .doc_data_vid");
+		if ((doc_data_vid.val() == "" )||(doc_data_vid.val().indexOf('_') >= 0 )) {
+			jQuery(doc_data_vid).parent().addClass("error");
+			flag = false;
+		} else {
+			jQuery(doc_data_vid).parent().removeClass("error");
+		}
+
+		if (!jQuery(".doc_no_dk").prop("checked")) {
+			let doc_dk_number = jQuery("#request-form-osago .doc_dk_number");
+			if (doc_dk_number.val() == "" ) {
+				jQuery(doc_dk_number).parent().addClass("error");
+				flag = false;
+			} else {
+				jQuery(doc_dk_number).parent().removeClass("error");
+			}
+
+			let doc_dk_data = jQuery("#request-form-osago .doc_dk_data");
+			if ((doc_dk_data.val() == "" )||(doc_dk_data.val().indexOf('_') >= 0 )) {
+				jQuery(doc_dk_data).parent().addClass("error");
+				flag = false;
+			} else {
+				jQuery(doc_dk_data).parent().removeClass("error");
+			}
+		}
+
 		if (flag) {
 			toStapIndex(2);
 		} else {
@@ -942,7 +968,17 @@ jQuery(document).ready(function() {
 		}
 	});
 
+	jQuery(".doc_no_dk").click(function(e){  
+		
 
+		if (jQuery(".doc_no_dk").prop("checked")) {
+			jQuery("input[name=doc_dk_number]").attr("disabled", true);
+			jQuery("input[name=doc_dk_data]").attr("disabled", true);
+		} else {
+			jQuery("input[name=doc_dk_number]").attr("disabled", false);
+			jQuery("input[name=doc_dk_data]").attr("disabled", false);
+		}
+	});
 
 	//-----------------------------------------------------
 

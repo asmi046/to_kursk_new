@@ -198,6 +198,49 @@
                                     </span>
                                 </label>
                             </div>
+
+                            <div class="input-panel__field-box">
+                                <label>
+                                    <span class="caption db mandatory">Дата выдачи</span>
+                                    <input type="text" name="doc_data_vid" class="inputbox doc_data_vid doc_data_v" placeholder="дд.мм.ггг" autocomplete="off">
+                                    <span class="err-message">
+                                        Пожалуйста, заполните это поле.
+                                    </span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class = "row">
+                            <div class="input-panel__field-box">
+                                <label>
+                                    <span class="caption db mandatory">Номер диагностической карты</span>
+                                    <input type="text" name="doc_dk_number" class="inputbox doc_dk_number" placeholder="1234561234543" autocomplete="off">
+                                    <span class="err-message">
+                                        Пожалуйста, заполните это поле.
+                                    </span>
+                                </label>
+                            </div>
+
+                            <div class="input-panel__field-box">
+                                <label>
+                                    <span class="caption db mandatory">Дата выдачи</span>
+                                    <input type="text" name="doc_dk_data" class="inputbox doc_dk_data doc_data_v" placeholder="дд.мм.ггг" autocomplete="off">
+                                    <span class="err-message">
+                                        Пожалуйста, заполните это поле.
+                                    </span>
+                                </label>
+                            </div>
+
+                            <div class="consent-box flexed_cb">
+                                <label class="consent">
+                                    <input class = "doc_no_dk" type="checkbox">
+                                    <span></span>
+                                </label>
+                                <span class="consent-mess">
+                                    Нет диагностической карты
+                                </span>
+                            </div>
+
                         </div>
                     </div>
                     <div class="btn-box">
@@ -224,6 +267,9 @@
                                 </span>
                             </label>
                         </div>
+
+
+
                     </div>
                     <div class="input-panel__title">
                         <h2>Собственник</h2>
@@ -419,7 +465,7 @@
                 <div class="input-panel__field-box input-panel__field-box-date">
                     <label id="input-panel__data-os">
                         <span class="caption db mandatory">Дата начала стажа</span>
-                        <input type="text" id="field-date" name="data_st_v1" class="inputbox doc_data_god data_st_v1" placeholder="гггг" autocomplete="off">
+                        <input type="text" id="field-date" name="data_st_v1" class="inputbox doc_data_v data_st_v1" placeholder="дд.мм.гггг" autocomplete="off">
                         <span class="err-message">
                             Поле заполнено не корректно.
                         </span>
@@ -483,7 +529,7 @@
         <div class="input-panel__field-box input-panel__field-box-date">
             <label id="input-panel__data-os">
                 <span class="caption db mandatory">Дата начала стажа</span>
-                <input type="text" id="field-date" name="data_st_v2" class="inputbox data_st_v2" placeholder="дд.мм.гггг" autocomplete="off">
+                <input type="text" id="field-date" name="data_st_v2" class="inputbox data_st_v2 doc_data_v" placeholder="дд.мм.гггг" autocomplete="off">
                 <span class="err-message">
                     Поле заполнено не корректно.
                 </span>
@@ -547,7 +593,7 @@
     <div class="input-panel__field-box input-panel__field-box-date">
         <label id="input-panel__data-os">
             <span class="caption db mandatory">Дата начала стажа</span>
-            <input type="text" id="field-date" name="data_st_v3" class="inputbox data_st_v3" placeholder="дд.мм.гггг" autocomplete="off">
+            <input type="text" id="field-date" name="data_st_v3" class="inputbox data_st_v3 doc_data_v" placeholder="дд.мм.гггг" autocomplete="off">
             <span class="err-message">
                 Поле заполнено не корректно.
             </span>

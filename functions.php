@@ -250,6 +250,10 @@ add_action( 'wp_enqueue_scripts', 'my_assets' );
 					."\nДокумент: ".$param["type_doc"]
 					."\nСерия: ".$param["doc_seria"]
 					."\nНомер: ".$param["doc_number"]
+					."\nДата выдачи: ".$param["doc_data_vid"]
+
+					."\nНомер диагностической карты: ".$param["doc_dk_number"]
+					."\nДата выдачи диагностической карты: ".$param["doc_dk_data"]
 
 					."\nДата начала страховки: ".$param["str_data_n"]
 					."\nГород прописки собственника: ".$param["pers_city"]
@@ -315,7 +319,12 @@ add_action( 'wp_enqueue_scripts', 'my_assets' );
 					."<br/><strong>Документ:</strong> ".$param["type_doc"]
 					."<br/><strong>Серия:</strong> ".$param["doc_seria"]
 					."<br/><strong>Номер:</strong> ".$param["doc_number"]
-					
+					."<br/><strong>Дата выдачи: </strong> ".$param["doc_data_vid"]
+
+					."<br/><strong>Номер диагностической карты: </strong> ".$param["doc_dk_number"]
+					."<br/><strong>Дата выдачи диагностической карты: </strong> ".$param["doc_dk_data"]
+
+
 					."<br/><strong>Дата начала страховки:</strong> ".$param["str_data_n"]
 					."<br/><strong>Город прописки собственника:</strong> ".$param["pers_city"]
 					."<br/><strong>Фамилия собственника:</strong> ".$param["sob_lastname"]
