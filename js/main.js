@@ -504,7 +504,7 @@ jQuery(document).ready(function() {
 
 		
 		let doc_max_mesta = jQuery("#request-form-osago .doc_max_mesta");
-		console.log(doc_max_mesta.parent().parent().is(':visible'));
+		console.log((doc_max_mesta.parent().parent().is(':visible'))&&(doc_max_mesta.val() == ""));
 		if ((doc_max_mesta.parent().parent().is(':visible'))&&(doc_max_mesta.val() == "")) {
 			jQuery(doc_max_mesta).parent().addClass("error");
 			flag = false;
